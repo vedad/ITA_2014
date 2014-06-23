@@ -1,6 +1,5 @@
 \documentclass{article}
-\usepackage{graphics}
-\usepackage{psfig}
+\usepackage{graphicx}
 \newcommand{\bc}{\begin{center}}
 \newcommand{\ec}{\end{center}}
 \newcommand{\be}{\begin{equation}}
@@ -51,8 +50,8 @@ the fact that the image on the retina is inverted, and for chromatic
 aberration. 
 
 \begin{figure}[h!]
-\hbox{\psfig{file=eye-schematic.eps,width=0.49\textwidth}
-\psfig{file=eye-rod-cone.eps,width=0.49\textwidth}}
+\includegraphics[width=0.49\textwidth]{eye-schematic.eps}
+\includegraphics[width=0.49\textwidth]{eye-rod-cone.eps}
 \caption{Cross section of the human eye (left), illustration of the eyes
 receptor cells; cones, used for color vision with the iodopsin layers 
 arranged to the right, and rods with rhodopsin layers. Light enters these
@@ -101,7 +100,8 @@ to give color vision. At low light levels only rods are triggered by
 the ambient radiation and vision is then in black and white. 
 
 \begin{figure}[h!]
-\hfil\psfig{file=absorption-rod-cone.eps,width=0.66\textwidth}\hfil
+\centering
+\includegraphics[width=0.66\textwidth]{absorption-rod-cone.eps}
 \caption{Absorption curves for the various types of cones, which combined
 give color vision, and for rhodopsin. Note that the peak sensitivity
 for rods (at 500~nm) and cones (at 555~nm) are at different wavelengths: this causes the
