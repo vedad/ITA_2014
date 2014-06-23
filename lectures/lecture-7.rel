@@ -1,0 +1,58 @@
+;; RefTeX parse info file
+;; File: /Users/viggoh/Documents/ast2210/lecture-7.tex
+;; User: viggoh (Viggo Hansteen)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/viggoh/Documents/ast2210/")
+
+(label-numbers)
+
+(bof "/Users/viggoh/Documents/ast2210/lecture-7.tex")
+
+("#1" "e" "\\newcommand{\\eea}{" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil)
+
+(toc "toc" "    1 Diffraction \\sc{ii}" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 2 "1" "\\section{Diffraction \\sc{ii}}" 746)
+
+(toc "toc" "      1.1 Fresnel Diffraction" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 3 "1.1" "\\subsection{Fresnel Diffraction}" 777)
+
+("fig:path-length" "f" "Geometry for computing the path length between a point $\\cal{Q}$ in the aperture and the observation" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil)
+
+("eq:small-aperture" "s" "\\] to \\[ \\psi_{\\cal P}=-{ike^{ikz}\\over 2\\pi z}\\int_{\\cal Q}e^{i\\Delta\\phi}\\psi_{\\cal Q}dx'dy' =-{i\\" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil)
+
+("fig:cornu" "f" "The Cornu Spiral showing the behaviour of the Fresnel integrals $U(\\xi)$ and $V(\\xi)$. " "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil)
+
+("eq:fresnel" "s" "\\ee where the arguments are the limits of integration and where \\[ S(\\xi)\\equiv\\int_0^\\xi e^{i\\pi s^" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil)
+
+(toc "toc" "      1.2 Lunar Exultation of a Radio Source" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 3 "1.2" "\\subsection{Lunar Exultation of a Radio Source}" 6037)
+
+(toc "toc" "      1.3 Circular Apertures" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 3 "1.3" "\\subsection{Circular Apertures}" 7688)
+
+(toc "toc" "      1.4  " "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 3 "1.4" "\\subsection{}" 7720)
+
+(toc "toc" "      1.4  " "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 3 "1.4" "\\subsection{}" 7720)
+
+(toc "toc" "        * Exercises" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 3 "  *" "\\subsection*{Exercises}" 11190)
+
+(toc "toc" "      1.5 Seeing in the atmosphere" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 3 "1.5" "\\subsection{Seeing in the atmosphere}" 11669)
+
+(toc "toc" "        1.5.1 A simple model (with exercises)" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 4 "1.5.1" "\\subsubsection{A simple model (with exercises)}" 11708)
+
+(toc "toc" "        1.5.2 Real time atmospheric compensation" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil 4 "1.5.2" "\\subsubsection{Real time atmospheric compensation}" 13561)
+
+("fig:shack-hartmann" "f" "Prinicple of the Shack-Hartmann sensor. (figure from {\\it Institut f\\\"ur Photoniche Technologien e. " "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil)
+
+("fig:ao_live_display" "f" "The multiple images of the Shack-Hartmann micro lenses as seen in the Swedish 1~meter Solar Telescop" "/Users/viggoh/Documents/ast2210/lecture-7.tex" nil)
+
+(eof "/Users/viggoh/Documents/ast2210/lecture-7.tex")
+))
+

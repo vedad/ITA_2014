@@ -1,0 +1,208 @@
+\documentclass{article}
+\usepackage{graphics}
+\usepackage{psfig}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bue}{\begin{equation}}
+\newcommand{\eue}{\end{equation}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bua}{\begin{eqnarray*}}
+\newcommand{\eua}{\end{eqnarray*}}
+\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+\newcommand{\ddt}[1]{\dd{#1}{t}}
+\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+\newcommand{\aver}[1]{\langle{#1}\rangle}
+\newcommand{\atom}[3]{\ifmmode^{#1}_{#2}{\rm{#3}}\else{$^{#1}_{#2}${#3}}\fi}
+\newcommand{\electron}{\atom{~0}{-1}{e}}
+\newcommand{\positron}{\atom{0}{1}{\bar{e}}}
+\newcommand{\neutrino}{\atom{0}{0}{\nu}}
+\newcommand{\photon}{\atom{0}{0}{\gamma}}
+\newcommand{\antineutrino}{\atom{0}{0}{\bar{\nu}}}
+\newcommand{\neutron}{\atom{1}{0}{n}}
+\newcommand{\proton}{\atom{1}{1}{p}}
+\newcommand{\hydrogen}{\atom{1}{1}{H}}
+\newcommand{\deuterium}{\atom{2}{1}{H}}
+\newcommand{\tritium}{\atom{3}{1}{H}}
+\newcommand{\helium}{\atom{4}{2}{He}}
+\newcommand{\hethree}{\atom{3}{2}{He}}
+\begin{document}
+\def\half{{{1}\over{2}}}
+\def\third{{{1}\over{3}}}
+\def\mv2{{mv^2}}
+\def\vece{{\mathbf e}}
+\def\vecv{{\mathbf v}}
+\def\vecr{{\mathbf r}}
+\def\vecp{{\mathbf p}}
+\def\vecF{{\mathbf F}}
+\def\vecL{{\mathbf L}}
+\def\bra{\left[}
+\def\ket{\right]}
+\def\densu{kg/m$^3$}
+\def\ergu{J/m$^3$}
+\def\pressu{kg/m$^3$}
+\def\velu{km/s}
+\def\hubu{km/s/Mpc}
+\def\msol{M$_{S}$}
+\def\lsol{L$_{S}$}
+\def\rsol{R$_{S}$}
+\def\mearth{M$_{E}$}
+\def\rearth{R$_{E}$}
+\subsection*{Lecture notes 20: Inflation}
+The observed galaxies, quasars and supernovae, as well as observations of intergalactic absorption lines, tell us about the state of
+the universe during the period where $z<6$ when the universe was older than 1~Gyr. The observed CMB tells us the state of the universe
+at around $z=1100$ when the Universe was some $t\approx 0.35$~Myr. The observed abundances of the light elements allow us to probe the 
+universe at the time of nucleosynthesis; $z=3\times 10^8$, $t\simeq 3$~min. Finally the time of proton freeze-out; $z=4\times 10^9$, 
+$t\simeq 1$~s, is evidenced by the helium abundance in the universe of $Y=0.24$ indicating that we understand the universe even at this
+early date. 
+\par
+There are however three problems with the state of the universe today that are not easily reconciled with a theory that {\it necessarily}
+leads to the universe we live in today. 
+\subsubsection*{Flatness}
+The Friedmann equation may be written as an equation for the curvature
+\[ 1-\Omega(t)=-{\kappa c^2\over R_0^2a(t)^2H(t)^2} \]
+today this equation reads
+\[ 1-\Omega_0=-{\kappa c^2\over R_0^2H_0^2}. \]
+Dividing one by the other and rearranging gives us an equation for the critical density as
+\[ 1-\Omega(t)={H_0^2(1-\Omega_0)\over H(t)^2a(t)^2} \]
+In the benchmark model we have $\Omega_{r,0}=8.4\times 10^{-5}$, $\Omega_{m,0}=0.3$ and
+$\Omega_\Lambda=0.7$. Thus, observations of SN~Ia and the CMB tell us that $|1-\Omega_0|\leq 0.2$, which implies a universe that is close 
+to flat. Let us see how this parameter develops as we move back in time.
+\par
+Another way of writing the Friedmann equation is
+\[ {H^2\over H_0^2}={\epsilon\over\epsilon_0}+{1-\Omega_0\over a^2} \]
+where we can expand the $\epsilon/\epsilon_0$ to 
+\[ {\epsilon\over\epsilon_0}={\Omega_{r,0}\over a^4}+{\Omega_{m,0}\over a^3}+{\Omega_{\Lambda}}\approx {\Omega_{r,0}\over a^4}+{\Omega_{m,0}\over a^3} \quad {\rm for} \quad a<<1 \]
+Which gives
+\[ 1-\Omega(t)={(1-\Omega_0)a^2\over\Omega_{r,0}+a\Omega_{m,0}} \]
+During the radiation dominated phase we have $|1-\Omega|_r\propto a^2\propto t$ while in the matter dominated phase 
+$|1-\Omega|_m\propto a\propto t^{2/3}$. 
+\par
+Using the number above for the critical density today at $t_0$ we find that the density parameter was 
+\[ |1-\Omega_{rm}|\leq 2\times 10^{-4} \]
+at the time of radiation-matter equality, 
+\[ |1-\Omega_{nuc}|\leq 3\times 10^{-14} \]
+at the time deuterium was forming. If we push the extrapolation back to the Planck time $t_p\approx 5\times 10^{-44}$~s we find 
+\[ |1-\Omega_{P}|\leq 1\times 10^{-60}. \]
+{\it Why in the world is the universe flat to such an incredible high precision?? There is nothing in the laws of physics we know telling 
+us it must be so.}
+\subsubsection*{The Horizon}
+The universe was matter dominated at the time of the last scattering, so the horizon distance can be approximated by 
+\[ d_{hor}=2{c\over H(t_{ls})} \]
+We have already seen that the Hubble distance at this time was $0.2$~Mpc so the horizon distance was only $d_{hor}\approx 0.4$~Mpc: Points
+further apart were not in causal contact if the universe were radiation or matter dominated up to this time. The angular distance to the last
+scattering surface is $d_A\approx 13$~Mpc (Why?). Thus points in the CMB further apart than 
+\[ \theta_{hor}={d_{hor}\over d_A}\approx 0.03~{\rm rad}\approx 2^o \]
+as seen from the Earth today should never have been exchanging information. There are $20\,000$ such a-causal patches on the sky which 
+nevertheless have temperatures that do not vary by much more than $1/100\,000$. 
+\par
+{\it This seems a highly unlikely state of affairs!}
+\subsubsection*{Monopoles}
+One of the major projects of modern physics is the unification of all four forces into one force. It has already been shown that the 
+weak interaction and the electromagnetic force are one and the same at energies above $E_{ew}\simeq 1$~TeV, or equivalently 
+$T_{ew}\simeq 10^{16}$~K, which for the Universes part means that at times before an age of $t\simeq 10^{-12}$~s these forces were one
+and the same, the {\bf electro-weak} force. Similarly, it is thought that above an even higher energy --- super-symmetry theory, which is 
+not well confirmed, indicates an energy for {\bf grand unification} of $E_{GUT}\simeq 10^{12} - 10^{13}$~TeV or temperatures of 
+$T_{GUT}\simeq 10^{28}$~TeV, which would indicate an age of less than some $t_{GUT}\simeq 10^{-36}$~s. 
+\par
+(This is four order of magnitude below the {\bf Planck scale}: $E_P\simeq 10^{16}$~TeV, which arises when one sees at which mass $m_P$ the 
+Schwarzschild radius equals the Compton length, {\it i.e.}
+\[ R_{Sch}={m_{P}G\over c^2} \qquad \lambda_C={\hbar\over m_Pc} \quad \Rightarrow \quad m_P=\left({\hbar c\over G}\right)^{1/2}=2.2\times 10^{-8}~{\rm kg} \]
+The length that this occurs at defines the Planck length
+\[ l_P=\left({G\hbar\over c^3}\right)^{1/2}=1.6\times 10^{-35}~{\rm m} \]
+while, the time it takes to cross this distance at the speed of light defines the Planck time
+\[ t_P=\left({G\hbar\over c^5}\right)^{1/2}=5.4\times 10^{-44}~{\rm s} \]
+It is though the an eventual theory of quantum gravity will unify with the other forces at the Planck scale.)
+\par
+As the universe cools below $T_{GUT}$, a phase transition occurs when the strong force separates from the electro-weak force. Points further
+away from each other than the horizon size at that time, $t_{GUT}$, will be out of causal contact and it is expected that {\bf topological
+defects} will form between regions the size of the horizon $d_{hor}={2 c/H_{GUT}}=2ct_{GUT}$. According to super-symmetric theory these
+defects will take the form of {\bf magnetic monopoles} (or perhaps cosmic strings?). The density of such monopoles should then be
+\[ n_M(t_{GUT})\simeq{1/(2ct_{GUT})^3}\simeq 10^{82}~{\rm m^{-3}} \]
+It is also predicted that the mass of such monopoles is of order $E_{GUT}/c^2$, thus the energy density of monopoles is predicted to be
+\[ \epsilon_{M,GUT}\simeq E_{GUT}n_{M,GUT}\simeq 10^{94}~{\rm TeV/m^3} \]
+The photon energy at that time was 
+\[ \epsilon_{\gamma,GUT}\simeq \alpha T_{GUT}^4\simeq 10^{104}~{\rm TeV/m^3} \]
+but since monopoles are non-relativistic their energy density falls, like other cold matter, as $1/a^3$ instead of the $1/a^4$ that the 
+photon/neutrino energy density falls at. Thus, when the temperature falls below $T=10^{-10}T_{GUT}\simeq 10^{18}$~K at an age of
+$t\simeq 10^{-16}$~s, we would expect that monopoles dominate the universe. This is certainly not the case today, no one has found a
+magnetic monopole.
+\par
+{\it Where have all the monopoles gone?}
+\subsubsection*{The Inflation solution}
+When Einstein first solved his field equations for the universe he found that he could not develop a static non-trivial solution without
+introducing an extra term into his equations a {\bf cosmological constant} $\Lambda$. This term works as a repulsive force on large spatial
+scales and thus keeps the universe from collapsing under its own weight (though it must be admitted that the universe with a cosmological
+constant is {\it unstable}; given a small perturbation an initially static universe would collapse or expand). In terms of the Friedmann
+equation the cosmological constant appears on the right hand side
+\[ \left({\dot{a}\over a}\right)^2={8\pi G\over 3c^2}\epsilon-{\kappa c^2\over R_0^2a^2}+{\Lambda\over 3} \]
+We may rewrite this term by introducing the energy density associated with the cosmological constant
+\[ \epsilon_\Lambda={c^2\over 8\pi G}\Lambda. \]
+Note that if we require the cosmological constant to remain constant ($\dot{\epsilon}=0$), the fluid equation requires that 
+$P_\Lambda=-\epsilon_\Lambda$. Note also that the static Einstein Universe ($\dot{a}=0$) is closed with a radius of curvature 
+\[ R_0={c\over 2(\pi G\rho)^{1/2}}={c\over\Lambda^{1/2}}. \]
+\par
+In the mid 1980's Alan Guth came up with the idea that the universe had suffered an {\bf inflationary expansion} early in its history in 
+order to explain the problems outlined above. Assume that one has a cosmological constant $\Lambda_i$ sufficient to dominate universal 
+dynamics. We can then write the Friedmann equation
+\[ \left({\dot{a}\over a}\right)^2={\Lambda_i\over 3}. \]
+The Hubble parameter is $H_i=({\Lambda_i/3})$ which has solution
+\[ a(t)=e^{H_it} \]
+Let us now further suppose an inflationary era from time $t_i$ until time $t_f$, before and after which the universe is radiation dominated. 
+The expansion factor is then
+\[ a(t) =\left\{ \begin{array}{ll}
+             a_i(t/t_i)^{1/2} & \mbox{for $t<t_i$}; \\
+             a_ie^{H_i(t-t_i)} & \mbox{for $t_i<t<t_f$}; \\
+             a_ie^{H(t_f-t_i)}(t/t_f)^{1/2} & \mbox{for $t>t_f$}.\end{array}\right. \]
+The universe has expanded a factor
+\[ {a(t_f)\over a(t_i)}=e^{N} \quad {\rm where} \quad N=H_i(t_f-t_i) \]
+during inflation. We will in the following assume that $N\simeq 100$.
+\par
+What happens to the flatness of the universe during inflation? The Friedmann equation says
+\[ |1-\Omega|={c^2\over a^2H^2R_0^2}\propto e^{-2H_it} \]
+thus, any initial curvature (for example $|1-\Omega|\simeq 1$) is reduced by an enormous factor, of order $10^{-87}$ using the numbers above,
+during inflation.
+\par 
+How about the horizon problem? The size of the horizon is in general given by 
+\[ d_{hor}(t)=a(t)c\int_0^t{dt\over a(t)} \] 
+which for $t_i$ is $d_{hor}(t_i)=2ct_i$ since the universe is radiation dominated
+up till this time. The horizon at $t_f$ is easily calculated using the above:
+\[ d_{hor}(t_f)=a_ie^Nc\left(\int_0^{t_i}{dt\over a_i(t/t_i)^{1/2}}+\int_{t_i}^{t_f}{dt\over a_i\exp\bra H_i(t-t_i)\ket}\right) \simeq ce^N(2t_i+H_i^{-1}) \]
+Assuming that $t_i=10^{-36}$~s, that $H_i=10^{36}$~s, and $N=100$ we find that the horizon goes from $d_{hor}(t_i)=6\times 10^{-28}$~m to
+$d_{hor}(t_f)\simeq e^N3ct_i\simeq 2\times 10^{16}~{\rm m}\simeq 0.8~{\rm pc}$, and that within $10^{-34}$~s!! Everything we see inside
+our horizon is causally connected if inflation has happened.
+\par
+The exponential growth of space also spreads any eventual monopoles so greatly that there are less than one monopole within our horizon today.
+\par
+Does this early inflation have anything at all to do with the inflation we see today? Probably not: The energy density of today's
+cosmological constant is 
+\[ \epsilon_{\Lambda,0}\approx 0.7\epsilon_{c,0}\approx 0.04~{\rm TeV/m^3} \]
+while in the universe's infancy we find (again using the numbers above\ldots)
+\[ \epsilon_{\Lambda_i}={c\over 8\pi G}H_i^2\simeq 10^{105}~{\rm TeV/m^3} \]
+\subsection*{Exercises: Inflation}
+\vspace {\baselineskip}
+\begin{enumerate}
+\item What is the upper limit placed on $\Omega(t_P)$ by the requirement that the universe not
+end in a Big Crunch between the Planck time, $t_P\approx 5\times 10^{-44}$~s, and the start of 
+the inflationary epoch at $t_i$? Compute the maximum permissible value of $\Omega(t_P)$, first
+assuming $t_i\approx 10^{-36}$~s, then assuming $t_i\approx 10^{-26}$~s. (Hint: prior to 
+inflation, the Friedmann equation will be dominated by the radiation term and the curvature 
+term.)
+\item Current observational limits on the density of magnetic monopoles tell us that their
+density parameter is currently $\Omega_{M,0}<10^{-6}$. If mononpoles formed at the GUT time,
+with one momonpole per horizon of mass $m_M=m_{\rm GUT}$, how many e-foldings of inflation
+would be required to drive the current of monopoles below the limit $\Omega_{M,0}<10^{-6}$?
+Assume that inflation took place immediately after the formation of monopoles.
+\item It has been speculated that the present-day acceleration of the universe is due to the
+existence of a false vacuum, which will eventually decay. Suppose that the energy density
+of the false vacuum is $\epsilon_{\Lambda}=0.7\epsilon_{c,0}=3600$~MeV~m$^{-3}$, and that the
+current energy density of matter is $\epsilon_{m,0}=0.3\epsilon_{c,0}=1600$~MeV~m$^{-3}$. What
+will be the value of the Hubble parameter once the false vacuum becomes strongly dominant?
+Suppose that the false vacuum is fated to decay instantaneously to radiation at a time 
+$t_f=50t_0$. (Assume, for simplicity, that the radiation takes the form of blackbody photons.)
+To what temperature will the universe be reheated at $t=t_f$? What will the energy density
+of matter be at $t=t_f$? At what time will the universe again be dominated by matter?
+\end{enumerate}
+\end{document}

@@ -1,0 +1,104 @@
+Let us now estimate a Fourier transform form a finit number of sampled points.
+Suppose that we have $N$ conscutive sampled values
+\[
+h_k\equiv h(t_k) \qquad t_k\equiv k\Delta \qquad k=0,1,2,\ldots,N-1 
+\]
+so that the sampling interval is $\Delta$. Also assume $N$ is even. With $N$ 
+numbers of input, we cannot produce more than $N$ independent numbers of 
+output. So, instead of trying to estimate the Fourier transform $H(\nu)$ at 
+all values of $\nu$ in the range $-\nu_c$ to $\nu_c$, let us seek estimates 
+at only the discrete values
+\[
+\nu_n\equiv{n\over N\Delta},\qquad n={-N\over 2},\ldots,{N\over 2} 
+\]
+The extreme values of $n$ correspond to the lower and upper values fo the 
+Nyquist critical frequency range. 
+
+The remaining step is to approximate the continuous tranform by a discrete 
+sum
+\[
+H(\nu_n)=\infint h(t)e^{2\pi i \nu_nt}dt\approx \sum_{k=0}^{N-1}h_ke^{2\pi i\nu_nt_k}\Delta=\Delta\sum_{k=0}^{N-1}h_k e^{2\pi ikn/N}
+\]
+The final summation is called the {\it discrete Fourier transform} of the $N$ 
+points $h_k$. Let us denote it by $H_n$:
+\be
+H_n\equiv\sum_{k=0}^{N-1}h_k e^{2\pi ikn/N}
+\label{eq:discret-fourier}
+\ee
+Up to now we have taken the view that index $n$ varies from $-N/2$ to $N/2$. 
+However, since it is clear that equation~\ref{eq:discrete-fourier} is 
+periodic in $n$ we also have that $H_{-n}=H_{N-1}$. With this in mind it is 
+customary to let $n$ vary from $0$ to $N-1$ (one period). When this convention
+is followed the {\it zero} frequency corresponds to $n=0$, positive 
+frequencies $0<\nu<\nu_c$ correspond to valuses $1\le n\le {N/2}-1$, while
+negative frequencies $-\nu_c<\nu<0$ correspond to ${N/2}_1\le n \le N-1$. The
+value $n={N/2}$ corresponds to both $\nu=\nu_c$ and $\nu=-\nu_c$.
+
+The discrete {\it inverse} transform which recovers $h_k$ form the $H_n$ is
+\[
+h_k={1\over N}\sum_{n=0}^{N-1}H_n e^{-2\pi ikn/N}
+\]
+
+How do we implement the discrete transform in code? The brute strenght 
+approach takes of order $N^2$ operations: Define $W$ as the complex nubmer
+\[
+W\equiv e^{2\pi i/N}
+\]
+Then equation~\ref{eq:discrete-fourier} can be written 
+\[
+H_n=\sum_{k=0}^{N-1}W^{nk}h_k,
+\]
+{\it i.e.} the vector $h_k$ is multiplied by a matrix whose $(h,k)^{th}$
+element is the constant $W$ to the power $n\times k$. The matrix multiplication
+produces a vector result whose components are $H_n$. This multiplication
+evidently needs $N^2$ complex multiplications. 
+
+In fact, the discrete Fourier transform can be achieved in $N\log_2 N$ 
+operations with an algorithm called the {it Fast Fourier Transform} or 
+{\it FFT}. Here is one derivation of the FFT, that of Danielson and Lanczos
+in 1942. They showed that a discrete transform of length $N$ can be rewritten
+as the sum of two discrete transforms, each of length $N/2$. One of the 
+two is formed from the even numbered points of the original $N$, the other 
+from the odd-numbered points.
+\bau
+F_k & = & \sum_{j=0}^{N-1}e^{2\pi ijk/N}f_j \\
+    & = & \sum_{j=0}^{{N/2}-1}e^{2\pi i2jk/N}f_{2j}
+         +\sum_{j=0}^{{N/2}-1}e^{2\pi i(2j+1)k/N}f_{2j+1} \\
+    & = & \sum_{j=0}^{{N/2}-1}e^{2\pi ijk/({N/2})}f_{2j}
+         +W^k\sum_{j=0}^{{N/2}-1}e^{2\pi ijk/({N/2})}f_{2j+1} \\
+    & = & F_k^e+W^kF_k^o
+\eau
+$F_k^e$ denotes the $k^{th}$ component of the Fourier transform of length 
+$({N/2})$ formed from the even components of the original $f_j$, while $F_k^o$
+is the corresponding transform of lenght $({N/2})$ from the odd components.
+
+This procedure can be applied recursively; having reduced the problem of
+computing $F_k$ to that of computing $F_k^e$ and $F_k^o$, one can do the 
+same reduction of $F_k^e$ to the problem of computing the transform of 
+{\it its} $N/4$ even-numbered inputs data, $F_k^{ee}$, and $N/4$ odd-numbered 
+data $F_k^{eo}$. When we start with an original $N$ which is a integer 
+power of 2 (one should only use FFTs with $N$ a power of 2, padding the input
+data with zeroes is necessary) we can continue applying the Danielson-Lanczos 
+method until the original data is subdivided all the way down to transforms
+of length one. The Fourier transfrom of lenght one is just the identity 
+operation that copies its one input number into its output slot. Thus, 
+for every pattern of $e$'s and $o$'s numbering $\log_2 N$ in all there is a 
+one-point transform that is given by 
+\[
+F_k^{eoeeoeo\cdots oee}=f_n\qquad {\rm for~some~}n
+\]
+Which value of $n$ corresponds to which pattern? Reverse the pattern of 
+$e$'s and $o$'s, let $e=0$ and $o=1$ and one will have, {\it in binary}, the
+value of $n$. This is because the successive subdivisions of the data into 
+odd and even are tests of successive least significant bits of $n$. Thus
+by rearranging the input vector $f_j$ in bit reversed order so that the 
+indivdual numbers are in the order obtained by bit reversing $j$. The points
+are given as one-point transforms. These are recombined with the adjacent 
+number to give two-point transforms, then combine adjacent pairs again to 
+give 4-point transforms, and so on, using the Danielson-Lanczos formula
+at every step.
+
+The FFT therefore has a structure where first the data are sorted into
+bit reversed order and thereafter the transforms of length $2,4,8,/ldots,N$
+are computed implementing the Danielson-Lanczos formula.
+

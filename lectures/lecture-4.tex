@@ -1,0 +1,258 @@
+\documentclass{article}
+\usepackage{wasysym}
+\usepackage{graphics}
+\usepackage{psfig}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bua}{\begin{eqnarray*}}
+\newcommand{\eua}{\end{eqnarray*}}
+\newcommand{\infint}{\int_{-\infty}^{\infty}}
+\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+\newcommand{\ddt}[1]{\dd{#1}{t}}
+\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+\newcommand{\aver}[1]{\langle{#1}\rangle}
+\def\labs{\mid\!}
+\def\rabs{\!\mid}
+\begin{document}
+\section*{Lecture notes 4: Fourier Analysis}
+
+\subsection*{Definitions}
+
+There are many common (and confusing, but ultimately trivial!)
+differences in defining the {\it Fourier transform}. One common 
+definition is 
+\[
+F(\nu)=\infint f(t)e^{-i2\pi\nu t}dt
+\]
+Thus $F(\nu)$ gives the wavenumber representation of the function
+$f(t)$. The inverse transform can be written 
+\[
+f(t)=\infint F(\nu)e^{i2\pi\nu t}d\nu
+\]
+$F(\nu)$ is in general a complex function whose interpretation may be
+aided by expression in the polar coordinate form
+$F(\nu)=A(\nu)e^{i\phi(\nu)}$, where $A(\nu)$ and $\phi(\nu)$ are real
+functions where $A(\nu)=\labs{F(\nu)}\rabs$ is the amplitude and $\phi(\nu)={\rm
+  arg}[F(\nu)]$  is the phase. Note that we then can write the inverse 
+transform as 
+\[
+f(t)=\infint A(\nu)e^{i[2\pi\nu t+\phi(\nu)]}d\nu,
+\]
+which is seen to be a recombination of all the frequency components of
+$f(t)$. Each component is a complex sinusoid of the form $e^{2\pi i\nu t}$
+whose amplitude is $A(\nu)$ and whose initial phase (at $t=0$) is
+$\phi(\nu)$. This interpretation of the Fourier transform clearly
+shows its relation to the {\it Fourier series}\footnote{Note that by 
+using Euler's formula $e^{inx}=\cos(nx)+i\sin(nx)$ a more concise (and
+modern) form can be used: $f(x)=\sum_{n=-\infty}^\infty c_n e^{inx}$
+with $c_n={1\over 2\pi}\int_{-\pi}^{\pi} f(x)e^{-inx}dx$.} 
+\[
+f(x)={a_0\over 2}+\sum_{n=1}^\infty[a_n\cos(nx)+b_n\sin(nx)]
+\]
+with coefficients given by 
+\bua
+a_n & = & {1\over\pi}\int_{-\pi}^\pi f(x)\cos(nx)dx \\
+b_n & = & {1\over\pi}\int_{-\pi}^\pi f(x)\sin(nx)dx.
+\eua
+
+It is common to perform the substitution $\nu={\omega/2\pi}$ which
+gives
+\bua
+F(\omega)&=&\infint f(t)e^{i\omega t}dt \\
+f(t)&=&{1\over 2\pi}\infint F(\omega)e^{-i\omega t}d\omega
+\eua
+
+\subsection*{Properties}
+
+Fourier transforms exhibit a number of properties that are very
+useful:
+\begin{itemize}
+\item Linearity \[ af(t)+bg(t)\Longleftrightarrow
+  aF(\omega)+bG(\omega) \]
+\item Multiplication \[ f(t)g(t)\Longleftrightarrow{1\over
+    2\pi}(F\otimes G)(\omega) \]
+where we define the {\it convolution} $\otimes$ as \[
+K(\omega)\equiv\infint F(\omega')G(\omega-\omega')d\omega' \]
+\item Convolution \[ (f\otimes g)(t)\Longleftrightarrow
+  F(\omega)G(\omega) \]
+\item Conjugation \[ \overline{f(t)}\Longleftrightarrow\overline{F(-\omega)} \]
+\item Scaling \[ f(at) \Longleftrightarrow {1\over
+    \labs a\rabs}F\left({\omega\over a}\right) \]
+ \item Time reversal \[ f(-t) \Longleftrightarrow F(-\omega) \]
+\item Time shift \[ f(t-t_0) \Longleftrightarrow e^{-i\omega
+    t_0}F(\omega) \]
+\item Parsevals theorem \[ \infint f(t)\overline{g(t)}dt = {1\over
+    2\pi}\infint F(\omega)\overline{G(\omega)}d\omega \]
+\end{itemize}
+
+The {\it correlation} of two functions, denoted by ${\rm Corr}(g,h)$, is defined
+\[
+{\rm Corr}(g,h)\equiv\int_{-\infty}^\infty g(t'+t)h(t')dt'
+\]
+The correlation is a function of $t$, called the {\it lag}. The ``Correlation theorem'' states that 
+\[ {\rm Corr}(g,h) \Longleftrightarrow  G(f)\overline{H(f)} \]
+if $g$ and $h$ are real functions, as we expect for our applications [otherwise the expression on 
+the right hand side of the correlation theorem is $G(f)H(-f)$.] The correlation of a function with itself is called the {\it autocorrelation}. In this case we have 
+\[ {\rm Corr}(g,g) \Longleftrightarrow  \labs G(f)\rabs^2 \]
+which is also known as the ``Wiener-Khinchin theorem''. The {\it total power} in a signal
+can be computed from the autocorrelation of that signal and following Parseval's theorem
+we can write
+\[ {\rm Total~Power}\equiv\int_{-\infty}^{\infty}\labs g(t)\rabs^2dt
+  =\int_{-\infty}^{\infty}\labs G(f)\rabs^2df.
+\]
+Often one desires to know how much power is contained in the frequency interval between $f$ and $f+df$. In this case it is often not
+interesting to distinguish  between positive and negative $f$, but rather regard $f$ as varying from $0$ (zero frequency or DC) to $+\infty$. In this case we define the {\it one-sided power spectral density} of the function $g$:
+\[ P_g(f) \equiv \labs G(f)\rabs^2+\labs G(-f)\rabs^2\qquad 0\le f<\infty,\]
+when $g$ is real the two terms in the equation above are equal, so 
+\[ P_g(f)=2\rabs G(f)\labs^2.\]
+\subsection*{Sampling Theorem and Aliasing}
+
+We will in general be dealing with functions $h(t)$ which are sampled
+at evenly spaced intervals in time (or space). Let $\Delta$ denote the 
+time (space) interval between consecutive samples.
+
+For any sampling interval $\Delta$, there is a special frequency
+$\nu_c$ called the {\it Nyquist frequency} given by 
+\[
+\nu_c\equiv{1\over 2\Delta}
+\]
+The critical sampling of a sine wave is two sample points per
+cycle. There are two aspects of the critical frequency. First, if the
+original signal is bandwidth limited to frequencies smaller than
+$\nu_c$ then the function is completely determined by its discrete
+samples. This is the {\it sampling theorem}. However, if a signal is
+{\it not} bandwidth limited to less than the Nyquist frequency then
+the power that lies outside the range $-\nu_c<\nu<\nu_c$ is spuriously
+moved into that range. This phenomena is called {\it aliasing}. 
+
+\subsection*{FFTs}
+
+Let us now estimate a Fourier transform from a finite number of sampled points.
+Suppose that we have $N$ consecutive sampled values
+\[
+h_k\equiv h(t_k) \qquad t_k\equiv k\Delta \qquad k=0,1,2,\ldots,N-1 
+\]
+so that the sampling interval is $\Delta$. Also assume $N$ is even. With $N$ 
+numbers of input, we cannot produce more than $N$ independent numbers of 
+output. So, instead of trying to estimate the Fourier transform $H(\nu)$ at 
+all values of $\nu$ in the range $-\nu_c$ to $\nu_c$, let us seek estimates 
+at only the discrete values
+\[
+\nu_n\equiv{n\over N\Delta},\qquad n={-N\over 2},\ldots,{N\over 2} 
+\]
+The extreme values of $n$ correspond to the lower and upper values of the 
+Nyquist critical frequency range. 
+
+The remaining step is to approximate the continuous transform by a discrete 
+sum
+\[
+H(\nu_n)=\infint h(t)e^{2\pi i \nu_nt}dt\approx \sum_{k=0}^{N-1}h_ke^{2\pi i\nu_nt_k}\Delta=\Delta\sum_{k=0}^{N-1}h_k e^{2\pi ikn/N}
+\]
+The final summation is called the {\it discrete Fourier transform} of the $N$ 
+points $h_k$. Let us denote it by $H_n$:
+\be
+H_n\equiv\sum_{k=0}^{N-1}h_k e^{2\pi ikn/N}
+\label{eq:discrete-fourier}
+\ee
+Up to now we have taken the view that index $n$ varies from $-N/2$ to $N/2$. 
+However, since it is clear that equation~\ref{eq:discrete-fourier} is 
+periodic in $n$ we also have that $H_{-n}=H_{N-1}$. With this in mind it is 
+customary to let $n$ vary from $0$ to $N-1$ (one period). When this convention
+is followed the {\it zero} frequency corresponds to $n=0$, positive 
+frequencies $0<\nu<\nu_c$ correspond to values $1\le n\le {N/2}-1$, while
+negative frequencies $-\nu_c<\nu<0$ correspond to ${N/2}_1\le n \le N-1$. The
+value $n={N/2}$ corresponds to both $\nu=\nu_c$ and $\nu=-\nu_c$.
+
+The discrete {\it inverse} transform which recovers $h_k$ form the $H_n$ is
+\[
+h_k={1\over N}\sum_{n=0}^{N-1}H_n e^{-2\pi ikn/N}
+\]
+
+How do we implement the discrete transform in code? The brute strength 
+approach takes of order $N^2$ operations: Define $W$ as the complex number
+\[
+W\equiv e^{2\pi i/N}
+\]
+Then equation~\ref{eq:discrete-fourier} can be written 
+\[
+H_n=\sum_{k=0}^{N-1}W^{nk}h_k,
+\]
+{\it i.e.} the vector $h_k$ is multiplied by a matrix whose $(n,k)^{th}$
+element is the constant $W$ to the power $n\times k$. The matrix multiplication
+produces a vector result whose components are $H_n$. This multiplication
+evidently needs $N^2$ complex multiplications. 
+
+In fact, the discrete Fourier transform can be achieved in $N\log_2 N$ 
+operations with an algorithm called the {it Fast Fourier Transform} or 
+{\it FFT}. Here is one derivation of the FFT, that of Danielson and Lanczos
+in 1942. They showed that a discrete transform of length $N$ can be rewritten
+as the sum of two discrete transforms, each of length $N/2$. One of the 
+two is formed from the even numbered points of the original $N$, the other 
+from the odd-numbered points.
+\bua
+F_k & = & \sum_{j=0}^{N-1}e^{2\pi ijk/N}f_j \\
+    & = & \sum_{j=0}^{{N/2}-1}e^{2\pi i2jk/N}f_{2j}
+         +\sum_{j=0}^{{N/2}-1}e^{2\pi i(2j+1)k/N}f_{2j+1} \\
+    & = & \sum_{j=0}^{{N/2}-1}e^{2\pi ijk/({N/2})}f_{2j}
+         +W^k\sum_{j=0}^{{N/2}-1}e^{2\pi ijk/({N/2})}f_{2j+1} \\
+    & = & F_k^e+W^kF_k^o
+\eua
+$F_k^e$ denotes the $k^{th}$ component of the Fourier transform of length 
+$({N/2})$ formed from the even components of the original $f_j$, while $F_k^o$
+is the corresponding transform of length $({N/2})$ from the odd components.
+
+This procedure can be applied recursively; having reduced the problem of
+computing $F_k$ to that of computing $F_k^e$ and $F_k^o$, one can do the 
+same reduction of $F_k^e$ to the problem of computing the transform of 
+{\it its} $N/4$ even-numbered inputs data, $F_k^{ee}$, and $N/4$ odd-numbered 
+data $F_k^{eo}$. When we start with an original $N$ which is a integer 
+power of 2 (one should only use FFTs with $N$ a power of 2, padding the input
+data with zeroes is necessary) we can continue applying the Danielson-Lanczos 
+method until the original data is subdivided all the way down to transforms
+of length one. The Fourier transform of length one is just the identity 
+operation that copies its one input number into its output slot. Thus, 
+for every pattern of $e$'s and $o$'s numbering $\log_2 N$ in all there is a 
+one-point transform that is given by 
+\[
+F_k^{eoeeoeo\cdots oee}=f_n\qquad {\rm for~some~}n
+\]
+Which value of $n$ corresponds to which pattern? Reverse the pattern of 
+$e$'s and $o$'s, let $e=0$ and $o=1$ and one will have, {\it in binary}, the
+value of $n$. This is because the successive subdivisions of the data into 
+odd and even are tests of successive least significant bits of $n$. Thus
+by rearranging the input vector $f_j$ in bit reversed order so that the 
+individual numbers are in the order obtained by bit reversing $j$. The points
+are given as one-point transforms. These are recombined with the adjacent 
+number to give two-point transforms, then combine adjacent pairs again to 
+give 4-point transforms, and so on, using the Danielson-Lanczos formula
+at every step.
+
+The FFT therefore has a structure where first the data are sorted into
+bit reversed order and thereafter the transforms of length $2,4,8,\ldots,N$
+are computed implementing the Danielson-Lanczos formula.
+
+\subsection*{Exercises}
+
+Experiment with the {\tt fft} function in {\tt idl}. First make an $x$-axis, 
+{\it eg} {\tt idl> x=findgen(2000)/100.*2.*!pi}
+\begin{enumerate}
+\item Compute the amplitude of the transform of $f=\sin x$. In plotting this 
+amplitude, what should be used for the $x$-axis?
+\item What happens if you set the edges of $f$ to zero: {\it eg} multiply $f$
+by a step-function $s$ such as {\tt idl> s=fltarr(2000) \& s[200:1800]=1.0}? 
+Overplot the amplitude of the transform as you narrow the region of $s$ that is
+equal to one.
+\item Compute the transform of step-functions of various widths.
+\item Add sinusoidal functions to $f$ with different frequencies and check the
+resulting transforms. What happens to the transform if you add a constant to 
+$f$? 
+\item Consider a function $g$ given by the sum of three sinusoidals of differing
+frequency. Construct such a $g$ and remove one of the frequencies from $g$ using 
+forward and back transforms FFT's in {\tt idl}.
+\end{enumerate}
+
+\end{document}

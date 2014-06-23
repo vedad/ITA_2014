@@ -1,0 +1,275 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{graphics}
+\usepackage{bm}
+\usepackage{psfig}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bua}{\begin{eqnarray*}}
+\newcommand{\eua}{\end{eqnarray*}}
+\newcommand{\infint}{\int_{-\infty}^{\infty}}
+\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+\newcommand{\ddt}[1]{\dd{#1}{t}}
+\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+\newcommand{\aver}[1]{\langle{#1}\rangle}
+\def\cl#1{{\cal #1}}               % for caligrafic letters
+\def\labs{\mid\!}
+\def\rabs{\!\mid}
+\begin{document}
+\setcounter{section}{10}
+\newcounter{count}
+\setcounter{count}{\value{enumi}}
+\section{Polarimetry}
+
+The discovery of polarized light from astronomical sources goes back to the early 1800's 
+when Arago detected its presence in moonlight. However, polarization is quite technically difficult to detect and the lack of any expectation of finding polarized light from stars meant that the field developed quite slowly. On the other hand, many phenomena contribute to the polarization of radiation and its observation can accordingly give information on a wide range of basic causes.
+
+\subsection{Stokes parameters}
+
+Polarization of radiation is simply the non-random angular distribution of the electric
+vectors of of the photons in a beam of photons. Two cases are distinguished; linear and 
+circular polarization. In the former the electric vectors are all parallel and their direction
+is constant, in the latter the angle of the electric vector rotates with time at the frequency of the radiation. These are not really physically distinct phenomena however,
+and all types of radiation may be considered different aspects of partially elliptically 
+polarized radiation. This also has two components, one of which is unpolarized, the other being elliptically polarized. Elliptically polarized light is similar to circularly 
+polarized light in that the electric vector traces out an ellipse. 
+
+The properties of partially elliptically polarized light are completely described by the 
+four {\it Stokes parameters}. These fix the intensity of unpolarized light, the degree of ellipticity, the direction of the major axis of the ellipse, and the sense (left- or right-handed) of the elliptically polarized light. We can decompose the electric vector
+of elliptically polarized light travelling along the $z$-axis onto the $x$ and $y$ axes
+\bua
+E_x(t)&=&e_1\cos(2\pi\nu t) \\
+E_y(t)&=&e_2\cos(2\pi\nu t+\delta)
+\eua
+\noindent
+where $\nu$ is the frequency of the radiation, $\delta$ is the phase difference between
+the $x$ and $y$ components and $e_1$ and $e_2$ are the amplitudes fo the $x$ and $y$ components. It is tedious but straightforward to show that 
+\[
+a=\left({(e_1^2+e_2^2)\over 1+\tan^2[{1\over 2}\sin^{-1}\left\{[{2e_1e_2/(e_1^2+e_2^2)}]\sin\delta\right\}]}\right)^{1/2}
+\]
+\[
+b=a\tan\left[{1\over 2}\sin^{-1}\left\{\left[{2e_1e_2\over e_1^2+e_2^2}\right]\sin\delta\right\}\right]
+\]
+\[
+a^2+b^2=e_1^2+e_2^2
+\]
+\[
+\psi={1\over 2}\tan^{-1}\left\{\left[2e_1e_2\over e_1^2-e_2^2\right]\cos\delta\right\}
+\]
+\noindent
+where $a$ and $b$ are the semi-major and semi-minor axes of the polarization ellipse and $\psi$ is the angle between the $x$ axis and the major axis of the polarization ellipse. The Stokes parameters are then defined by 
+\bua
+Q&=&e_1^2-e_2^2={a^2-b^2\over a^2+b^2}\cos(2\psi)I_p \\
+U&=&2e_1e_2\cos\delta={a^2-b^2\over a^2+b^2}\sin(2\psi)I_p \\
+V&=&2_1e_2\sin\delta={2ab\over a^2+b^2}I_p
+\eua
+\noindent
+where $I_p$ is the intensity of the polarized component of the light. From the equations 
+above we have
+\[
+I_p=(Q^2+U^2+V^2)^{1/2}
+\]
+\noindent
+The fourth Stokes parameter, $I$, is the total intensity fo the partially polarized light
+\[
+I=I_u+I_p.
+\]
+The degree of polarization, $\pi$, of the radiation is given by
+\[
+\pi={(Q^2+U^2+V^2)^{1/2}\over I}={I_p\over I}
+\]
+\noindent
+while the degree of linear polarization, $\pi_{\rm L}$, and the degree of ellipticity, $\pi_{\rm e}$, are
+\[
+\pi_{\rm L}={(Q^2+U^2)^{1/2}\over I}
+\]
+\[
+\pi_{\rm e}={V\over I}.
+\]
+\noindent
+When $V=0$ we have linearly polarized radiation. The degree of polarization is then equal
+to the degree of linear polarization, and is the quantity that is commonly determined experimentally
+\[
+\pi=\pi_{\rm L}={I_{\rm max}-I_{\rm min}\over I_{\rm max}+I_{\rm min}}
+\] 
+\noindent 
+where $I_{\rm max}$ and $I_{\rm min}$ are the maximum and minimum intensities that are
+observed through a polarizer as it is rotated. The value of $\pi_{\rm e}$ is positive for 
+right-handed and negative for left-handed radiation.
+
+\subsection{Optical components for polarimetry}
+
+Polarimeters can contain a number of components that are optically active in the sense
+that they alter the state of polarization of the radiation. They may be grouped under
+three headings: polarizers, converters, and depolarizers. The first produces linearly 
+polarized light, the second converts elliptically polarized light into linearly polarized light, or vice versa, while the last eliminates polarization. 
+
+\subsubsection{Birefringence}
+
+In a {\it birefringent material} the velocity of propagation of light will depend on the polarization of the light and it will also depend on the orientation of the light ray 
+with respect to the structure of the material. In some materials it is possible to find 
+a linearly polarized direction in which the light propagates at uniform velocity. This ray
+is termed the ordinary ray. The ray that is polarized orthogonally to the ordinary ray is
+termed the extraordinary ray and it propagates with differing speed depending on direction. The direction in the material in which the ordinary and extraordinary rays propagate with the same speed is called the optical axis of the material. When the 
+velocity of the extraordinary ray is greater than the ordinary ray, then the birefringence is negative. The degree of birefringence may be obtained form the principal extraordinary 
+refractive index $\mu_{\rm E}$. This is the refractive index corresponding to the maximum
+velocity of the extraordinary ray for negative materials and the minimum velocity for
+positive materials. It will be obtained for rays travelling perpendicularly to the optic axis of the material. The degree of birefringence is often denoted by $J$, and is simply the
+difference between the principal extraordinary refractive index for the ordinary ray, $\mu_{\rm O}$
+\[
+J=\mu_{\rm E}-\mu_{\rm O}.
+\]
+\noindent
+Most crystals exhibit natural birefringence, and this can be introduced into many more
+and into amorphous substances such as glass by the presence of strain in the material. One of the most common birefringent materials is calcite where $\mu_{\rm O}=1.658$ and $\mu_{\rm E}=1.486$.
+
+Some crystals such as quartz that are birefringent ($J=0.009$) are in addition {\it optically active} in the sense that the plane of polarization of a beam of radiation is
+rotated as it passes through the material. Looking down a beam of light, against the motion of the photons, a substance is called {\it dextro-rotaratory} or right handed 
+if the rotation of the plane of vibration is clockwise. The other case is called {\it
+laevo-rotary} or left handed. 
+
+\subsubsection{Polarizers (or analysers)}
+
+These are devices that only allow the passage of light that is linearly polarized in some
+specified direction. There are several varieties that are based on birefringence, of which
+the {\it Nicol prism} is the best known.
+
+Polarizing sunglasses are based upon another type of polarizer. They employ {\it dichroic crystals} that have nearly 100\% absorption for one plane of polarization and less than 100\% for the other. Generally the dichroism varies with wavelength so that these polarizers are not achromatic. Usually, however, they are sufficiently uniform in their spectral behavior to be usable over quite wide wavebands. The use of microscopic crystals and the existence of a large commercial market means that dichroic are far cheaper than birefringent polarizers, and so they may be used even when their performance is poorer than that of the birefringent polarizers.
+
+Polarization by reflection can be used to produce a polarizer. A glass plane inclined at the {\it Brewster angle} (also known as the polarization angle, is an angle of incidence at which light with a particular polarization is perfectly transmitted through a surface, with no reflection) will reflect a totally polarized beam. However, only a small percentage (about 7.5\% for crown glass) of the incident energy is reflected. Thus, reflection from a secondary surface will reinforce the first reflection and several plates may be stacked together to provide further reflections). The transmitted beam is only partially polarized, but as the number of plates is increased the total intensity of the reflected beams will approach half of the incident intensity. Hence the transmitted beam will approach complete polarization. 
+
+\subsubsection{Converters (retarders or phase plates)}
+
+These are devices that alter the type of polarization and/or its orientation. They are also
+known as retarders or phase plates. Elliptically polarized light may be resolved into two
+orthogonal linear components with a phase difference. Altering the phase difference
+will alter the degree of ellipticity. The velocities of mutually orthogonal linearly polarized light will in general differ when the beams pass through a birefringent material. When the optic axis is perpendicular to the incident radiation, the ordinary and
+extraordinary rays will travel in the same direction. They will recombine upon emergence,
+but with an altered phase delay due to their differing velocities. The phase delay, $\delta'$, is given to first approximation by 
+\[
+\delta'={2\pi d\over\lambda}J
+\]
+\noindent
+where $d$ is the thickness of the material and $J$ is the birefringence of the material. If we now define the $x$ axis to be the polarization direction of the extraordinary ray, and note that $\delta$ is the intrinsic phase difference between the components of the incident radiation. Then, the ellipse for the emergent radiation has a minor axis given by
+\[
+b'=a'\tan\left[{1\over2}\sin^{-1}\left\{\left[{2e_1e_2\over e_1^2+e_2^2}\right]\sin(\delta+\delta')\right\}\right]
+\]
+\noindent
+where the primed quantities are for the emergent beam. So
+\bua
+b'&=&0 \qquad {\rm for}\quad\delta+\delta'=0 \\
+b'&=&a \qquad{\rm for}\quad\delta+\delta'=\sin^{-1}\left[{e_1^2+e_2^2\over 2e_1e_2}\right]
+\eua
+\noindent
+and also
+\[
+\psi'={1\over 2}\tan^{-1}\left\{\left[{2e_1e_2\over e_1^2-e_2^2}\right]\cos(\delta+\delta')\right\}.
+\]
+\noindent
+Thus
+\[
+\psi'=-\psi\qquad {\rm for}\quad \delta'=\pi
+\]
+\noindent
+and
+\[
+a'=a,\qquad b'=b.
+\]
+Thus we see that elliptically polarized radiation may have its degree of ellipticity altered and its inclination changed by passage through a converter. In particular it may be converted into linearly polarized or circularly polarized radiation, or its orientation may be reflected about the fast axis of the converter. 
+
+In real devices the value of $\delta'$ is chose to be $\pi/2$ or $\pi$ and the resulting converters are called {\it quarter-wave plates} or {\it half-wave plates} respectively,  since one beam is delayed with respect to the other by a quarter or a half of a wavelength.
+The quarter wave plate is used to convert elliptically or circularly polarized light into linearly polarized light or vice versa, while the half wave plate is used to rotate the plane of linearly polarized light.
+
+\subsubsection{Depolarizers}
+
+The ideal depolarizer accepts any form of polarized radiation and produces unpolarized
+radiation. No such device exists, but pseudo-depolarizers can be made. These convert the polarized radiation into radiation that is unpolarized when averaged over wavelength, time, or area. 
+
+A monochromatic depolarizer can be formed from a rotating quarter-wave plate that is in
+line with a half-wave plate rotating at twice its rate. The emerging beam at any given instant will have some form of elliptical polarization, but this will change rapidly with time, and the output will average to zero polarization over several rotations of the plates. 
+
+The Lyot depolarizer averages over wavelength. It consists of two retarders with phase differences very much greater than $2\pi$. The second plate has twice the thickness of the first and optic axis that is rotated by $\pi/4$ with respect to that of the first. The emergent beam will be polarized at any given wavelength, but the polarization will vary very rapidly with wavelength. In the optical, averaging over a waveband a few tens of nanometers wide is then sufficient to reduce the net polarization to one per cent of its initial value. 
+
+If a retarder is left with a rough surface and immersed in a liquid whose refractive index is the average refractive index of the retarder, then a beam of light will be undisturbed by the roughness of the surface because the hollows of will be filled by the liquid. The retarder will vary on the scale of its roughness in its effect. Thus the polarization of the emerging beam will vary on the same scale, and a suitable choice for the parameters of the system can lead to an average polarization of zero over the whole beam.
+
+\subsection{Polarimeters}
+
+A polarimeter is an instrument that measures the state of polarization or some aspect thereof, of a beam of radiation. Ideally all four Stokes parameters should be measured. Most of the time only the degree of linear polarization and its direction are found.
+
+\subsection{Spectropolarimetry}
+
+Spectropolarimetry that provides information on the variation of polarization with wavelength can be realized by several methods. 
+
+\subsection{Data reduction and analysis}
+
+The output of a polarimeter is usually in the form of a series of
+intensity measurements for varying angles of the polarizer. These must
+be corrected for instrumental polarization. The atmospheric
+contribution to the polarization must be removed by comparison of the
+observations of the object  and its background. 
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Obtain the equation 
+\[ \psi={1\over 2}\tan^{-1}\left\{\left[{2e_1e_2\over e_1^2-e_2^2}\right]\cos\delta\right\} \]
+from the equations
+\[ E_x(t)=e_1\cos(2\pi\nu t) \]
+and
+\[ E_y(t)=e_2\cos(2\pi\nu t+\delta) \]
+(This is exercise {\bf 5.2.1} from Kitchin's {\it Astrophysical Techniques}.)
+\item Show, using the Mueller calculus, that the effect of two ideal half-wave 
+plates upon a beam of radiation of any form of polarization is
+zero. The Mueller matrix for the half wave plate is given by 
+\[
+\mathbf{M}=\left[\begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+0 & \cos^22\psi-\sin^22\psi & 2\cos 2\psi\sin 2\psi & 0 \\
+0 & 2\cos 2\psi\sin 2\psi & \sin^2 2\psi-\cos^22\psi & 0 \\
+0 & 0 & 0 & -1 \\ \end{array}\right]
+\]
+(This is exercise {\bf 5.2.2} from Kitchin's {\it Astrophysical
+  Techniques}.)
+\item A Lyot filter is built up of several elements which each consist
+  of a crystal of birefringent material such as quartz and a
+  polarizer. The optical axis of the crystal is oriented such that the
+  ordinary and extraordinary rays propagate in the same direction. The
+  electric vector of the light that comes out of such an element can
+  be written
+\be
+E_{45}=\frac{a}{\sqrt{2}}[\cos(2\pi\nu t)+\cos(2\pi\nu t+\delta)]
+\ee
+The degree of birefringence is $J=\mu_e-\mu_o$, where $mu_e$ and
+$\mu_o$ are the indices of refraction for the extraordinary `e' and
+ordinary `o' rays respectively.
+\begin{enumerate}
+\item Show that the difference in phase between the two rays 
+\be
+\delta=\frac{2\pi c\Delta t}{\lambda}
+\ee
+where $c$ is the speed of light in vacuum, $\lambda$ is the wavelength
+and $\Delta t$ is the time delay, can be written
+\be
+\delta=\frac{2\pi TJ}{\lambda}
+\ee
+where $T$ is the thickness of the material. 
+\item Find the wavelengths $\lambda_{\rm max}$ and $\lambda_{\rm min}$ where
+the emerging ray has maximum and minimum intensity.
+\item Sketch what the emergent intensity from this element looks like
+  a a function of wavelength and explain how and why one need several
+  elements in order to construct a Lyot filter.
+\end{enumerate}
+\item Calculate the maximum and minimum thickness of the elements required
+for an H$\alpha$ birefringent filter based upon calcite, if its whole 
+bandwidth is to be $0.05$~nm, and it is to be used in conjunction with an
+interference filter whose whole bandwidth is 3~nm. The birefringence of 
+calcite is $-0.172$.
+(This is exercise {\bf 5.3.1} of Kitchin's {\it Astrophysical Techniques}.) 
+\end{enumerate}
+
+\end{document}
