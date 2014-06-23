@@ -1,8 +1,6 @@
 \documentclass{article}
 \usepackage{wasysym}
 \usepackage{graphics}
-\usepackage{psfig}
-\usepackage{epsfig}
 \newcommand{\bc}{\begin{center}}
 \newcommand{\ec}{\end{center}}
 \newcommand{\be}{\begin{equation}}
@@ -109,9 +107,10 @@ usual infinity of vacuum electrostatics, the Fermi energy is also
 referred to as the electro-chemical potential of the electron.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_fFD.eps}
+  \centering
+	\includegraphics{CCD_fFD.eps}
   \caption{The Fermi-Dirac distribution function}
-  \label{CCD.figfFD}
+  \label{fig:CCD.figfFD}
 \end{figure}
 
 If an electric field is imposed on the material, the electrons will
@@ -143,11 +142,11 @@ influence of the electric field. The electrons are thus not allowed to
 move and the material will be an insulator.
 
 \begin{figure}[h]
-  \centering  \psfig{file=CCD_solstate.eps,width=0.95\textwidth}
-  \caption{Solid state energy levels}
-  \label{CCD.figsolstate}
+	\centering
+	\includegraphics[width=0.95\textwidth]{CCD_solstate.eps}
+	\caption{Solid state energy levels.}
+	\label{fig:CCD.figsolstate}
 \end{figure}
-
 
 For crystalline silicon the corresponding energy gaps is 1.10 eV. In
 this case some of the electrons may be thermally excited to the
@@ -255,10 +254,12 @@ effective thickness $x_{epi}$. The third factor in expression
 effective poly-crystalline gate thickness $x_{poly}$. 
 
 \begin{figure}[h!]
-\hfil\psfig{file=SiIndex.eps,width=0.7\textwidth}\hfil
-\caption{Reflection coeffecients (both real and imaginary) for Si as a function
-of wavelength.}
-\label{fig:si-refl}
+%\hfil\psfig{file=SiIndex.eps,width=0.7\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.7\textwidth]{SiIndex.eps}
+	\caption{Reflection coeffecients (both real and imaginary) for Si as a function
+		of wavelength.}
+	\label{fig:si-refl}
 \end{figure}
 
 In figure~\ref{fig:si-refl} the reflection 
@@ -275,9 +276,11 @@ is lumigen, effective for wavelengths less than 480~nm and
 re-emitting at about 530~nm. 
 
 \begin{figure}[h!]
-\hfil\psfig{file=Si_abs_T-col.eps,width=0.7\textwidth}\hfil
-\caption{Absorption length of Si as a function of wavelength and temperature.}
-\label{fig:si-abs}
+%\hfil\psfig{file=Si_abs_T-col.eps,width=0.7\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.7/textwidth]{Si_abs_T-col.eps}
+	\caption{Absorption length of Si as a function of wavelength and temperature.}
+	\label{fig:si-abs}
 \end{figure}
 
 To be able to lift a valence-band electron to the conduction band the
@@ -301,16 +304,18 @@ of these effects are visible in figure~\ref{fig:crisp8542raw-momfbd}, which
 features a solar image taken in the infrared 854.2~nm Ca~{\sc ii} line.
 
 \begin{figure}[p]
-\centering{
-\psfig{file=camXXV_13Jun2008_8542_raw.eps,width=0.7\textwidth}
-\psfig{file=camXXV_13Jun2008_8542_momfbd.eps,width=0.7\textwidth}}
-\caption{Pre- and post-processed images taken of the quiet Sun in the 
-$\lambda 8542$~\AA\ line of Ca~{\sc ii} at the Swedish 1-meter Solar 
-Telescope, June 13, 2008 with the CRISP Fabry-Perot focal plane instrument. 
-Notice that at this wavelength the CCD is partly transparent.
-Notice also the patterns due fringing. Most, if not all, of these
-artifacts can be removed with {\it e.g.} MOMFBD techniques.}
-\label{fig:crisp8542raw-momfbd}
+	\centering{
+%\psfig{file=camXXV_13Jun2008_8542_raw.eps,width=0.7\textwidth}
+%\psfig{file=camXXV_13Jun2008_8542_momfbd.eps,width=0.7\textwidth}}
+		\includegraphics[width=0.7\textwidth]{camXXV_13Jun2008_8542_raw.eps}
+		\includegraphics[width=0.7\textwidth]{camXXV_13Jun2008_8642_momfbd.eps}
+	\caption{Pre- and post-processed images taken of the quiet Sun in the 
+	$\lambda 8542$~\AA\ line of Ca~{\sc ii} at the Swedish 1-meter Solar 
+	Telescope, June 13, 2008 with the CRISP Fabry-Perot focal plane instrument. 
+	Notice that at this wavelength the CCD is partly transparent.
+	Notice also the patterns due fringing. Most, if not all, of these
+	artifacts can be removed with {\it e.g.} MOMFBD techniques.}
+	\label{fig:crisp8542raw-momfbd}
 \end{figure}
 % example from SST!
 
@@ -373,11 +378,11 @@ a separate set of A, B and C electrodes. The register which is
 shielded from radiation is needed for the read-out process.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_schematic.eps}
+  \centering
+	\includegraphics{CCD_schematic.eps}
   \caption{Schematic lay-out of a three-phase CCD detector}
   \label{CCD.figschematic}
 \end{figure}
-
 
 1) During the illumination phase the B-gate is held at high potential
 (10 V) while the A- and C-gates are kept at low potential (2
@@ -449,11 +454,11 @@ therefore be characterized as a metal-oxide-semiconductor (MOS)
 capacitor.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_pMOS.eps}
+  \centering
+	\includegraphics{CCD_pMOS.eps}
   \caption{Surface channel MOS capacitor}
   \label{CCD.figpMOS}
 \end{figure}
-
 
 Let the top conductive layer be given a few volts positive bias
 relative to the substrate. Due to the bias voltage $V_G$ an electric
@@ -510,11 +515,11 @@ gate voltages $V_G$ for a case with uniform acceptor density $N_A =
 1\times10^{21}$ m$^{-3}$.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_surchan.eps}
-  \caption{Surface channel potential well}
+  \centering
+	\includegraphics{CCD_surchan.eps}
+  \caption{Surface channel potential well.}
   \label{CCD.figsurchan}
 \end{figure}
-
 
 If the depletion layer is now illuminated, electron-hole pairs may be
 formed. Under the influence of the existing electric field in this
@@ -558,11 +563,11 @@ introduced between the oxide and p-layer. The structure is
 illustrated in figure~\ref{CCD.fignMOS}.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_nMOS.eps}
+  \centering
+	\includegraphics{CCD_nMOS.eps}
   \caption{Buried channel MOS capacitor}
   \label{CCD.fignMOS}
 \end{figure}
-
 
 The analysis of the buried channel MOS capacitor is only slightly more
 complicated than the preceding one. The extra n-layer reshapes the
@@ -646,8 +651,9 @@ $N_A = 1\times 10^{21}$~m$^{-3}$, $N_D = 1\times 10^{22}$~m$^{-3}$,
 $t = 5000$~nm, and $d = 1000$~nm.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_burchan.eps}
-  \caption{Buried channel potential well}
+  \centering
+	\includegraphics{CCD_burchan.eps}
+  \caption{Buried channel potential well.}
   \label{CCD.figburchan}
 \end{figure}
 
@@ -704,8 +710,9 @@ with
 The situation is illustrated in figure \ref{CCD.figjunction}.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_junction.eps}
-  \caption{n-p junction depletion region}
+  \centering
+	\includegraphics{CCD_junction.eps}
+  \caption{n-p junction depletion region.}
   \label{CCD.figjunction}
 \end{figure}
 
@@ -843,8 +850,9 @@ neighboring pixels, producing a ``blooming'' effect in the image.
 
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_burchanph.eps}
-  \caption{Buried channel potential structure with photo-electrons present}
+  \centering
+	\includegraphics{CCD_burchanph.eps}
+  \caption{Buried channel potential structure with photo-electrons present.}
   \label{CCD.figburchanph}
 \end{figure}
 
@@ -889,7 +897,8 @@ This is the choice made in figure~\ref{CCD.figclocking}. A typical
 value of the transfer time may be $t_T = 1$ $\mu$s.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_clocking.eps}
+  \centering
+	\includegraphics{CCD_clocking.eps}
   \caption{Clocking signal for three-phase CCD}
   \label{CCD.figclocking}
 \end{figure}
@@ -966,7 +975,8 @@ formation of potential wells. This requires operating temperatures
 exceeding 70 K.
 
 \begin{figure}[h]
-  \centering  \includegraphics{CCD_dark.eps}
+  \centering
+	\includegraphics{CCD_dark.eps}
   \caption{Normalized dark current as a function of temperature }
   \label{CCD.figdark}
 \end{figure}
