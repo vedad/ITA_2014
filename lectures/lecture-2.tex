@@ -1,21 +1,21 @@
-\documentclass{article}
-\usepackage{wasysym}
-\usepackage{graphics}
-\usepackage{psfig}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bua}{\begin{eqnarray*}}
-\newcommand{\eua}{\end{eqnarray*}}
-\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-\newcommand{\ddt}[1]{\dd{#1}{t}}
-\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-\newcommand{\aver}[1]{\langle{#1}\rangle}
+%\documentclass{article}
+%\usepackage{wasysym}
+%\usepackage{graphicx}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+%\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\bua}{\begin{eqnarray*}}
+%\newcommand{\eua}{\end{eqnarray*}}
+%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+%\newcommand{\ddt}[1]{\dd{#1}{t}}
+%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+%\newcommand{\aver}[1]{\langle{#1}\rangle}
+
 \begin{document}
-\setcounter{section}{1}
+%\setcounter{section}{1} % No need when combining files I think
 \section{Coordinate systems}
 
 In order to find something one needs a system of coordinates. For 
@@ -23,14 +23,14 @@ determining the positions of the stars and planets where the
 distance to the object often is unknown it usually suffices to use {\it two} 
 coordinates. On the other hand, since the Earth rotates around it's 
 own axis as well as around the Sun the positions of stars and planets 
-is continually changing, and the measurment of {\it when} an object 
+is continually changing, and the measurement of {\it when} an object 
 is in a certain place is as important as deciding {\it where} it is. 
 
 Our first task is to decide on a coordinate system and the position of
 \begin{enumerate}
 \item The origin. {\it E.g.} one's own location, the center of the Earth,
 the, the center of the Solar System, the Galaxy, etc. 
-\item The fundamental plan ($x-y$ plane). This is often a plane of some
+\item The fundamental plane ($x-y$ plane). This is often a plane of some
 physical significance such as the horizon, the equator, or the ecliptic.
 \item Decide on the direction of the positive $x$-axis, also known as
 the ``reference direction''. 
@@ -80,7 +80,9 @@ the surface of the earth (supposed spherical), be the center of the
 celestial sphere. 
 
 \begin{figure}[h]
-{\hfil\psfig{file=alt-az.eps,width=0.66\textwidth}\hfil}
+%{\hfil\psfig{file=alt-az.eps,width=0.66\textwidth}\hfil}
+\centering
+\includegraphics[width=0.66\textwidth]{alt-az.eps}
 \caption{The altitude -- azimuth coordinate system.}
 \label{fig:alt-az}
 \end{figure}
@@ -166,7 +168,9 @@ y' & = & \sin a \sin B.
 \end{eqnarray}
 
 \begin{figure}[h]
-{\hfil\psfig{file=sph-trig.eps,width=0.66\textwidth}\hfil}
+%{\hfil\psfig{file=sph-trig.eps,width=0.66\textwidth}\hfil}
+\centering
+\includegraphics[width=0.66\textwidth]{sph-trig.eps}
 \caption{Two axis systems used to derive the basic formula of spherical
 trigonometry.}
 \label{fig:sph-trig}
@@ -210,7 +214,9 @@ The first of these is the {\it cosine formula}, the second the {\it
 Consider now again the celestial sphere as drawn in figure~\ref{fig:hr-dec}.
 
 \begin{figure}[h]
-{\hfil\psfig{file=hr-dec.eps,width=0.66\textwidth}\hfil}
+%{\hfil\psfig{file=hr-dec.eps,width=0.66\textwidth}\hfil}
+\centering
+\includegraphics[width=0.66\textwidth]{hr-dec.eps}
 \caption{Relation between altitude -- azimuth and declination -- hour angle
 coordinates.}
 \label{fig:hr-dec}
@@ -280,7 +286,9 @@ position on the celestial sphere only one coordinate, the declination,
 remains constant as the start travels across the sky. 
 
 \begin{figure}[h]
-{\hfil\psfig{file=ra-dec.eps,width=0.66\textwidth}\hfil}
+%{\hfil\psfig{file=ra-dec.eps,width=0.66\textwidth}\hfil}
+\centering
+\includegraphics[width=0.66\textwidth]{ra-dec.eps}
 \caption{Definition of the right ascension -- declination coordinate system.}
 \label{fig:ra-dec}
 \end{figure}
@@ -329,9 +337,11 @@ inclined at an angle of about $23{1\over 2}^\circ$ to the celestial
 equator. 
 
 \begin{figure}[h]
-{\hfil\psfig{file=ecliptic.eps,width=0.66\textwidth}\hfil}
-\caption{Celestial longitude and latitude.}
-\label{fig:ecliptic}
+%{\hfil\psfig{file=ecliptic.eps,width=0.66\textwidth}\hfil}
+	\centering
+	\includegraphics[width=0.66\textwidth]{ecliptic.eps}
+	\caption{Celestial longitude and latitude.}
+	\label{fig:ecliptic}
 \end{figure}
 
 In figure~\ref{fig:ecliptic}, $Y\aries M$ represents the ecliptic and
@@ -432,10 +442,12 @@ a time varying quantity, slowly moving according to well established principles 
 reference to the background stars.
 
 \begin{figure}[h]
-{\hfil\psfig{file=sidereal.eps,width=0.66\textwidth}\hfil}
-\caption{Definition of sidereal time and the effects of precession; motion 
-of the vernal equinox. }
-\label{fig:sidereal}
+%{\hfil\psfig{file=sidereal.eps,width=0.66\textwidth}\hfil}
+	\centering
+	\includegraphics[width=0.66\textwidth]{sidereal.eps}
+	\caption{Definition of sidereal time and the effects of precession; motion 
+		of the vernal equinox. }
+	\label{fig:sidereal}
 \end{figure}
 
 We will continue to assume the ecliptic as a fixed great circle. Owing to precession, 
