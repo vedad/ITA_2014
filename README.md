@@ -1,6 +1,6 @@
-## Summer project at the Institute of Theoretical Astrophysics
+## Summer project at the Institute of Theoretical Astrophysics, University of Oslo
 This repository contains supplementary work on the lectures notes used in AST2210 -
-Observational Astronomy at the University of Oslo. These notes are originally authored
+Observational Astronomy. These notes are originally authored
 by Professor Viggo Hansteen.
 
 
