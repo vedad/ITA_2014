@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{wasysym} % For Aries symbol
 \usepackage{bm}
+\usepackage{amssymb}
 
 % New commands
 \newcommand{\bc}{\begin{center}}
@@ -27,4 +28,9 @@
 \def\rabs{\!\mid}
 \def\rd{\mbox{d}}
 \def\rD{\mbox{D}}
+
+% New environments
+\newenvironment{mylisting}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+{\end{list}}
 
