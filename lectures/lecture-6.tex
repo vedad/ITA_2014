@@ -1,26 +1,25 @@
-\documentclass{article}
-\usepackage{wasysym}
-\usepackage{graphics}
-\usepackage{bm}
-\usepackage{psfig}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bua}{\begin{eqnarray*}}
-\newcommand{\eua}{\end{eqnarray*}}
-\newcommand{\infint}{\int_{-\infty}^{\infty}}
-\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-\newcommand{\ddt}[1]{\dd{#1}{t}}
-\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-\newcommand{\aver}[1]{\langle{#1}\rangle}
-\def\cl#1{{\cal #1}}               % for caligrafic letters
-\def\labs{\mid\!}
-\def\rabs{\!\mid}
-\begin{document}
-\setcounter{section}{5}
+%\documentclass{article}
+%\usepackage{wasysym}
+%\usepackage{graphicx}
+%\usepackage{bm}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+%\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\bua}{\begin{eqnarray*}}
+%\newcommand{\eua}{\end{eqnarray*}}
+%\newcommand{\infint}{\int_{-\infty}^{\infty}}
+%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+%\newcommand{\ddt}[1]{\dd{#1}{t}}
+%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+%\newcommand{\aver}[1]{\langle{#1}\rangle}
+%\def\cl#1{{\cal #1}}               % for caligrafic letters
+%\def\labs{\mid\!}
+%\def\rabs{\!\mid}
+%\begin{document}
+%\setcounter{section}{5} No need for this when merging into main.
 \section{Telescopes for visible light}
 
 Astronomers use telescopes to collect radiation from astronomical sources and
@@ -167,7 +166,9 @@ indices of refraction. A few results are worth stating:
 \end{itemize}
 
 \begin{figure}[th]
-  \hfil\psfig{file=reflection_spherical.eps,width=0.9\textwidth}\hfil
+%  \hfil\psfig{file=reflection_spherical.eps,width=0.9\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.9\textwidth]{reflection_spherical.eps}
   \caption{Reflection from a spherical surface. See text for details. }
   \label{fig:reflection_spherical}
 \end{figure}
@@ -213,7 +214,7 @@ The distance $R/2$ is termed the {\it focal length} of the mirror, often written
 the {\it power} of the surface is written $P$. Note that as the object distance
 $s_o$ goes to $\infty$ the image distance $s_i$ goes to $f$.
 
-\subsubsection{Refraction in Lenses}
+\subsubsection{Refraction in lenses} % Changed capital letter ``L'' in ``Lenses'' to 'l'.
 
 Snell's law of refraction is also a good starting point for
 understanding lenses.
@@ -320,7 +321,9 @@ in the focal plane. An eyepiece beyond the focal point functions as a
 magnifying glass. These two elements form the basic telescope (see figure~\ref{fig:telescope}).
 
 \begin{figure}[th]
-  \hfil\psfig{file=telescope.eps,width=0.7\textwidth}\hfil
+%  \hfil\psfig{file=telescope.eps,width=0.7\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.7\textwidth]{telescope.eps}
   \caption{Schematic telescope design. Object has angular size $\alpha$ and is focused by 
 the primary lens with focal length $F_1$. Image is observed using the eyepiece adjusted so
 as to give a virtual image at infinity. The focal length of the eyepiece is $F_0$. }
@@ -411,7 +414,9 @@ $2.7~\mu$m. A large selection of crystalline materials, some identical to those 
 ultraviolet, transmit to much longer $\lambda$, but most are soft, or fragile, or sensitive to
 humidity, so can only be used in protected environments.
 
+% Maybe change table width to fill the textwidth.
 \begin{table}
+\centering
 \begin{tabular}{llllll}
 \hline\hline
 & & & & & \\
@@ -465,7 +470,9 @@ and the F-line 656~nm H$\alpha$. The glasses listed above have constringence tha
 varies from 57 for crown glass to 33 for the dense flint. 
 
 \begin{figure}[th!]
- \hfil\psfig{file=chromatic-aberration.eps,width=0.5\textwidth}\hfil
+% \hfil\psfig{file=chromatic-aberration.eps,width=0.5\textwidth}\hfil
+ \centering
+ \includegraphics[width=0.5\textwidth]{chromatic-aberration.eps}
   \caption{Chromatic aberration.}
   \label{fig:chromatic-aberration}
 \end{figure}
@@ -483,7 +490,9 @@ containing the circle of least confusion is called the {\it transverse
 chromatic aberration}.
 
 \begin{figure}[th!]
-  \hfil\psfig{file=sst-design.eps,width=0.9\textwidth}\hfil
+%  \hfil\psfig{file=sst-design.eps,width=0.9\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.9\textwidth]{sst-design.eps}
   \caption{Schematic drawing of the Swedish 1-meter Solar Telescope tower 
 with the turret and vacuum system (center drawing). Details of the box 
 holding the field mirror and field lens are shown in A and the Schupmann 
@@ -546,7 +555,9 @@ telescope in which a Schupmann achromat is used.
 \subsection{Seidel Aberrations}
 
 \begin{figure}[th!]
-  \psfig{file=aberration_geometry.eps,width=0.95\textwidth}
+%  \psfig{file=aberration_geometry.eps,width=0.95\textwidth}
+	\centering
+	\includegraphics[width=0.95\textwidth]{aberration_geometry.eps}
   \caption{Geometry used in the Seidel aberration discussion. The left hand
 diagram shows rays through the the center of curvature (CFB) and vertex (VV', the chief ray), which
 along with the optical axis defines the meridional plane. Point P is outside the plane of the diagram. 
@@ -584,7 +595,9 @@ important.
 \subsubsection{Spherical aberration $\propto\rho^4$}
 
 \begin{figure}[th!]
-  \hfil\psfig{file=spherical-aberration.eps,width=0.9\textwidth}\hfil
+%  \hfil\psfig{file=spherical-aberration.eps,width=0.9\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.9\textwidth]{spherical-aberration.eps}
   \caption{Spherical aberration.}
   \label{fig:spherical-aberration}
 \end{figure}
@@ -671,7 +684,9 @@ two mirrors in reflecting telescopes.
 \subsubsection{Astigmatism $\propto b^2\rho^2\cos^2\phi$}
 
 \begin{figure}[th!]
-  \hfil\psfig{file=astigmatism-example.eps,width=0.7\textwidth}\hfil
+%  \hfil\psfig{file=astigmatism-example.eps,width=0.7\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.7\textwidth]{astigmatism-example.eps}
   \caption{Example of the effect of astigmatism.}
   \label{fig:astigmatism-example}
 \end{figure}
@@ -711,7 +726,9 @@ used to flatten the field.
 \subsubsection{Distortion $\propto \rho b^3\cos\phi$}
 
 \begin{figure}[th!]
-  \hfil\psfig{file=aberration-distort.eps,width=0.9\textwidth}\hfil
+%  \hfil\psfig{file=aberration-distort.eps,width=0.9\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.9\textwidth]{aberration-distort.eps}
   \caption{Distortion}
   \label{fig:aberration-distortion}
 \end{figure}
@@ -732,12 +749,15 @@ the light path by parts of the instrument.
 \subsubsection{Zernike polynomials}
 
 \begin{figure}[th!]
-  \hfil\psfig{file=zernike_polynomials.eps,width=0.4\textwidth}\hfil
+%  \hfil\psfig{file=zernike_polynomials.eps,width=0.4\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.4\textwidth]{zernike_polynomials.eps}
   \caption{The first few Zernike polynomials, see table~\ref{tab:zernike-polynomials} 
 }
  \label{fig:zernike-polynomials}
 \end{figure}
 
+% Do something about the table. Too wide for the paragraph. Might change if book is used.
 \begin{table}
 \begin{tabular}{ll}
 \hline\hline
@@ -917,10 +937,13 @@ and large image scale. The Cassegrain is affiliated with coma and spherical
 aberration to about the same degree as an equivalent Newtonian.
 
 \begin{figure}[th!]
-\hfil{
-\psfig{file=cassegraindetailed.eps,width=0.45\textwidth}\hfil
-\psfig{file=newtoniandetailed.eps,width=0.45\textwidth}
-}\hfil
+%\hfil{
+%\psfig{file=cassegraindetailed.eps,width=0.45\textwidth}\hfil
+%\psfig{file=newtoniandetailed.eps,width=0.45\textwidth}
+%}\hfil
+	\centering
+	\includegraphics[width=0.45\textwidth]{cassegraindetailed.eps}
+	\includegraphics[width=0.45\textwidth]{newtoniandetailed.eps}
   \caption{Cassegrain and Newtonian Designs}
   \label{fig:catatropic}
 \end{figure}
@@ -985,11 +1008,14 @@ example of a Gregorian.
 {\it Refractors (and the Swedish 1-meter Solar Telescope).}
 
 \begin{figure}[th!]
-\hfil{
-\psfig{file=maksutovcassegraindetailed.eps,width=0.45\textwidth}
-\hfil
-\psfig{file=schmidtcassegraindetailed.eps,width=0.45\textwidth}
-}\hfil
+%\hfil{
+%\psfig{file=maksutovcassegraindetailed.eps,width=0.45\textwidth}
+%\hfil
+%\psfig{file=schmidtcassegraindetailed.eps,width=0.45\textwidth}
+%}\hfil
+	\centering
+	\includegraphics[width=0.45\textwidth]{maksutovcassegraindetailed.eps}
+	\includegraphics[width=0.45\textwidth]{schmidtcassegraindetailed.eps}
   \caption{Maksutov and Schmidt-Cassegrain Designs}
   \label{fig:catadiotropic}
 \end{figure}
@@ -1135,4 +1161,4 @@ $D=24.5$~m of 7 8.4~m segments, and the Thirty Meter Telescope
 $D=30$~m consisting of 492 1.4~m segments. Each of these telescopes has a cost of
 some $10^9$ US dollars.
 
-\end{document}
+%\end{document}
