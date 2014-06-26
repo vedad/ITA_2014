@@ -6,10 +6,17 @@ by Professor Viggo Hansteen.
 
 ### Overview of project goals
 The primary goals are to:
-* Merge all chapters in a single document and add a table of contents. Change document
-	format to `book`.
-* Correct typos. Rewrite unclear paragraphs. Add relevant paragraphs and remove superflous ones.
-* Create and add descriptive figures for most of the chapters.
+* Layout
+..* Merge all chapters into a single document.
+..* Add table of contents.
+..* Change document format to `book`.
+* Content (text)
+..* Correct typos.
+..* Rewrite unclear paragraphs.
+..* Add relevant paragraphs.
+..* Remove superflous paragraphs.
+* Content (figures)
+..* Create and add descriptive figures for most of the chapters.
 
 The secondary goals below will be carried out if there's time left.
 * Create and add exercises and solutions to the lecture notes, or make it separate from
