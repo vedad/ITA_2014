@@ -1,27 +1,27 @@
-\documentclass{article}
-\usepackage{amssymb}
-\usepackage{wasysym}
-\usepackage{graphics}
-\usepackage{bm}
-\usepackage{psfig}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bua}{\begin{eqnarray*}}
-\newcommand{\eua}{\end{eqnarray*}}
-\newcommand{\infint}{\int_{-\infty}^{\infty}}
-\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-\newcommand{\ddt}[1]{\dd{#1}{t}}
-\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-\newcommand{\aver}[1]{\langle{#1}\rangle}
-\def\cl#1{{\cal #1}}               % for caligrafic letters
-\def\labs{\mid\!}
-\def\rabs{\!\mid}
-\begin{document}
-\setcounter{section}{7}
+%\documentclass{article}
+%\usepackage{amssymb}
+%\usepackage{wasysym}
+%\usepackage{graphicx}
+%\usepackage{bm}
+%\usepackage{psfig}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+%\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\bua}{\begin{eqnarray*}}
+%\newcommand{\eua}{\end{eqnarray*}}
+%\newcommand{\infint}{\int_{-\infty}^{\infty}}
+%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+%\newcommand{\ddt}[1]{\dd{#1}{t}}
+%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+%\newcommand{\aver}[1]{\langle{#1}\rangle}
+%\def\cl#1{{\cal #1}}               % for caligrafic letters
+%\def\labs{\mid\!}
+%\def\rabs{\!\mid}
+%\begin{document}
+%\setcounter{section}{7} No need when merging
 \section{Radio, EUV and X-ray telescopes}
 
 \subsection{Radio and microwave detection}
@@ -47,7 +47,9 @@ reduces the short wave absorption considerably. Radiation with $\lambda>50$~m
 does not penetrate to the ground, because of reflection by the ionosphere.
 
 \begin{figure}[h]
-  \centering  \psfig{file=jansky-antenna.eps,width=0.7\textwidth}
+  \centering
+%	\psfig{file=jansky-antenna.eps,width=0.7\textwidth}
+	\includegraphics[width=0.7\textwidth]{jansky-antenna.eps}
   \caption{Karl Jansky and his antenna.}
   \label{fig:jansky-antenna}
 \end{figure}
@@ -111,7 +113,9 @@ acceptable level.
 
 
 \begin{figure}[h]
-  \centering  \psfig{file=heterodyne.eps,width=0.95\textwidth}
+  \centering
+%	\psfig{file=heterodyne.eps,width=0.95\textwidth}
+	\includegraphics[width=0.95\textwidth]{heterodyne.eps}
   \caption{Block diagram of a basic heterodyne receiver (figure adapted from Kitchin {\it
 Astrophysical Techniques}).}
   \label{fig:heterodyne}
@@ -171,7 +175,7 @@ transmissions often overlap these bands. For example the Russian GLONASS
 satellite navigation system overlaps into the band reserved for interstellar
 OH lines at 1.61~GHz.
 
-\subsection{Radio Telescopes}
+\subsection{Radio telescopes} % Changed from capital T to small t.
 
 The nature of electro-magnetic radiation is the same whether it be radio waves
 or optical light that is discussed. On the other hand, the image in an optical 
@@ -218,7 +222,9 @@ For the half-wave dipole, the maximum gain is about 1.6, and so there is very
 little advantage over an isotropic receiver. 
 
 \begin{figure}[h]
-  \centering  \psfig{file=polar_plot.eps,width=0.95\textwidth}
+  \centering
+%	\psfig{file=polar_plot.eps,width=0.95\textwidth}
+	\includegraphics[width=0.95\textwidth]{polar_plot.eps}
   \caption{Polar plots for a single half-wave dipole, collinear arrays with two and four 
 dipoles and an isotropic receiver.}
   \label{fig:polar_plot}
@@ -397,7 +403,9 @@ and mixtures thereof. Inert gases are preferred as there is then no possibility
 of the loss of energy into the rotation or vibration of the molecules. 
 
 \begin{figure}[h]
-  \centering  \psfig{file=GLAST_allsky_labeled_HI.eps,width=0.95\textwidth}
+  \centering
+%	\psfig{file=GLAST_allsky_labeled_HI.eps,width=0.95\textwidth}
+	\includegraphics[width=0.95\textwidth]{GLAST_allsky_labeled_HI.eps}
   \caption{First light on the Large Area Telescope on board the Fermi Gamma-ray
 Space Telescope. The photons that have made this image have an energy
 greater than 1~GeV.}
@@ -452,7 +460,9 @@ and observed from the ground with telescopes such as CANGAROO-II in Australia or
 MAGIC on La Palma.
 
 \begin{figure}[h]
-  \centering  \psfig{file=magic.eps,width=0.7\textwidth}
+  \centering
+%	\psfig{file=magic.eps,width=0.7\textwidth}
+	\includegraphics[width=0.7\textwidth]{magic.eps}
   \caption{One of the two (almost) identical MAGIC telescopes on Roque
     de los Muchachos Observatory on La Palma.}
   \label{fig:magic}
@@ -538,7 +548,9 @@ may be reflected with up to 50\% efficiency off metal surfaces, when
 their angle of incidence approaches 90$^o$.
 
 \begin{figure}[h]
-  \centering  \psfig{file=paraboloid_hyperboloid.eps,width=0.95\textwidth}
+  \centering
+%	\psfig{file=paraboloid_hyperboloid.eps,width=0.95\textwidth}
+	\includegraphics[width=0.95\textwidth]{paraboloid_hyperboloid.eps}
   \caption{Wolther telescope of type {\sc i}.}
   \label{fig:wolther_i}
 \end{figure}
@@ -626,4 +638,4 @@ all wavelengths which can be detected in a single observation with a position se
 Spectral resolutions of up to $10^3$ are possible at 1~keV, but large crystal areas are necessary for good sensitivity.  Among common crystals in use are lithium fluoride, lithium hydride, 
 tungsten disulphide, graphite, and potassium acid phthalate. 
 
-\end{document}
+%\end{document}
