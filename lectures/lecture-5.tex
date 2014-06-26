@@ -1,26 +1,26 @@
-\documentclass{article}
-\usepackage{wasysym}
-\usepackage{graphics}
-\usepackage{bm}
-\usepackage{psfig}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bua}{\begin{eqnarray*}}
-\newcommand{\eua}{\end{eqnarray*}}
-\newcommand{\infint}{\int_{-\infty}^{\infty}}
-\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-\newcommand{\ddt}[1]{\dd{#1}{t}}
-\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-\newcommand{\aver}[1]{\langle{#1}\rangle}
-\def\cl#1{{\cal #1}}               % for caligrafic letters
-\def\labs{\mid\!}
-\def\rabs{\!\mid}
-\begin{document}
-\section*{Lecture notes 5: Diffraction}
+%\documentclass{article}
+%\usepackage{wasysym}
+%\usepackage{graphicx}
+%\usepackage{bm}
+%\usepackage{psfig}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+%\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\bua}{\begin{eqnarray*}}
+%\newcommand{\eua}{\end{eqnarray*}}
+%\newcommand{\infint}{\int_{-\infty}^{\infty}}
+%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+%\newcommand{\ddt}[1]{\dd{#1}{t}}
+%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+%\newcommand{\aver}[1]{\langle{#1}\rangle}
+%\def\cl#1{{\cal #1}}               % for caligrafic letters
+%\def\labs{\mid\!}
+%\def\rabs{\!\mid}
+%\begin{document}
+\section{Lecture notes 5: Diffraction}
 
 Let us now consider how light reacts to being confined to a given aperture. The resolution 
 of an aperture is restricted due to the wave nature of light: as light passes through any 
@@ -56,7 +56,9 @@ or magnetic field vector, e.g. $E_x$ or $B_y$. In vacuum Maxwell's equations imp
 $\psi=E_x$ satisfies equation~\ref{eq:helmholtz}. 
 
 \begin{figure}[th!]
-  \hfil\psfig{file=helmholz-kirchhoff-surface.eps,width=0.7\textwidth}\hfil
+%  \hfil\psfig{file=helmholz-kirchhoff-surface.eps,width=0.7\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.7\textwidth]{helmholz-kirchhoff-surface.eps}
   \caption{Surface $\cal{S}$ for the Helmholtz-Kirchhoff integral. The surface
 $\cal{S'}$ surrounds the observation point $\cal{P}$ and $\cal{V}$ is the 
 volume bounded by $\cal{S}$ and $\cal{S'}$. The aperture $\cal{Q}$, the 
@@ -139,7 +141,7 @@ If $\cl{P}$ is many wavelengths away from the boundary $\cl{S}$, then the integr
 influenced by the waves $\psi$ as they enter through $\cl{S}$, and not when they are
 leaving.
 
-\subsection*{Diffraction by an aperture}
+\subsection{Diffraction by an aperture}
 
 Next let us suppose that some aperture $\cl{Q}$ of size much greater than a wavelength but
 much smaller than the distance to $\cl{P}$ is illuminated by a distant wave source. Let 
@@ -181,7 +183,7 @@ phase of the incoming wave $\psi'$ can also be changed by the transmission funct
 Finally there is the {\it obliquity factor} ${d\hat{\bm S}\cdot({\bm n}+{\bm n'})/2}$, where 
 $d\hat{\bm S}$ is the unit vector normal to the aperture. 
 
-\subsection*{Spreading of the Wavefront}
+\subsection{Spreading of the Wavefront}
 
 Equation~\ref{eq:small-aperture} gives a general description for computing the diffraction 
 pattern from an illuminated aperture. It is commonly used in two different limits, called
@@ -240,10 +242,12 @@ associated with wave-packet spreading. By contrast in the more distant Fraunhofe
 front spreading will cause the transverse size of the entire wave to grow linearly with the 
 distance, and the intensity pattern will typically not resemble the aperture at all.
 
-\subsection*{Fraunhofer Diffraction}
+\subsection{Fraunhofer Diffraction}
 
 \begin{figure}[th!]
-  \hfil\psfig{file=path-length.eps,width=0.7\textwidth}\hfil
+%  \hfil\psfig{file=path-length.eps,width=0.7\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.7\textwidth]{path-length.eps}
   \caption{Geometry for computing the path length between a point $\cal{Q}$ in 
 the aperture and the observation point $\cal{P}$. The transverse vector 
 $\bf{x}$ is used to identify $\cal{Q}$ in the Fraunhofer analysis and in a
@@ -279,7 +283,7 @@ Fraunhofer regime is given by the two dimensional Fourier transform denoted by
 $\bar{t}({\bm\theta})$, of the transmission function $t({\bm x})$, with ${\bm x}$ made 
 dimensionless in the transform by multiplying with $k={2\pi/\lambda}$. 
 
-\subsection*{Diffraction of a single slit}
+\subsection{Diffraction of a single slit}
 
 Consider now a single transparent stripe, a slit, of width $a$ centered on $x=0$, and 
 measure the scalar angle $\theta$ from the direction of the incident radiation. This slit
@@ -307,7 +311,7 @@ where ${\rm sinc}(x)\equiv{\sin(x)/x}$.
 \setcounter{count}{\value{enumi}}
 \end{enumerate}
 
-\subsection*{Babinet's principle}
+\subsection{Babinet's principle}
 
 In the previous section we have shown how to compute the Fraunhofer diffraction pattern formed
 by a narrow slit. We might also be interested in the pattern produced by the complementary
@@ -320,7 +324,7 @@ Therefore the Fraunhofer diffraction patterns from the needle and the slit --- a
 any complementary apertures --- are identical, except in the direction of the incident 
 wave.
 
-\subsection*{Diffraction by a circular aperture}
+\subsection{Diffraction by a circular aperture}
 
 Let us now compute how well a telescope can distinguish neighboring stars. We cannot expect to
 resolve them (or any two objects) that are closer together in the sky than the angular width
@@ -329,7 +333,9 @@ and pointing errors in a real telescope may degrade the image quality even furth
 is the best that can be done, limited only by the uncertainty principle.
 
 \begin{figure}[th!]
-  \hfil\psfig{file=jinc2.eps,width=0.7\textwidth}\hfil
+%  \hfil\psfig{file=jinc2.eps,width=0.7\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.7\textwidth]{jinc2.eps}
   \caption{Airy diffraction pattern for a circular aperture. Note the first zero
 of the function at $\theta D/\lambda=1.22$.}
   \label{fig:jinc2}
@@ -359,4 +365,4 @@ and, in addition, plots an image of the Airy disk.
 \setcounter{count}{\value{enumi}}
 \end{enumerate}
 
-\end{document}
+%\end{document}
