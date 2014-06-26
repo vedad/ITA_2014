@@ -1,27 +1,27 @@
-\documentclass{article}
-\usepackage{amssymb}
-\usepackage{wasysym}
-\usepackage{graphics}
-\usepackage{bm}
-\usepackage{psfig}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bua}{\begin{eqnarray*}}
-\newcommand{\eua}{\end{eqnarray*}}
-\newcommand{\infint}{\int_{-\infty}^{\infty}}
-\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-\newcommand{\ddt}[1]{\dd{#1}{t}}
-\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-\newcommand{\aver}[1]{\langle{#1}\rangle}
-\def\cl#1{{\cal #1}}               % for caligrafic letters
-\def\labs{\mid\!}
-\def\rabs{\!\mid}
-\begin{document}
-\setcounter{section}{8}
+%\documentclass{article}
+%\usepackage{amssymb}
+%\usepackage{wasysym}
+%\usepackage{graphicx}
+%\usepackage{bm}
+%\usepackage{psfig}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+%\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\bua}{\begin{eqnarray*}}
+%\newcommand{\eua}{\end{eqnarray*}}
+%\newcommand{\infint}{\int_{-\infty}^{\infty}}
+%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+%\newcommand{\ddt}[1]{\dd{#1}{t}}
+%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+%\newcommand{\aver}[1]{\langle{#1}\rangle}
+%\def\cl#1{{\cal #1}}               % for caligrafic letters
+%\def\labs{\mid\!}
+%\def\rabs{\!\mid}
+%\begin{document}
+%\setcounter{section}{8}
 \section{Imaging}
 
 \subsection{The inverse problem}
@@ -209,7 +209,9 @@ where $d$ is the separation between the two Young's apertures, will disappear. T
 The resolution of the interferometer is almost 2.5 times that of a telescope with the same diameter for point sources! 
 
 \begin{figure}[h]
-  \centering  \psfig{file=vlt-image-smallsize.eps,width=0.75\textwidth}
+  \centering
+%	\psfig{file=vlt-image-smallsize.eps,width=0.75\textwidth}
+	\includegraphics[width=0.75\textwidth]{vlt-image-smallsize.eps}
   \caption{The VLT Array on the Paralal Mountain which can be used as a stellar interferometer.}
   \label{fig:vlt-array}
 \end{figure}
@@ -241,4 +243,4 @@ Speckle interferometry works by obtaining images of the object sufficiently rapi
 
 Consider the effect of seeing upon the wavefront of the object. Assume that the wavefront is initially planar and coherent, then the main effect of scintillation is to introduce differential phase delays across it. A typical cell size is 0.1~m and the scintillation frequency is in the range 1 -- 100~Hz. Thus some 100 atmospheric cells will affect an average image from a 1~m telescope at any given instant. These will be rapidly changing. An exposure of a few milliseconds will freeze the image motion, and the observed image is then just the resultant of the contributions from the atmospheric cells across the telescope objective at the moment. The large number of cells renders it highly probable that some of the phase delays will be similar and so some of the contributions to the image will be in phase with each other. These particular contributions will have been distributed over the objective in a random manner. Considering two such contributions, we have a simple interferometer, and the tow beams of radiation will combine in the image plane to produce results identical with those of an interferometer whose baseline is equal to the separations of the contribution on the objective. The smallest speckles in the total image therefore have the diffraction limited resolution of the whole objective. 
 
-\end{document}
+%\end{document}
