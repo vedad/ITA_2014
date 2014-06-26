@@ -5,7 +5,7 @@ by Professor Viggo Hansteen.
 
 
 ### Overview of project goals
-The primary goals are to:
+The primary goals are:
 * Layout
   * Merge all chapters into a single document.
   * Add table of contents.
