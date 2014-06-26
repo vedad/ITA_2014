@@ -1,27 +1,27 @@
-\documentclass{article}
-\usepackage{amssymb}
-\usepackage{wasysym}
-\usepackage{graphics}
-\usepackage{bm}
-\usepackage{psfig}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bua}{\begin{eqnarray*}}
-\newcommand{\eua}{\end{eqnarray*}}
-\newcommand{\infint}{\int_{-\infty}^{\infty}}
-\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-\newcommand{\ddt}[1]{\dd{#1}{t}}
-\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-\newcommand{\aver}[1]{\langle{#1}\rangle}
-\def\cl#1{{\cal #1}}               % for caligrafic letters
-\def\labs{\mid\!}
-\def\rabs{\!\mid}
-\begin{document}
-\setcounter{section}{11}
+%\documentclass{article}
+%\usepackage{amssymb}
+%\usepackage{wasysym}
+%\usepackage{graphicx}
+%\usepackage{bm}
+%\usepackage{psfig}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+%\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\bua}{\begin{eqnarray*}}
+%\newcommand{\eua}{\end{eqnarray*}}
+%\newcommand{\infint}{\int_{-\infty}^{\infty}}
+%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+%\newcommand{\ddt}[1]{\dd{#1}{t}}
+%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+%\newcommand{\aver}[1]{\langle{#1}\rangle}
+%\def\cl#1{{\cal #1}}               % for caligrafic letters
+%\def\labs{\mid\!}
+%\def\rabs{\!\mid}
+%\begin{document}
+%\setcounter{section}{11}
 \newcounter{count}
 \setcounter{count}{\value{enumi}}
 \section{Photometry}
@@ -317,7 +317,8 @@ function of $\lambda$.
 
 \begin{figure}[th!]
   \centering
-  \psfig{file=color_index.eps,width=\textwidth}
+%  \psfig{file=color_index.eps,width=\textwidth}
+	\includegraphics[width=\textwidth]{color_index.eps}
   \caption{Blackbody curves for stars of temperature between $1600$~K
     to $16\,000$~K. $C(alpha)$ is set arbitrarily to $C(alpha)=-15$.}
   \label{fig:color_index}
@@ -698,4 +699,4 @@ m_{\rm P}=-2.5\log\int T_{\rm
 \]
 where $T_{\rm P}(\lambda)$ and $C_{\rm P}$ characterize the
 instrumental system located outside the atmosphere.
-\end{document}
+%\end{document}
