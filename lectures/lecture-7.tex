@@ -1,30 +1,30 @@
-\documentclass{article}
-\usepackage{amssymb}
-\usepackage{wasysym}
-\usepackage{graphics}
-\usepackage{bm}
-\usepackage{psfig}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bua}{\begin{eqnarray*}}
-\newcommand{\eua}{\end{eqnarray*}}
-\newcommand{\infint}{\int_{-\infty}^{\infty}}
-\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-\newcommand{\ddt}[1]{\dd{#1}{t}}
-\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-\newcommand{\aver}[1]{\langle{#1}\rangle}
-\def\cl#1{{\cal #1}}               % for caligrafic letters
-\def\labs{\mid\!}
-\def\rabs{\!\mid}
-\newenvironment{mylisting}
-{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
-{\end{list}}
-\begin{document}
-\setcounter{section}{6}
+%\documentclass{article}
+%\usepackage{amssymb}
+%\usepackage{wasysym}
+%\usepackage{graphicx}
+%\usepackage{bm}
+%\usepackage{psfig}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+%\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\bua}{\begin{eqnarray*}}
+%\newcommand{\eua}{\end{eqnarray*}}
+%\newcommand{\infint}{\int_{-\infty}^{\infty}}
+%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+%\newcommand{\ddt}[1]{\dd{#1}{t}}
+%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+%\newcommand{\aver}[1]{\langle{#1}\rangle}
+%\def\cl#1{{\cal #1}}               % for caligrafic letters
+%\def\labs{\mid\!}
+%\def\rabs{\!\mid}
+%\newenvironment{mylisting}
+%{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+%{\end{list}}
+%\begin{document}
+%\setcounter{section}{6} No need for merging
 \section{Diffraction \sc{ii}}
 
 \subsection{Fresnel Diffraction}
@@ -40,7 +40,9 @@ use as integration variable in the aperture
 ${\bf x'}\equiv{\bf x}-r{\bm\theta}$ (see figure~\ref{fig:path-length}).
 
 \begin{figure}[h!]
-  \hfil\psfig{file=path-length.eps,width=0.9\textwidth}\hfil
+%  \hfil\psfig{file=path-length.eps,width=0.9\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.9\textwidth]{path-length.eps}
   \caption{Geometry for computing the path length between a point $\cal{Q}$ in 
 the aperture and the observation point $\cal{P}$. The transverse vector 
 $\bf{x}$ is used to identify $\cal{Q}$ in the Frauenhofer analysis and 
@@ -97,7 +99,9 @@ to
 \end{enumerate}
 
 \begin{figure}[th!]
-  \hfil\psfig{file=cornu.eps,width=0.7\textwidth}\hfil
+%  \hfil\psfig{file=cornu.eps,width=0.7\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.7\textwidth]{cornu.eps}
   \caption{The Cornu Spiral showing the behaviour of the Fresnel integrals
 $U(\xi)$ and $V(\xi)$. }
   \label{fig:cornu}
@@ -363,7 +367,9 @@ very low resolution spectra --- with the blue image shifted more
 towards the zenith than red.
 
 \begin{figure}[h]
-  \centering  \psfig{file=seeing_global.eps,width=0.9\textwidth}
+  \centering
+%	\psfig{file=seeing_global.eps,width=0.9\textwidth}
+	\includegraphics[width=0.9\textwidth]{seeing_global.eps}
   \caption{Sketch of atmospheric circulation in the troposphere and
     the effects it has on incoming wavefronts. Locally heated air near
     the ground will become boyant and rise, resulting in a convective
@@ -392,7 +398,9 @@ plane. Since the turbulent eddies at each altitude move at the local
 wind speed, the distortion in the wavefront changes very quickly.
 
 \begin{figure}[h]
-  \centering  \psfig{file=wavefront_rn.eps,width=0.9\textwidth}
+  \centering
+%	\psfig{file=wavefront_rn.eps,width=0.9\textwidth}
+	\includegraphics[width=0.9\textwidth]{wavefront_rn.eps}
   \caption{Quantifying the wavefront is done by fitting the wavefront
   with straight segments along which the difference between vertical
   $z$ direction between the fit and the wavefront is less than
@@ -466,7 +474,8 @@ infrared, the correction only extends over a very small area (the
 {\it isoplanatic patch}). 
 
 \begin{figure}[h]
-  \centering  \includegraphics{shack-hartmann.eps}
+  \centering
+	\includegraphics{shack-hartmann.eps}
   \caption{Prinicple of the Shack-Hartmann sensor. (figure from {\it
 Institut f\"ur Photoniche Technologien e. V.)}}
   \label{fig:shack-hartmann}
@@ -485,7 +494,9 @@ or thermal stresses. Correction of these sorts of effects also goes under
 the heading active optics. 
 
 \begin{figure}[h]
-  \hfil\psfig{file=AO_live_display.eps,width=0.9\textwidth}\hfil
+%  \hfil\psfig{file=AO_live_display.eps,width=0.9\textwidth}\hfil
+	\centering
+	\includegraphics[width=0.9\textwidth]{AO_live_display.eps}
   \caption{The multiple images of the Shack-Hartmann micro lenses as seen 
 in the Swedish 1~meter Solar Telescope.}
   \label{fig:ao_live_display}
@@ -562,4 +573,4 @@ Plans for future 50~m and 100~m telescopes include adaptive secondary or
 tertiary mirrors up to 8~m in diameter, requiring up to $500\,000$ actuators
 to compensate the atmospheric distortions of the wave front.
 
-\end{document}
+%\end{document}
