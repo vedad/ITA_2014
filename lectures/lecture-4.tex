@@ -1,26 +1,26 @@
-\documentclass{article}
-\usepackage{wasysym}
-\usepackage{graphics}
-\usepackage{psfig}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bua}{\begin{eqnarray*}}
-\newcommand{\eua}{\end{eqnarray*}}
-\newcommand{\infint}{\int_{-\infty}^{\infty}}
-\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-\newcommand{\ddt}[1]{\dd{#1}{t}}
-\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-\newcommand{\aver}[1]{\langle{#1}\rangle}
-\def\labs{\mid\!}
-\def\rabs{\!\mid}
-\begin{document}
-\section*{Lecture notes 4: Fourier Analysis}
+%\documentclass{article}
+%\usepackage{wasysym}
+%\usepackage{graphicx}
+%\usepackage{psfig}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+%\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\bua}{\begin{eqnarray*}}
+%\newcommand{\eua}{\end{eqnarray*}}
+%\newcommand{\infint}{\int_{-\infty}^{\infty}}
+%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+%\newcommand{\ddt}[1]{\dd{#1}{t}}
+%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+%\newcommand{\aver}[1]{\langle{#1}\rangle}
+%\def\labs{\mid\!}
+%\def\rabs{\!\mid}
+%\begin{document}
+\section{Lecture notes 4: Fourier Analysis}
 
-\subsection*{Definitions}
+\subsection{Definitions}
 
 There are many common (and confusing, but ultimately trivial!)
 differences in defining the {\it Fourier transform}. One common 
@@ -66,7 +66,7 @@ F(\omega)&=&\infint f(t)e^{i\omega t}dt \\
 f(t)&=&{1\over 2\pi}\infint F(\omega)e^{-i\omega t}d\omega
 \eua
 
-\subsection*{Properties}
+\subsection{Properties}
 
 Fourier transforms exhibit a number of properties that are very
 useful:
@@ -109,7 +109,7 @@ interesting to distinguish  between positive and negative $f$, but rather regard
 \[ P_g(f) \equiv \labs G(f)\rabs^2+\labs G(-f)\rabs^2\qquad 0\le f<\infty,\]
 when $g$ is real the two terms in the equation above are equal, so 
 \[ P_g(f)=2\rabs G(f)\labs^2.\]
-\subsection*{Sampling Theorem and Aliasing}
+\subsection{Sampling Theorem and Aliasing}
 
 We will in general be dealing with functions $h(t)$ which are sampled
 at evenly spaced intervals in time (or space). Let $\Delta$ denote the 
@@ -129,7 +129,7 @@ samples. This is the {\it sampling theorem}. However, if a signal is
 the power that lies outside the range $-\nu_c<\nu<\nu_c$ is spuriously
 moved into that range. This phenomena is called {\it aliasing}. 
 
-\subsection*{FFTs}
+\subsection{FFTs}
 
 Let us now estimate a Fourier transform from a finite number of sampled points.
 Suppose that we have $N$ consecutive sampled values
@@ -235,7 +235,7 @@ The FFT therefore has a structure where first the data are sorted into
 bit reversed order and thereafter the transforms of length $2,4,8,\ldots,N$
 are computed implementing the Danielson-Lanczos formula.
 
-\subsection*{Exercises}
+\subsection{Exercises}
 
 Experiment with the {\tt fft} function in {\tt idl}. First make an $x$-axis, 
 {\it eg} {\tt idl> x=findgen(2000)/100.*2.*!pi}
@@ -255,4 +255,4 @@ frequency. Construct such a $g$ and remove one of the frequencies from $g$ using
 forward and back transforms FFT's in {\tt idl}.
 \end{enumerate}
 
-\end{document}
+%\end{document}
