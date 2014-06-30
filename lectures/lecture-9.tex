@@ -22,9 +22,9 @@
 %\def\rabs{\!\mid}
 %\begin{document}
 %\setcounter{section}{8}
-\section{Imaging}
+\chapter{Imaging}
 
-\subsection{The inverse problem}
+\section{The inverse problem}
 
 A problem that occurs throughout astronomy is how best to interpret noisy data so that the resulting deduced quantities are real and not artifacts of the noise. This problem is termed the inverse problem. 
 
@@ -36,7 +36,7 @@ Even a faultlessly constructed telescope will spread the image of a true point s
 \]
 If $\psi_1$ were a $\delta$-function, then the output would be simply given by the function $P_{21}$, up to a normalization. Thus, $P_{21}$ is known as the {\it Point Spread Function} or PSF. The process of removing instrumental effects form data can be necessary for any type of measurement, but is perhaps best studied in relation to imaging, when the process is generally known as de-convolution.
 
-\subsubsection{De-convolution}
+\subsection{De-convolution}
 
 The true image {\it convolves} with the PSF to give the observed image. Inversion of this effect is thus deconvolution. This is most easily illustrated by considering a one-dimensional case. 
 
@@ -72,12 +72,12 @@ where $\cl{F}(O)$ is the Fourier transform of the observations, without the effe
 \[
 T=\cl{F}^{-1}\left[{\cl{F}(O)W\over\cl{F}(I)}\right].
 \]
-\subsubsection{MOMFBD}
+\subsection{MOMFBD}
 
-\subsection{Photography}
+\section{Photography}
 Photography is hardly used at all in professional astronomy --- the last photograph on the AAT was taken in 1999, for example. CCDs now dominate imaging from the ultraviolet to the near infrared. However, photography is perhaps not totally dead, Kitchin's {\it Astrophysical Techniques} contains good descriptions of photographic process.
 
-\subsection{Scanning}
+\section{Scanning}
 
 Scanning is a quite obvious way of building up a two dimensional image which may be built up by using a point source detector, if the detector is scanned over the image or vice versa. Scanning patterns are normally raster or spiral. Other patterns may also be encountered. Many Earth observation satellites use {\it push-broom} scanning, in which a linear array of detectors is aligned at right angles to the spacecraft's ground track. The image is built up at the spacecraft's motion move the array to look at successive slices of the swathe of ground over which the satellite is passing.
 
@@ -103,7 +103,7 @@ One method of finding suitable matrices to reduce construction costs and noise i
 \]
 where ${\bf H}$ is the Hadamard matrix and ${\bf I}$ is the identity matrix. 
 
-\subsection{Interferometry}
+\section{Interferometry}
 
 The simplest example of interference is given by Young's slits. Suppose two long,
 narrow, parallel slits are illuminated coherently by monochromatic light from a distant
@@ -172,7 +172,7 @@ For a given choice of $ka$, {\it ie} a given distance between the slits, $\gamma
 \]
 where $F_{\rm max}$ and $F_{\rm min}$ are the maximum and minimum values of the flux $F_{\cl P}$ on the screen; and its phase ${\rm arg}(\gamma_\perp)$ is $ka$ times the displacement $\Delta\theta$ of the centers of the bright fringes from the optic axis. The modulus is called the fringe {\it visibility} because of it measuring the fractional contrast in the fringes. 
 
-\subsubsection{Michelson Stellar Interferometer}
+\subsection{Michelson Stellar Interferometer}
 
 Michelson's stellar interferometer implements Young's slits for measuring spatial coherence which Michelson used for measuring the angular diameters of Jupiter's 
 moons and some bright stars in 1920 and a bit earlier. The light is sampled at two 
@@ -229,7 +229,7 @@ Vibrations and scintillation are additional limiting factors.
 
 A proposal for the future is to use {\it nulling interferometry} based in space. This would use destructive interference to supress the bright central object in order to look for the much dimmer companions such as Earth-like planets. To achieve this around stars 10~pc or more away one would need baselines of order 50~m and observations taking a few hours with a four element array of telescopes.
 
-\subsubsection{Michelson radio interferometer}
+\subsection{Michelson radio interferometer}
 
 There is no difference in principle between a radio and an optical interferometer when they are used to measure the separation of double source, or the diameters of uniform objects. However, the output from a radio telscope contains both the amplitude and the phase of the signal, so that complete imaging of the source is possible. This is achieved by using equation~\ref{eq:fourier-coherence} to perform the Fourier inversion of the lateral degree of coherence $\gamma_\perp({\bf a})$, which must be measured for a 
 variety of values of the relative separatioin vector ${\bf a}$ of the telescopes perpendicular to the direction of the source. As the earth rotates, this vector will trace out half an ellipse in the two-dimensional ${\bf a}$ plane every twelve hours. Since the source intensity is real equation~\ref{eq:fourier-coherence} implies that $\gamma_\perp(-{\bf a})=\gamma_\perp^*({\bf a})$. By changing the spacing between the telescopes the degree of coherence can be well sampled. In practice a modern interferometer has many more than two telscopes. The Very Large Array (VLA) in New Mexico has 27 individual telescopes arranged in a `Y' pattern and operating simultaneously. The degree of coherence can thus be measured simultaneously over 
@@ -237,7 +237,7 @@ ${27\times 26/2}=351$ different relative separations. The maximum baseline of th
 
 \paragraph{Closure phase.}
 
-\subsubsection{Speckle interferometry}
+\subsection{Speckle interferometry}
 
 Speckle interferometry works by obtaining images of the object sufficiently rapidly to freeze the blurring of the image that arises from atmospheric scintillations. The total image then consists of a large number of small dots or speckles, each of which is a diffraction-limited image for some objective diameter up to and including the diameter of the actual objective.
 

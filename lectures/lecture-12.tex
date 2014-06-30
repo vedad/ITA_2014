@@ -24,7 +24,7 @@
 %\setcounter{section}{11}
 \newcounter{count}
 \setcounter{count}{\value{enumi}}
-\section{Photometry}
+\chapter{Photometry}
 
 The brightness of stars has, along with their locations, been studied
 by astronomers since ancient times. Prior to the 1860's observers
@@ -32,7 +32,7 @@ necessarily estimated brightness using their eyes expressing the
 result in the {\it magnitude system} that Ptolemy introduced in the
 second century. 
 
-\subsection{A short history}
+\section{A short history}
 
 Modern instruments show that early measurements such as those made by
 Ptolemy and Tycho Brahe (who were both more interested in the position
@@ -105,13 +105,13 @@ From space, for example the Kepler mission for detecting occultations
 by extrasolar planets, achieves uncertainties below $10~\mu{\rm m}$
 over time scales of several weeks.
 
-\subsection{The response function}
+\section{The response function}
 
 A photometric device is sensitive over a restricted range of
 wavelengths called a bandpass. There are three types of bandpass
 photometry in astronomy.
 
-\subsubsection{Types of photometry}
+\subsection{Types of photometry}
 
 \paragraph{Single-band photometry} For applications such as finding
 planets via occultations where one is only interested in measuring the
@@ -156,7 +156,7 @@ spectra, such as the Balmer discontinuity at $364.6$~nm or very broad
 absorption features due to blended lines or molecular bands such as
 the band due to TiO in the spectra of M stars extending from 705 to
 730~nm.
-\subsection{Magnitudes}
+\section{Magnitudes}
 We can write the {\it apparent magnitude} of the source as 
 \[
 m_{\rm P}=-2.5\log{(F_{\rm P})}+C_{\rm
@@ -197,7 +197,7 @@ at every wavelength. In which case $C'(\lambda)$ is a strong function
 of $\lambda$. On the other hand $C'(\lambda)$ can also be chosen as a
 constant function and at the monochromatic magnitude reflects the
 spectrum in energy units. 
-\subsubsection{Response function implementation} 
+\subsection{Response function implementation} 
 Both practical limits and intentional controls can determine the
 functional form of the response functions $R_{\rm P}$ and $R_{\rm
   PP}$. The {\it sensitivity of the detector} limits the wavelength
@@ -239,7 +239,7 @@ astronomers must remove atmospheric effects during data reduction.
 \setcounter{count}{\value{enumi}} 
 \end{enumerate}
 
-\subsubsection{Response function description}
+\subsection{Response function description}
 
 There are a whole host of terms used to describe the response
 function $R(\lambda)$. 
@@ -300,7 +300,7 @@ W_0f_{\rm iph}=\frac{1}{R_{\rm max}}\int f_\lambda R(\lambda)d\lambda
 As for the effective wavelength the exact value of the isophotal
 wavelength will depend on the spectrum of the source. 
 
-\subsubsection{Color indices}
+\subsection{Color indices}
 
 Multi band photometry can measure the shape of an object's
 spectrum. It is convenient to think of the bands as sampling the
@@ -374,7 +374,7 @@ linear function of $1/T$.
 \setcounter{count}{\value{enumi}} 
 \end{enumerate}
 
-\subsubsection{Line and feature index}
+\subsection{Line and feature index}
 Real objects such as stars will of course have more complex spectra
 than blackbodies with features of astrophysical significance such as
 absorption and emission lines, bands, and various
@@ -414,7 +414,7 @@ molecular bands. A curvature index is defined by the differences
 where $S$, $C$ and $L$ indicate the short, central, and long
 wavelength bands respectively.
 
-\subsection{Photometric systems}
+\section{Photometric systems}
 
 Photometric systems are defined by at least two specifications:
 \begin{enumerate}
@@ -449,7 +449,7 @@ to duplicate the defined natural system as best they can, and through
 references to a published list of standard stars add to the pool of
 observations in the system.
 
-\subsubsection{Common photometric systems}
+\subsection{Common photometric systems}
 
 \paragraph{Visual and photographic systems} The dark-adapted human eye
 determines the band of the {\it visual photometric system}. The
@@ -528,7 +528,7 @@ Emission in the $u$ and $v$ bands is depressed by the presence of
 metals in a star's atmosphere. Also the $u$ band is depressed by the
 Balmer discontinuity. 
 
-\subsection{From source to telescope}
+\section{From source to telescope}
 At least four different effects can alter the photons on their way to
 the telescope:
 \begin{itemize}
@@ -537,7 +537,7 @@ the telescope:
 \item Galactic and Solar System absorption
 \item atmospheric absorption
 \end{itemize}
-\subsubsection{Wavelength shifts}
+\subsection{Wavelength shifts}
 The photons that leave the source is written $\phi_{\rm
   E}(\lambda_{\rm E}d\lambda_{\rm E}$, where the subscript `E' stands
 for ``emitted''. 
@@ -606,7 +606,8 @@ Universe. Given knowledge of $\phi(\lambda)$ and $z$ it is possible to
 use an observed bandpass magnitude to compute the magnitude that
 would be observed if the source had a redshift $z=0$. Hubble called
 this kind of correction the {\it K correction}. 
-\subsubsection{Absorption outside the atmosphere}
+%
+\subsection{Absorption outside the atmosphere}
 Interstellar gas and dust absorb and scatter light. It is common to
 refer to both processes as ``absorption''. Absorption not only reduces
 the number of photons arriving at the telescope, {\it extinction}, but
@@ -643,7 +644,8 @@ wavelength ${\lambda/(1+z')}$ when they were absorbed by material with
 where $\phi(\lambda)$ is the photon flux outside the atmosphere and
 $\phi_0(\lambda)$ is the photon flux outside the atmosphere corrected
 for interstellar absorption. 
-\subsubsection{Absorption by the atmosphere}
+%
+\subsection{Absorption by the atmosphere}
 Extinction in the Earth's atmosphere is a strong function of
 wavelength. At sea level, three opaque regions define two transmitting
 windows. Rayleigh scattering and absorption by atoms and molecules

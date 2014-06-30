@@ -18,9 +18,9 @@
 %\def\rd{\mbox{d}}
 %\def\rD{\mbox{D}}
 %\begin{document}
-\section{Lecture notes 3: Detectors}
+\chapter{Detectors}
 
-\subsection{Detector parameters}
+\section{Detector parameters}
 
 The overall performance of a detector (CCD or other) is described in terms of
 different technical parameters. A short-list of such parameters
@@ -70,7 +70,7 @@ basic properties of solid state conductors, insulators, and
 semi-conductors, the photo-electric effect, and the
 metal-oxide-semiconductor (MOS) capacitor.
 
-\subsection{Semiconductors}
+\section{Semiconductors}
 
 Many types of detectors base their properties on those of {\it
   semiconductors}. Thus, let us discuss these properties as a
@@ -213,7 +213,7 @@ therefore that the materials stop to act as semiconductors. This
 phenomenon is referred to as ``freeze-out''. At this point the CCD
 will cease to function.
 
-\subsection{The photoelectric effect}
+\section{The photoelectric effect}
 
 The photo-electric effect traditionally refers to a process in which
 the energy $h\nu$ of a photon is absorbed by one electron in the
@@ -330,7 +330,7 @@ $h\nu > 10$~eV is approximated by the empirical formula
 \end{equation}
 where $E_{e-h} \approx 3.65$~eV for silicon.
 
-\subsection{CCDs}
+\section{CCDs}
 
 The CCD-detector (Charge-Coupled Device) was invented in 1969 by Boyle
 and Smith at Bell Telephone Laboratory, the same laboratory where the
@@ -351,7 +351,7 @@ have also been produced in sizes up to 10000$\times$10000
 pixels. Detectors of this size or larger are becoming impractical due
 to rapidly increasing read-out times and production costs.
 
-\subsection{A simplified three-phase CCD lay-out}
+\section{A simplified three-phase CCD lay-out}
 
 The CCD depends for its functioning as a photon counting device on
 four different operations: 1) the conversion of individual photons to
@@ -416,7 +416,7 @@ charge packet can be identified and the recorded image reconstructed.
 We will return to study different aspects of these different stages of
 the CCD detector in greater detail below.
 
-\subsubsection{Other types of clocking}
+\subsection{Other types of clocking}
 
 Astronomical CCDs are mainly three phase devices, but there are other types
 as well. 
@@ -437,7 +437,7 @@ in a virtual phase CCD are physically separated from each other leaving
 parts of the substrate directly exposed to incoming radiation. This 
 enhances their sensitivity.
 
-\subsection{The surface channel MOS capacitor}
+\section{The surface channel MOS capacitor}
 
 Let us now consider the particular silicon structure illustrated in
 figure \ref{CCD.figpMOS}. On top of a heavily doped p-substrate
@@ -549,7 +549,7 @@ with
 Obviously, the holding capacity of the MOS capacitor for a given gate
 voltage $V_G$ is exceeded when $x_d \rightarrow 0$.
 
-\subsection{The buried channel MOS capacitor}
+\section{The buried channel MOS capacitor}
 
 The surface channel MOS capacitor studied above met with serious
 difficulties in practical applications. A fraction of the accumulated
@@ -578,7 +578,7 @@ depletion of majority carriers (electrons) in the n-layer has been
 achieved before the photon counting sequence is initiated. We return
 to a discussion of this requirement below.
 
-\subsubsection{Potential well}
+\subsection{Potential well}
 
 If we for the time being assume the depletion condition to be
 satisfied the shape of the potential well is found by solving the
@@ -658,7 +658,7 @@ $t = 5000$~nm, and $d = 1000$~nm.
 \end{figure}
 
 
-\subsubsection{Depletion}
+\subsection{Depletion}
 
 At the n-p junction mobile carriers from both sides (electrons form
 the n-side and holes from the p-side) will tend to diffuse across the
@@ -765,7 +765,7 @@ A light sensitive diode can be used in several ways:
   across it is a non-linear function of the photon flux.
 \end{itemize}
 
-\subsubsection{Storage capacity}
+\subsection{Storage capacity}
 
 As the CCD detector is subsequently illuminated, the generated
 photoelectrons will be collected in a region around the maximum
@@ -859,7 +859,7 @@ neighboring pixels, producing a ``blooming'' effect in the image.
 
 
 
-\subsection{The charge transfer process} 
+\section{The charge transfer process} 
 
 After the illuminated charge generation phase the collected charges
 need to be transfered to a suitable charge measuring circuitry. In a
@@ -904,7 +904,7 @@ value of the transfer time may be $t_T = 1$ $\mu$s.
 \end{figure}
 
 
-\subsection{Charge measurements} 
+\section{Charge measurements} 
 
 The final operational phase of the CCD detector is the measurement of
 the charges accumulated in the different pixels during the exposure
@@ -923,7 +923,7 @@ temperatures down to about - 90$^\circ$C.  Modern
 high-performance CCDs have achieved remarkable noise level
 equivalents down to less than 2 (elementary) electron charges.
 
-\subsection{Dark currents}
+\section{Dark currents}
 
 Operating the CCD detector under reduced temperatures will also reduce
 problems related to dark currents in the MOS capacitors. The basic
@@ -981,7 +981,7 @@ exceeding 70 K.
   \label{CCD.figdark}
 \end{figure}
 
-\subsection{CCD summary, problems and corrections}
+\section{CCD summary, problems and corrections}
 
 For typical noise levels and pixel capacities, astronomical CCDs have dynamic
 ranges of $100\,000$ to $500\,000$.
@@ -1014,14 +1014,14 @@ is the reason rear illuminated CCDs are thinned; {\it ie} to reduce this
 distance. It will also occur for any CCD where the accumulating charge nears
 its maximum capacity. 
 
-\subsection{Other types of detectors}
+\section{Other types of detectors}
 
 In these notes we have concentrated almost exclusively on CCD's, but one should
 be aware that also other types of detectors exist. These are covered were
 summarily here and in somewhat more detail in chapter~1 of Kitchin's 
 {\it Astrophysical Techniques}.
 
-\subsubsection{Photomultiplyers}
+\subsection{Photomultiplyers}
 
 Electron photomultiplyer phototubes were once the workhorse of optical 
 astronomy. They continue to be used when individual photons need to be
@@ -1042,7 +1042,7 @@ are channelled towards the correct next electrode in the sequence after
 each interaction. The final signal pulse may contain $10^6$ electrons for each
 incoming photon. 
 
-\subsubsection{Superconducting tunnel junction detectors (STJs)}
+\subsection{Superconducting tunnel junction detectors (STJs)}
 
 Kitchin mentions that a possible replacement of CCDs could come in the form
 of superconducting tullel junction detectors (STJ). At temperatures
@@ -1088,7 +1088,7 @@ determine their wavelength, from X-ray to infrared, of each. This is a
 technology still in development, but some practical multi-pixel
 STJ-based detectors have begun to appear at telescopes.
 
-\subsubsection{Other types}
+\subsection{Other types}
 
 \noindent{\it Photvoltaic cells.} These are also known as photodiodes,
 photoconductors, and barrier junction detectors. The idea is to use the
@@ -1148,7 +1148,7 @@ rises with increasing radiation and provides a measure of its intensity.
 \noindent{\it Charge injection devices} (CID) -- detection method identical to CCD, 
 the difference lies in the read out system. 
 
-\subsubsection{Infrared detectors}
+\subsection{Infrared detectors}
 
 Many of the detectors mentioned above have some infrared (IR) sensitivity, 
 especially out to 1~$\mu$m. At longer wavelengths, other types of detectors
@@ -1179,7 +1179,7 @@ simplest, two strips of material are used as the arms of a Wheatstone
 bridge. When one is heated by the radiation its resitance changes and
 so the balance of the bridge alters. 
 
-\subsection{Noise}
+\section{Noise}
 
 In the absence of noise any detector would be capable of detecting any source,
 however faint. A minimum signal to noise ratio of unity is required for 
@@ -1214,7 +1214,7 @@ deviation of $\sqrt{n}$ where $n$ is the mean number of photons per unit
 time. 
 
 
-\subsection{Exercises}
+\section{Exercises}
 
 \begin{enumerate}
 \item Describe, in detail, how two phase and virtual phase CCDs move charges

@@ -20,7 +20,7 @@
 %\def\labs{\mid\!}
 %\def\rabs{\!\mid}
 %\begin{document}
-\section{Lecture notes 5: Diffraction}
+\chapter{Diffraction}
 
 Let us now consider how light reacts to being confined to a given aperture. The resolution 
 of an aperture is restricted due to the wave nature of light: as light passes through any 
@@ -33,7 +33,7 @@ coherently in phase.
 \noindent (In the following I will follow Kip Thorne's lecture notes found at 
 \newline{\tt www.pma.caltech.edu/Courses/ph136/yr2004}.)
 
-\subsection*{Helmholtz-Kirchhoff Integral}
+\section{Helmholtz-Kirchhoff Integral}
 
 Let us restrict attention to the simplest (and, luckily the most
 useful) case: a monochromatic scalar wave 
@@ -96,10 +96,13 @@ $\cl{P}$ to the point where $\psi_0$ is evaluated. Now apply Gauss' theorem
 \]
 to the vector field $\psi\nabla\psi_0-\psi_0\nabla\psi$ and invoke Helmholtz equation to 
 arrive at 
+%\begin{align}
 \[
 \int_{\cl{S}+\cl{S}'}(\psi\nabla\psi_0-\psi_0\nabla\psi)\cdot d{\bm S}
            =-\int_\cl{V}(\psi\nabla^2\psi_0-\psi_0\nabla^2\psi)dV=0
 \]
+%\label{fig:exercise-1-eq}
+%\end{align}
 Where we have introduced a small sphere $\cl{S}'$ of radius $r'$ surrounding $\cl{P}$; $\cl{V}$
 is the volume between the two surfaces $\cl{S}$ and $\cl{S}'$; and we have made the opposite 
 choice of direction for the integration element $d{\bm S}$ -- it points into $\cl{V}$ instead
@@ -108,7 +111,7 @@ of outwardly as is usual, changing the sign of the second expression in the equa
 {\bf Exercise}
 
 \begin{enumerate}
-\item Confirm that the above expression is correct.
+	\item Confirm that the expression in formula \ref{exercise-1-eq} is correct.
 \newcounter{count}
 \setcounter{count}{\value{enumi}} 
 \end{enumerate}
@@ -141,7 +144,7 @@ If $\cl{P}$ is many wavelengths away from the boundary $\cl{S}$, then the integr
 influenced by the waves $\psi$ as they enter through $\cl{S}$, and not when they are
 leaving.
 
-\subsection{Diffraction by an aperture}
+\section{Diffraction by an aperture}
 
 Next let us suppose that some aperture $\cl{Q}$ of size much greater than a wavelength but
 much smaller than the distance to $\cl{P}$ is illuminated by a distant wave source. Let 
@@ -183,7 +186,7 @@ phase of the incoming wave $\psi'$ can also be changed by the transmission funct
 Finally there is the {\it obliquity factor} ${d\hat{\bm S}\cdot({\bm n}+{\bm n'})/2}$, where 
 $d\hat{\bm S}$ is the unit vector normal to the aperture. 
 
-\subsection{Spreading of the Wavefront}
+\section{Spreading of the Wavefront}
 
 Equation~\ref{eq:small-aperture} gives a general description for computing the diffraction 
 pattern from an illuminated aperture. It is commonly used in two different limits, called
@@ -242,7 +245,7 @@ associated with wave-packet spreading. By contrast in the more distant Fraunhofe
 front spreading will cause the transverse size of the entire wave to grow linearly with the 
 distance, and the intensity pattern will typically not resemble the aperture at all.
 
-\subsection{Fraunhofer Diffraction}
+\section{Fraunhofer Diffraction}
 
 \begin{figure}[th!]
 %  \hfil\psfig{file=path-length.eps,width=0.7\textwidth}\hfil
@@ -283,7 +286,7 @@ Fraunhofer regime is given by the two dimensional Fourier transform denoted by
 $\bar{t}({\bm\theta})$, of the transmission function $t({\bm x})$, with ${\bm x}$ made 
 dimensionless in the transform by multiplying with $k={2\pi/\lambda}$. 
 
-\subsection{Diffraction of a single slit}
+\section{Diffraction of a single slit}
 
 Consider now a single transparent stripe, a slit, of width $a$ centered on $x=0$, and 
 measure the scalar angle $\theta$ from the direction of the incident radiation. This slit
@@ -311,7 +314,7 @@ where ${\rm sinc}(x)\equiv{\sin(x)/x}$.
 \setcounter{count}{\value{enumi}}
 \end{enumerate}
 
-\subsection{Babinet's principle}
+\section{Babinet's principle}
 
 In the previous section we have shown how to compute the Fraunhofer diffraction pattern formed
 by a narrow slit. We might also be interested in the pattern produced by the complementary
@@ -324,7 +327,7 @@ Therefore the Fraunhofer diffraction patterns from the needle and the slit --- a
 any complementary apertures --- are identical, except in the direction of the incident 
 wave.
 
-\subsection{Diffraction by a circular aperture}
+\section{Diffraction by a circular aperture}
 
 Let us now compute how well a telescope can distinguish neighboring stars. We cannot expect to
 resolve them (or any two objects) that are closer together in the sky than the angular width
@@ -364,5 +367,6 @@ $J_1({kD\theta/2})$ which is found to be $\theta_A={1.22\lambda/D}$.
 and, in addition, plots an image of the Airy disk.
 \setcounter{count}{\value{enumi}}
 \end{enumerate}
+
 
 %\end{document}

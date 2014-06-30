@@ -20,7 +20,7 @@
 %\def\rabs{\!\mid}
 %\begin{document}
 %\setcounter{section}{5} No need for this when merging into main.
-\section{Telescopes for visible light}
+\chapter{Telescopes for visible light}
 
 Astronomers use telescopes to collect radiation from astronomical sources and
 to estimate their direction and structure as well as spectral and absolute 
@@ -52,7 +52,7 @@ exception is chromatic aberration and the related second order effects of
 transverse chromatic aberration and secondary color, and these only effect
 lenses.
 
-\subsection{Lenses, mirrors and geometric optics}
+\section{Lenses, mirrors and geometric optics}
 
 The speed of light in a vacuum is a constant, $c$, identical for all observers. 
 The {\it phase velocity} $v$ of light in a dielectric medium such as air, water, or glass
@@ -81,7 +81,7 @@ where $w$ is the {\it optical path length}. In some situations with a coherent s
 all waves are emitted in phase) the geometrical wavefronts also correspond to surfaces of
 equal phase.
 
-\subsubsection{Fermat's principle and Snell's law}
+\subsection{Fermat's principle and Snell's law}
 
 Fermat's principle states that the path of a ray between two points will always be an extremum
 in total travel time $\tau$ or optical path length.
@@ -132,7 +132,7 @@ medium.
 Snell's law is a general result that applies to any shape, and can be used as the foundation of 
 almost all geometrical optics.
 
-\subsubsection{Reflection and transmission coefficients}
+\subsection{Reflection and transmission coefficients}
 
 The laws governing the relative {\it intensities} of incident and
 reflected, refracted beams are complicated and fall outside the realm
@@ -173,7 +173,7 @@ indices of refraction. A few results are worth stating:
   \label{fig:reflection_spherical}
 \end{figure}
 
-\subsubsection{Reflection from a spherical surface}
+\subsection{Reflection from a spherical surface}
 
 Consider a concave spherical surface with radius $R$ and center $C$ as
 shown in figure~\ref{fig:reflection_spherical}. The line that is 
@@ -214,7 +214,7 @@ The distance $R/2$ is termed the {\it focal length} of the mirror, often written
 the {\it power} of the surface is written $P$. Note that as the object distance
 $s_o$ goes to $\infty$ the image distance $s_i$ goes to $f$.
 
-\subsubsection{Refraction in lenses} % Changed capital letter ``L'' in ``Lenses'' to 'l'.
+\subsection{Refraction in lenses} % Changed capital letter ``L'' in ``Lenses'' to 'l'.
 
 Snell's law of refraction is also a good starting point for
 understanding lenses.
@@ -248,7 +248,7 @@ this means that the wavelength of light is shorter in glass than in vacuum.
 An imaging lens is constructed so that the optical length $w$ in all rays is 
 identical even if the geometric distances are different. 
 
-\subsubsection{Imaging properties}
+\subsection{Imaging properties}
 
 The relation between the distance from a thin lens to an object $s$ and to the 
 image of the object $s'$ is related to the focal length $f$ of the lens by the 
@@ -311,7 +311,7 @@ Likewise, when dealing with a spherical mirror
 \setcounter{count}{\value{enumi}} 
 \end{enumerate}
 
-\subsubsection{Simple telescopes}
+\subsection{Simple telescopes}
 
 In its simplest form an astronomical telescope consists of two parts, an 
 objective and an eyepiece. The objective images the object one is studying,
@@ -369,7 +369,7 @@ be given by $M={\beta/\alpha}$ and that therefore
 \[ M={\beta\over\alpha}={\tan({h/F_0})\over\tan({h/F_1})}\approx{{h/F_0}\over{h/F_1}}={F_1\over F_0}.\]
 Note that the image is formed upside down.
 
-\subsection{Optical Materials}
+\section{Optical Materials}
 
 An ideal mirror should have a reflectivity of 1.0 for all wavelengths ($\lambda$) of interest. The
 substrate should be easy to shape to an accuracy of a fraction of $\lambda$, and once shaped, 
@@ -451,7 +451,7 @@ a broad range of mirrors. Such {\it multilayer mirrors} are in
 frequent use in solar satellites observing the sun at normal incidence
 in the EUV as will be discussed later.
 
-\subsection{Chromatic aberration}
+\section{Chromatic aberration}
 
 Chromatic aberration arises through the change in the refractive index of
 glass or other optical material with the wavelength. Typical values for
@@ -540,7 +540,7 @@ case the corrective lenses are called {\it apochromats}. Adding more lenses, a p
 designed {\it triplet}, called a {\it superapochromat} can bring four wavelengths into 
 a common focus.
 
-\subsubsection{Schupmann achromat}
+\subsection{Schupmann achromat}
 
 Another interesting solution to the problem of achieving an achromatic image
 is the combination of a positive lens and a second negative lens in which case
@@ -552,7 +552,7 @@ in the usual setup. There are few refracting telescopes in professional night
 time astronomy, but the Swedish 1-meter Solar Telescope is a refracting 
 telescope in which a Schupmann achromat is used.
 
-\subsection{Seidel Aberrations}
+\section{Seidel Aberrations}
 
 \begin{figure}[th!]
 %  \psfig{file=aberration_geometry.eps,width=0.95\textwidth}
@@ -592,7 +592,7 @@ also known as the {\it Seidel aberrations}. Note that since the range of $\rho$ 
 the diameter of the telescope the terms with the highest order of $\rho$ are the most
 important.
 
-\subsubsection{Spherical aberration $\propto\rho^4$}
+\subsection{Spherical aberration $\propto\rho^4$}
 
 \begin{figure}[th!]
 %  \hfil\psfig{file=spherical-aberration.eps,width=0.9\textwidth}\hfil
@@ -640,7 +640,7 @@ Schmidt and Maksutov telescopes later in this lecture.
 %the fourth power of the diameter and inversly proportional to the third 
 %power of the focal length.
 
-\subsubsection{Coma $\propto \rho^3b\cos\phi$}
+\subsection{Coma $\propto \rho^3b\cos\phi$}
 
 {\it Coma} in an optical system refers to an aberration which results
 in off-axis point sources such as stars appearing distorted. Specifically, 
@@ -681,7 +681,7 @@ focal ratio will reduce coma, but impose penalties in image brightness and teles
 Otherwise, minimizing coma in a refracting system requires a system of lenses, and at least
 two mirrors in reflecting telescopes.
 
-\subsubsection{Astigmatism $\propto b^2\rho^2\cos^2\phi$}
+\subsection{Astigmatism $\propto b^2\rho^2\cos^2\phi$}
 
 \begin{figure}[th!]
 %  \hfil\psfig{file=astigmatism-example.eps,width=0.7\textwidth}\hfil
@@ -712,7 +712,7 @@ image plane is combined with corrected astigmatism is termed {\it anastigmatic}
 and a telescope that corrects for astigmatism, coma, and spherical aberration a
 anastigmatic aplanat. 
 
-\subsubsection{Field curvature $\propto\rho^2 b^2$}
+\subsection{Field curvature $\propto\rho^2 b^2$}
 
 This aberration results from off-axis images falling on a spherical surface called the
 {\it Petzval surface}. Detectors are generally flat, so much of an image formed on a 
@@ -723,7 +723,7 @@ using a mechanical plate holder. Large solid-state detectors like CCDs are mecha
 quite fragile, so bending is not an option. In which case a corrector plate or lens is
 used to flatten the field.
 
-\subsubsection{Distortion $\propto \rho b^3\cos\phi$}
+\subsection{Distortion $\propto \rho b^3\cos\phi$}
 
 \begin{figure}[th!]
 %  \hfil\psfig{file=aberration-distort.eps,width=0.9\textwidth}\hfil
@@ -746,7 +746,7 @@ Another fault of optical systems is called {\it vignetting}. It arises as a resu
 of uneven illumination of the image plane, usually due to the obstruction of 
 the light path by parts of the instrument.
 
-\subsubsection{Zernike polynomials}
+\subsection{Zernike polynomials}
 
 \begin{figure}[th!]
 %  \hfil\psfig{file=zernike_polynomials.eps,width=0.4\textwidth}\hfil
@@ -835,7 +835,7 @@ R_n^m(\rho)=0\qquad{\rm if}~n-m~{\rm odd}
 
 The first few few Zernike polynomials are described in table~\ref{tab:zernike-polynomials}.
 
-\subsection{Practical telescopes}
+\section{Practical telescopes}
 
 Even after a telescope design has been perfected; in which one attempts to 
 remove as many of the aberrations as possible from the list above, there 
@@ -922,7 +922,7 @@ the material behind the reflecting surface removed, leaving only thin struts to 
 {\it Rotating mirrors, bath of mercury.} Isaac Newton realized that the surface of a steadily rotating liquid would take up a paraboloidal shape under the combined forces of gravity and
 centrifugal acceleration. If the liquid reflects light, like mercury, gallium, gallium-indium alloy, or an oil suffused with reflecting particles, one can then use it as the primary mirror of a telescope. 
 
-\subsubsection{Designs}
+\subsection{Designs}
 
 The most common format for large telescopes is the Cassegrain system, although
 most large telescopes can be usually be used in several alternative 
@@ -1031,7 +1031,7 @@ camera cannot be used visually since its focus is inaccessible. One of the best
 modifications of this is the Maksutov. A similar system is the 
 Schmidt-Cassegrain telescope. 
 
-\subsubsection{Mountings}
+\subsection{Mountings}
 
 The functions of a telescope mounting are to hold the optical components 
 in their correct mutual alignment, and to direct the optical axis towards the
@@ -1077,7 +1077,7 @@ on a given target requires continuous telescope movement because of the aberrati
 starlight induced by the telescopes orbital velocity and because of torques induced by 
 atmospheric drag and thermal effects. 
 
-\subsubsection{Telescopes in space}
+\subsection{Telescopes in space}
 
 In connection with a RAND project in 1946, Lyman Spitzer was asked to consider the advantages
 of putting an astronomical telescope in space. This work came to full fruition in 1990 
@@ -1128,7 +1128,7 @@ at least 200, and that factor is likely to increase in the near future. The disa
 space astronomy are led by its enormous cost. Typically the two 8~m Gemini telescopes had a 
 construction budget of 100~MUSD, the 2.4~m HST cost 2000~MUSD to construct and launch.
 
-\subsubsection{Observatory engineering}
+\subsection{Observatory engineering}
 
 \begin{enumerate}
 \item The location of an observatory is vital to its success. Seeing is substantially better
@@ -1146,7 +1146,7 @@ combine beams from several telescopes at a common focus ({\it i.e} interferometr
 \item Adaptive optics can eliminate some of the effects of atmospheric seeing.
 \end{enumerate}
 
-\subsubsection{Future telescopes}
+\subsection{Future telescopes}
 
 If adaptive optics can produce a large diffraction limited FOV, then current mirror and
 mounting technology can allow telescopes of up to 100~m diameters. At present (2010)
