@@ -10,9 +10,9 @@ by Professor Viggo Hansteen.
 The primary goals are:
 * Layout
   * ~~Merge all chapters into a single document.~~ Done.
-  * **Change document format to** `book`.
-  * Add table of contents.
-  * Fix sections, numbering and other to make it more consistent and neat.
+  * ~~Change document format to `book`.~~ Done.
+  * ~~Add table of contents.~~ Done.
+  * **Fix sections, numbering and other to make it more consistent and neat.**
 * Content (text)
   * Correct typos.
   * Rewrite unclear paragraphs.
