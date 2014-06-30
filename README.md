@@ -5,11 +5,14 @@ by Professor Viggo Hansteen.
 
 
 ### Overview of project goals
+**Bold** font shows what I am currently working on.
+
 The primary goals are:
 * Layout
-  * Merge all chapters into a single document.
-  * Add table of contents.
-  * Change document format to `book`.
+  * ~~Merge all chapters into a single document.~~ Done.
+  * ~~Change document format to `book`.~~ Done.
+  * ~~Add table of contents.~~ Done.
+  * **Fix sections, numbering and other to make it more consistent and neat.**
 * Content (text)
   * Correct typos.
   * Rewrite unclear paragraphs.
