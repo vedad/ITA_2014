@@ -307,8 +307,8 @@ features a solar image taken in the infrared 854.2~nm Ca~{\sc ii} line.
 	\centering
 %\psfig{file=camXXV_13Jun2008_8542_raw.eps,width=0.7\textwidth}
 %\psfig{file=camXXV_13Jun2008_8542_momfbd.eps,width=0.7\textwidth}}
-		\includegraphics[width=0.7\textwidth]{camXXV_13Jun2008_8542_raw.eps}
-		\includegraphics[width=0.7\textwidth]{camXXV_13Jun2008_8542_momfbd.eps}
+		\includegraphics[width=0.6\textwidth]{camXXV_13Jun2008_8542_raw.eps}
+		\includegraphics[width=0.6\textwidth]{camXXV_13Jun2008_8542_momfbd.eps}
 	\caption{Pre- and post-processed images taken of the quiet Sun in the 
 	$\lambda 8542$~\AA\ line of Ca~{\sc ii} at the Swedish 1-meter Solar 
 	Telescope, June 13, 2008 with the CRISP Fabry-Perot focal plane instrument. 
@@ -1008,13 +1008,13 @@ its neighbors. However, the hot spot pixel is often also a poor transporter
 of charge resulting in a spurious line being introduced into the image.
 
 Yet another problem is that of cross talk or blooming. This occurs when 
-electrons stray to nearby pixels. This especially effects rear illuminated 
+electrons stray to nearby pixels. This especially affects rear illuminated 
 CCDs as in them electrons are produced quite far from the electrodes. This
 is the reason rear illuminated CCDs are thinned; {\it ie} to reduce this 
 distance. It will also occur for any CCD where the accumulating charge nears
 its maximum capacity. 
 
-\section{Other types of detectors}
+\section{Other types of detectors for visible light}
 
 In these notes we have concentrated almost exclusively on CCD's, but one should
 be aware that also other types of detectors exist. These are covered were
@@ -1088,9 +1088,11 @@ determine their wavelength, from X-ray to infrared, of each. This is a
 technology still in development, but some practical multi-pixel
 STJ-based detectors have begun to appear at telescopes.
 
-\subsection{Other types}
+%\subsection{Other types}
 
-\noindent{\it Photvoltaic cells.} These are also known as photodiodes,
+\subsection{Photovoltaic cells}
+%\noindent{\it Photovoltaic cells.}
+These are also known as photodiodes,
 photoconductors, and barrier junction detectors. The idea is to use the
 properties of a p-n junction in a semiconductor. When such a junction
 is in equilibrium electrons and holes have diffused across the
@@ -1113,7 +1115,9 @@ the size of the detecting area. These devices are known as p-i-n
 junctions, and their operating principle does not differ fro that of
 the simple p-n junction.
 
-\noindent{\it Thermocouples.} Two dissimilar metals in contact can
+\subsection{Thermocouples}
+%\noindent{\it Thermocouples.}
+Two dissimilar metals in contact can
 develop a potential difference across their junction. This is called
 the Seebeck effect. The position of the Fermi level will change with
 temperature and the change in Fermi level may not be the same in two
@@ -1139,16 +1143,19 @@ especially for infrared work. Their simplicity of operation and
 robustness has led to many application for them despite their
 relatively low sensitivity.
 
-\noindent{\it Phototransistors.} These are of little direct use in
+\subsection{Phototransistors}
+%\noindent{\it Phototransistors.}
+These are of little direct use in
 astronomy because of their low sensitivity. They consist simply of a
 p-n-p or n-p-n transistor with the minority current carriers produced
 by the illumination instead of the normal emitter. Thus the current
 rises with increasing radiation and provides a measure of its intensity.
 
-\noindent{\it Charge injection devices} (CID) -- detection method identical to CCD, 
-the difference lies in the read out system. 
+% @Viggo: Remove info about CID? No information, so not really relevant.
+%\noindent{\it Charge injection devices} (CID) -- detection method identical to CCD, 
+%the difference lies in the read out system. 
 
-\subsection{Infrared detectors}
+\section{Infrared detectors}
 
 Many of the detectors mentioned above have some infrared (IR) sensitivity, 
 especially out to 1~$\mu$m. At longer wavelengths, other types of detectors
@@ -1162,18 +1169,22 @@ FIR. Currently there are two types of detector in the IR: the photoconductor
 of the NIR and MIR (and somewhat into the FIR) and the bolometer for the
 FIR.
 
-\noindent{\it Photoconductive cells} exhibit a change in conductivity with the 
+\subsection{Photoconductive cells}
+%\noindent{\it Photoconductive cells}
+These cells exhibit a change in conductivity with the 
 intensity of their illumination. The mechanism for that change is the 
 absorption of radiation by the electrons in the valence band of a 
 semi-conductor and their consequent elevation to the conduction band. The
-conductivity therefor increases with increasing illumination, and is monitored
+conductivity therefore increases with increasing illumination, and is monitored
 by a small bias current. These cells have been assembled into arrays of 
 up to $2048\times 2048$ for the NIR and $1024\times 1024$ for the MIR, 
 though at the long wavelength end of the MIR arrays of some hundred cells is
 the maximum. In the FIR sizes are still only up to $32\times 32$. Unlike
 CCDs infrared arrays are read out pixel by pixel. 
 
-\noindent{\it Bolometers} are devices that change their electrical
+\subsection{Bolometers}
+%\noindent{\it Bolometers}
+Bolometers change their electrical
 resistivity in response to heating by illuminating radiation. At the
 simplest, two strips of material are used as the arms of a Wheatstone
 bridge. When one is heated by the radiation its resitance changes and
