@@ -20,7 +20,7 @@
 %\def\labs{\mid\!}
 %\def\rabs{\!\mid}
 %\begin{document}
-\chapter{Diffraction}
+\chapter{Diffraction I}
 
 Let us now consider how light reacts to being confined to a given aperture. The resolution 
 of an aperture is restricted due to the wave nature of light: as light passes through any 
@@ -96,48 +96,38 @@ $\cl{P}$ to the point where $\psi_0$ is evaluated. Now apply Gauss' theorem
 \]
 to the vector field $\psi\nabla\psi_0-\psi_0\nabla\psi$ and invoke Helmholtz equation to 
 arrive at 
-%\begin{align}
-\[
+\be
 \int_{\cl{S}+\cl{S}'}(\psi\nabla\psi_0-\psi_0\nabla\psi)\cdot d{\bm S}
            =-\int_\cl{V}(\psi\nabla^2\psi_0-\psi_0\nabla^2\psi)dV=0
-\]
-%\label{fig:exercise-1-eq}
-%\end{align}
+\label{eq:exercise-1-eq}
+\ee
 Where we have introduced a small sphere $\cl{S}'$ of radius $r'$ surrounding $\cl{P}$; $\cl{V}$
 is the volume between the two surfaces $\cl{S}$ and $\cl{S}'$; and we have made the opposite 
 choice of direction for the integration element $d{\bm S}$ -- it points into $\cl{V}$ instead
 of outwardly as is usual, changing the sign of the second expression in the equation above. 
-
-{\bf Exercise}
-
-\begin{enumerate}
-	\item Confirm that the expression in formula \ref{exercise-1-eq} is correct.
-\newcounter{count}
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
+%{\bf Exercise}
+%\begin{enumerate}
+	%\newcounter{count}
+%\setcounter{count}{\value{enumi}} 
+%\end{enumerate}
 
 Now let the radius $r'$ decrease to zero. We then find that 
 \[
 \psi\nabla\psi_0-\psi_0\nabla\psi\rightarrow {-\psi(0)/{r'}^2}+O({1/r'})
 \]
 and thus the integral over $\cl{S}'$ becomes $4\pi\psi(\cl{P})\equiv
-4\pi\psi_\cl{P}$. 
-
-{\bf Exercise}
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Carry out the integration, and show that its value is $4\pi\psi_{\cl{P}}$.
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
-
-
-Thus,
+4\pi\psi_\cl{P}$.\footnote{See Exercise 2.} 
+%{\bf Exercise}
+%\begin{enumerate}
+%\setcounter{enumi}{\value{count}}
+%\setcounter{count}{\value{enumi}} 
+%\end{enumerate}
+We then have
 \be
 \psi_\cl{P}={1\over 4\pi}\int_\cl{S}\left(\psi\nabla{e^{ikr}\over r}-{e^{ikr}\over r}\nabla\psi\right)\cdot d{\bm S}.
 \label{eq:helmholtz-kirchoff}
 \ee
-
+%
 This equation is the {\it Helmholtz-Kirchhoff formula} is the expression relating $\psi$ at 
 $\cl{P}$ to a linear combination of its value and normal derivative on a surrounding surface.
 If $\cl{P}$ is many wavelengths away from the boundary $\cl{S}$, then the integral is only 
@@ -186,7 +176,7 @@ phase of the incoming wave $\psi'$ can also be changed by the transmission funct
 Finally there is the {\it obliquity factor} ${d\hat{\bm S}\cdot({\bm n}+{\bm n'})/2}$, where 
 $d\hat{\bm S}$ is the unit vector normal to the aperture. 
 
-\section{Spreading of the Wavefront}
+\section{Spreading of the wavefront}
 
 Equation~\ref{eq:small-aperture} gives a general description for computing the diffraction 
 pattern from an illuminated aperture. It is commonly used in two different limits, called
@@ -196,17 +186,19 @@ Suppose that the aperture has a linear size $a$ and is roughly centered on the g
 from the the source point $\cl{P}'$ to the field point $\cl{P}$. Consider the variations of 
 the phase $\phi$ of the contributions to $\psi_\cl{P}$ that come from various places in the
 aperture. Using trigonometry we can estimate that locations on opposite sides of the aperture
-produce phases at $\cl{P}$ that differ by $\Delta\phi=k(r_2-r_1)\sim {ka^2/2r}$, where $r_1$ and
-$r_2$ are the distances from the two edges of the aperture to the point $\cl{P}$. 
+produce phases at $\cl{P}$ that differ by
+\be
+\Delta\phi=k(r_2-r_1)\sim {ka^2/2r},
+\label{eq:exercise-3-eq}
+\ee
+where $r_1$ and $r_2$ are the distances from the two edges of the aperture to the point $\cl{P}$. 
 
-{\bf Exercise}
+%{\bf Exercise}
 
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Why can we write $(r_2-r_1)\sim a^2/2r$? Draw a figure to show
-  the geometry of the problem.
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
+%\begin{enumerate}
+%\setcounter{enumi}{\value{count}}
+%\setcounter{count}{\value{enumi}} 
+%\end{enumerate}
 
 There are
 two limiting regimes depending on whether the aperture is large or small compared with the 
@@ -245,7 +237,7 @@ associated with wave-packet spreading. By contrast in the more distant Fraunhofe
 front spreading will cause the transverse size of the entire wave to grow linearly with the 
 distance, and the intensity pattern will typically not resemble the aperture at all.
 
-\section{Fraunhofer Diffraction}
+\section{Fraunhofer diffraction}
 
 \begin{figure}[th!]
 %  \hfil\psfig{file=path-length.eps,width=0.7\textwidth}\hfil
@@ -296,23 +288,18 @@ t_1(x)&=&1\quad\labs x\rabs<{a/2}, \\
       &=&0\quad\labs x\rabs>{a/2}.
 \eua
 Its diffraction pattern is 
-\bua
-\psi_\cl{P}({\bm\theta})&\propto&\bar{t}_1 \\
-                        &\propto&\int_{-{a/2}}^{a/2}e^{ikx\theta}dx \\
-                        &\propto&{\rm sinc}\left({ka\theta\over 2}\right),
-\eua
+\be
+\psi_\cl{P}({\bm\theta})&\propto \bar{t}_1 \nonumber \\
+&\propto \int_{-{a/2}}^{a/2}e^{ikx\theta}dx \label{eq:exercise-4-eq}\\
+&\propto {\rm sinc}\left({ka\theta\over 2}\right), \nonumber
+\ee
 where ${\rm sinc}(x)\equiv{\sin(x)/x}$. 
 
-{\bf Exercise}
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Carry out the intergration $\int_{-{a/2}}^{a/2}e^{ikx\theta}dx$  above, and show that the result is correct. 
-\item The intensity of radiation is proportional to the square of
-  $\psi$. Plot, for example with {\sc IDL}, the intensity pattern from
-  the diffraction of a single slit in the Frauhofer regime.
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
+%{\bf Exercise}
+%\begin{enumerate}
+%\setcounter{enumi}{\value{count}}
+%\setcounter{count}{\value{enumi}}
+%\end{enumerate}
 
 \section{Babinet's principle}
 
@@ -358,14 +345,30 @@ concentric rings whose flux vanishes with radius. Only 16\% of the tatal light f
 the the central Airy disk. The angular radius $\theta_A$ of the Airy disk, {\it i.e.} the 
 radius of the dark circle surrounding it, is determined by the first zero of 
 $J_1({kD\theta/2})$ which is found to be $\theta_A={1.22\lambda/D}$. 
+%{\bf Exercise}
+%\begin{enumerate}
+%\setcounter{enumi}{\value{count}}
+%\setcounter{count}{\value{enumi}}
+%\end{enumerate}
 
-{\bf Exercise}
+\section{Exercises}
 
 \begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Write a {\tt IDL} routine that plots a cut through the Airy disk such as figure~\ref{fig:jinc2}
+	\item Confirm that the expression in Eq.~\ref{exercise-1-eq} is correct by using Gauss'
+		theorem.
+	\item Carry out the integral over $\cl{S}'$ in Eq.~\ref{exercise-1-eq} by letting the
+		radius $r'$ go to zero, and show that
+		its value is $4\pi\psi_{\cl{P}}$.
+	\item Why can we write $(r_2-r_1)\sim a^2/2r$ in Eq.~\ref{exercise-3-eq}?
+	Draw a figure to show
+  the geometry of the problem.
+	\item Carry out the intergration $\int_{-{a/2}}^{a/2}e^{ikx\theta}dx$ in
+	Eq.~\ref{exercise-4-eq}, and show that the result is correct. 
+	\item The intensity of radiation is proportional to the square of
+  $\psi$. Plot, for example with {\sc IDL}, the intensity pattern from
+  the diffraction of a single slit in the Frauhofer regime.
+	\item Write a {\tt IDL} routine that plots a cut through the Airy disk such as figure~\ref{fig:jinc2}
 and, in addition, plots an image of the Airy disk.
-\setcounter{count}{\value{enumi}}
 \end{enumerate}
 
 
