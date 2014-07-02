@@ -1,25 +1,3 @@
-%\documentclass{article}
-%\usepackage{wasysym}
-%\usepackage{graphicx}
-%\usepackage{bm}
-%\usepackage{psfig}
-%\newcommand{\bc}{\begin{center}}
-%\newcommand{\ec}{\end{center}}
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-%\newcommand{\eea}{\end{eqnarray}}
-%\newcommand{\bua}{\begin{eqnarray*}}
-%\newcommand{\eua}{\end{eqnarray*}}
-%\newcommand{\infint}{\int_{-\infty}^{\infty}}
-%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-%\newcommand{\ddt}[1]{\dd{#1}{t}}
-%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-%\newcommand{\aver}[1]{\langle{#1}\rangle}
-%\def\cl#1{{\cal #1}}               % for caligrafic letters
-%\def\labs{\mid\!}
-%\def\rabs{\!\mid}
-%\begin{document}
 \chapter{Diffraction I}
 
 Let us now consider how light reacts to being confined to a given aperture. The resolution 
@@ -105,11 +83,6 @@ Where we have introduced a small sphere $\cl{S}'$ of radius $r'$ surrounding $\c
 is the volume between the two surfaces $\cl{S}$ and $\cl{S}'$; and we have made the opposite 
 choice of direction for the integration element $d{\bm S}$ -- it points into $\cl{V}$ instead
 of outwardly as is usual, changing the sign of the second expression in the equation above. 
-%{\bf Exercise}
-%\begin{enumerate}
-	%\newcounter{count}
-%\setcounter{count}{\value{enumi}} 
-%\end{enumerate}
 
 Now let the radius $r'$ decrease to zero. We then find that 
 \[
@@ -117,11 +90,6 @@ Now let the radius $r'$ decrease to zero. We then find that
 \]
 and thus the integral over $\cl{S}'$ becomes $4\pi\psi(\cl{P})\equiv
 4\pi\psi_\cl{P}$.\footnote{See Exercise 2.} 
-%{\bf Exercise}
-%\begin{enumerate}
-%\setcounter{enumi}{\value{count}}
-%\setcounter{count}{\value{enumi}} 
-%\end{enumerate}
 We then have
 \be
 \psi_\cl{P}={1\over 4\pi}\int_\cl{S}\left(\psi\nabla{e^{ikr}\over r}-{e^{ikr}\over r}\nabla\psi\right)\cdot d{\bm S}.
@@ -193,13 +161,6 @@ produce phases at $\cl{P}$ that differ by
 \ee
 where $r_1$ and $r_2$ are the distances from the two edges of the aperture to the point $\cl{P}$. 
 
-%{\bf Exercise}
-
-%\begin{enumerate}
-%\setcounter{enumi}{\value{count}}
-%\setcounter{count}{\value{enumi}} 
-%\end{enumerate}
-
 There are
 two limiting regimes depending on whether the aperture is large or small compared with the 
 {\it Fresnel length}
@@ -240,7 +201,6 @@ distance, and the intensity pattern will typically not resemble the aperture at 
 \section{Fraunhofer diffraction}
 
 \begin{figure}[th!]
-%  \hfil\psfig{file=path-length.eps,width=0.7\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.7\textwidth]{path-length.eps}
   \caption{Geometry for computing the path length between a point $\cal{Q}$ in 
@@ -288,18 +248,12 @@ t_1(x)&=&1\quad\labs x\rabs<{a/2}, \\
       &=&0\quad\labs x\rabs>{a/2}.
 \eua
 Its diffraction pattern is 
-\be
-\psi_\cl{P}({\bm\theta})&\propto \bar{t}_1 \nonumber \\
-&\propto \int_{-{a/2}}^{a/2}e^{ikx\theta}dx \label{eq:exercise-4-eq}\\
-&\propto {\rm sinc}\left({ka\theta\over 2}\right), \nonumber
-\ee
+\bea{eq:exercise-4-eq}
+\psi_\cl{P}({\bm\theta}) &\propto & \bar{t}_1 \nonumber \\
+&\propto & \int_{-{a/2}}^{a/2}e^{ikx\theta}dx \\ %\label{eq:exercise-4-eq}\\
+&\propto & {\rm sinc}\left({ka\theta\over 2}\right), \nonumber
+\eea
 where ${\rm sinc}(x)\equiv{\sin(x)/x}$. 
-
-%{\bf Exercise}
-%\begin{enumerate}
-%\setcounter{enumi}{\value{count}}
-%\setcounter{count}{\value{enumi}}
-%\end{enumerate}
 
 \section{Babinet's principle}
 
@@ -323,7 +277,6 @@ and pointing errors in a real telescope may degrade the image quality even furth
 is the best that can be done, limited only by the uncertainty principle.
 
 \begin{figure}[th!]
-%  \hfil\psfig{file=jinc2.eps,width=0.7\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.7\textwidth]{jinc2.eps}
   \caption{Airy diffraction pattern for a circular aperture. Note the first zero
@@ -345,31 +298,23 @@ concentric rings whose flux vanishes with radius. Only 16\% of the tatal light f
 the the central Airy disk. The angular radius $\theta_A$ of the Airy disk, {\it i.e.} the 
 radius of the dark circle surrounding it, is determined by the first zero of 
 $J_1({kD\theta/2})$ which is found to be $\theta_A={1.22\lambda/D}$. 
-%{\bf Exercise}
-%\begin{enumerate}
-%\setcounter{enumi}{\value{count}}
-%\setcounter{count}{\value{enumi}}
-%\end{enumerate}
 
 \section{Exercises}
 
 \begin{enumerate}
-	\item Confirm that the expression in Eq.~\ref{exercise-1-eq} is correct by using Gauss'
+	\item Confirm that the expression in Eq.~\ref{eq:exercise-1-eq} is correct by using Gauss'
 		theorem.
-	\item Carry out the integral over $\cl{S}'$ in Eq.~\ref{exercise-1-eq} by letting the
+	\item Carry out the integral over $\cl{S}'$ in Eq.~\ref{eq:exercise-1-eq} by letting the
 		radius $r'$ go to zero, and show that
 		its value is $4\pi\psi_{\cl{P}}$.
-	\item Why can we write $(r_2-r_1)\sim a^2/2r$ in Eq.~\ref{exercise-3-eq}?
+	\item Why can we write $(r_2-r_1)\sim a^2/2r$ in Eq.~\ref{eq:exercise-3-eq}?
 	Draw a figure to show
   the geometry of the problem.
-	\item Carry out the intergration $\int_{-{a/2}}^{a/2}e^{ikx\theta}dx$ in
-	Eq.~\ref{exercise-4-eq}, and show that the result is correct. 
+	\item Carry out the integral %$\int_{-{a/2}}^{a/2}e^{ikx\theta}dx$ in
+	in Eq.~\ref{eq:exercise-4-eq}, and show that the result is correct. 
 	\item The intensity of radiation is proportional to the square of
   $\psi$. Plot, for example with {\sc IDL}, the intensity pattern from
-  the diffraction of a single slit in the Frauhofer regime.
+  the diffraction of a single slit in the Fraunhofer regime.
 	\item Write a {\tt IDL} routine that plots a cut through the Airy disk such as figure~\ref{fig:jinc2}
 and, in addition, plots an image of the Airy disk.
 \end{enumerate}
-
-
-%\end{document}
