@@ -1,25 +1,3 @@
-%\documentclass{article}
-%\usepackage{wasysym}
-%\usepackage{graphicx}
-%\usepackage{bm}
-%\newcommand{\bc}{\begin{center}}
-%\newcommand{\ec}{\end{center}}
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-%\newcommand{\eea}{\end{eqnarray}}
-%\newcommand{\bua}{\begin{eqnarray*}}
-%\newcommand{\eua}{\end{eqnarray*}}
-%\newcommand{\infint}{\int_{-\infty}^{\infty}}
-%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-%\newcommand{\ddt}[1]{\dd{#1}{t}}
-%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-%\newcommand{\aver}[1]{\langle{#1}\rangle}
-%\def\cl#1{{\cal #1}}               % for caligrafic letters
-%\def\labs{\mid\!}
-%\def\rabs{\!\mid}
-%\begin{document}
-%\setcounter{section}{5} No need for this when merging into main.
 \chapter{Telescopes for visible light}
 
 Astronomers use telescopes to collect radiation from astronomical sources and
@@ -38,7 +16,7 @@ the detector
 (all wavelengths except gamma-rays)
 \end{itemize}
 Here we will concentrate on the latter category, and especially to those 
-telescopes used to observe visible and infra-red radiation. 
+telescopes used to observe visible and infrared radiation. 
  
 The theoretical
 consideration of resolution that we discussed in previous lectures is only 
@@ -107,18 +85,6 @@ n_1\sin\theta_1=n_2\sin\theta_2
 (Note that this expression reduces to the law of reflections for
 $n_1=-n_2$.) 
 
-{\bf Exercise}
-
-\begin{enumerate}
-\item Show that Snell's law and the law of reflections follow from
-  Fermat's principle. (Hint: set up an expression for the optical path length
-  between two points as a function of, for example $x$ and $y$, and
-  minimize the expression, {\it i.e.} find ${d/dy}=0$, keeping the
-  positions $x_{1,2}$ constant.)
-\newcounter{count}
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
-
 For a ray coming
 from a medium with a larger index of refraction there is a {\it critical angle} which 
 produces a refracted ray that never leaves the medium, which one can see is given by 
@@ -166,7 +132,6 @@ indices of refraction. A few results are worth stating:
 \end{itemize}
 
 \begin{figure}[th]
-%  \hfil\psfig{file=reflection_spherical.eps,width=0.9\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.9\textwidth]{reflection_spherical.eps}
   \caption{Reflection from a spherical surface. See text for details. }
@@ -276,18 +241,6 @@ approximation. However, using the paraxial approximation we can get a
   axis.
 \item Rays through the vertex do not change direction.
 \end{enumerate}
-
-{\bf Exercise}
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Follow the rules above to make a figure showing the ray tracing
-  of  the image of an arrow (lying in the plane of the sky) through a single lens. Indicate the
-  positions of the object (the arrow), the focal points, and the image
-  of the arrow.
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
-
 Likewise, when dealing with a spherical mirror
 \begin{enumerate}
 \item Incident rays parallel to the optical axis are reflected through
@@ -298,17 +251,6 @@ Likewise, when dealing with a spherical mirror
   equal and opposite angle.
 \item Incident rays through the center of curvature, $C$, are
   reflected back upon themselves.
-\end{enumerate}
-
-{\bf Exercise}
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Follow the rules above for a spherical mirror to make a figure showing the ray tracing
-  of  the image of an arrow (lying in the plane of the sky). Indicate the
-  positions of the object (the arrow), the focal point, and the image
-  of the arrow.
-\setcounter{count}{\value{enumi}} 
 \end{enumerate}
 
 \subsection{Simple telescopes}
@@ -342,14 +284,6 @@ s={\theta\over y}={1\over f}
 where $y$ is the distance the points are separated in the focal plane. Typical focal plane 
 detectors are composed of many identical pixels. If the center of each pixel is separated 
 from its nearest neighbors by $d$ then the {\it pixel scale} of a telescope is just $s_p=sd$.
-
-{\bf Exercise}
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item What is the image scale expressed in arcsec per unit lenght?
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
 
 The {\it focal ratio} is defined as 
 \[
@@ -470,7 +404,6 @@ and the F-line 656~nm H$\alpha$. The glasses listed above have constringence tha
 varies from 57 for crown glass to 33 for the dense flint. 
 
 \begin{figure}[th!]
-% \hfil\psfig{file=chromatic-aberration.eps,width=0.5\textwidth}\hfil
  \centering
  \includegraphics[width=0.5\textwidth]{chromatic-aberration.eps}
   \caption{Chromatic aberration.}
@@ -490,7 +423,6 @@ containing the circle of least confusion is called the {\it transverse
 chromatic aberration}.
 
 \begin{figure}[th!]
-%  \hfil\psfig{file=sst-design.eps,width=0.9\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.9\textwidth]{sst-design.eps}
   \caption{Schematic drawing of the Swedish 1-meter Solar Telescope tower 
@@ -555,7 +487,6 @@ telescope in which a Schupmann achromat is used.
 \section{Seidel Aberrations}
 
 \begin{figure}[th!]
-%  \psfig{file=aberration_geometry.eps,width=0.95\textwidth}
 	\centering
 	\includegraphics[width=0.95\textwidth]{aberration_geometry.eps}
   \caption{Geometry used in the Seidel aberration discussion. The left hand
@@ -595,7 +526,6 @@ important.
 \subsection{Spherical aberration $\propto\rho^4$}
 
 \begin{figure}[th!]
-%  \hfil\psfig{file=spherical-aberration.eps,width=0.9\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.9\textwidth]{spherical-aberration.eps}
   \caption{Spherical aberration.}
@@ -726,7 +656,6 @@ used to flatten the field.
 \subsection{Distortion $\propto \rho b^3\cos\phi$}
 
 \begin{figure}[th!]
-%  \hfil\psfig{file=aberration-distort.eps,width=0.9\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.9\textwidth]{aberration-distort.eps}
   \caption{Distortion}
@@ -749,7 +678,6 @@ the light path by parts of the instrument.
 \subsection{Zernike polynomials}
 
 \begin{figure}[th!]
-%  \hfil\psfig{file=zernike_polynomials.eps,width=0.4\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.4\textwidth]{zernike_polynomials.eps}
   \caption{The first few Zernike polynomials, see table~\ref{tab:zernike-polynomials} 
@@ -759,22 +687,27 @@ the light path by parts of the instrument.
 
 % Do something about the table. Too wide for the paragraph. Might change if book is used.
 \begin{table}
-\begin{tabular}{ll}
-\hline\hline
-&  \\
-\multicolumn{2}{c}{Roles of the Zernike polynomials} \\
-&  \\
+	\centering
+	\begin{tabular*}{\textwidth}{p{0.25\textwidth}@{\extracolsep{\fill}}p{0.70\textwidth}}
+\toprule
+\toprule
+Zernike polynomials & Roles of the Zernike polynomials \\ 
+%&\multicolumn{1}{c}{Roles of the Zernike polynomials} \\
+%\cmidrule{1}
+%\cmidrule{2}
+\midrule
 $a_0$ & ``Piston'', equal to the mean value of the wavefront \\
-$a_1\times\rho\cos(\varphi)$ & ``X-tilt'', the deviation of the overall beam in the sagittal direction \\
-$a_2\times\rho\sin(\varphi)$ & ``Y-tilt'', the deviation of the overall beam in the tangential direction \\
+$a_1\times\rho\cos(\varphi)$ & ``X-tilt'', deviation of the overall beam in the sagittal direction \\
+$a_2\times\rho\sin(\varphi)$ & ``Y-tilt'', deviation of the overall beam in the tangential direction \\
 $a_3\times(2\rho^2-1)$ & ``Defocus'', a parabolic wavefront resulting from being out of focus \\
 $a_4\times\rho^2\cos(2\varphi)$ & ``X-astigmatism'', horizontally oriented cylindrical shape \\
 $a_5\times\rho^2\sin(2\varphi)$ & ``Y-astigmatism'', vertically oriented cylindrical shape \\
 $a_6\times(3\rho^2-2)\rho\cos(\varphi)$ & ``X-coma'', comatic image flaring in the horizontal direction \\
 $a_7\times(3\rho^2-2)\rho\sin(\varphi)$ & ``Y-coma'', comatic image flaring in the vertical direction \\
 $a_8\times(6\rho^4-6\rho^2+1)$ & ``Third order spherical aberration'' \\
-\hline
-\end{tabular}
+\bottomrule
+\bottomrule
+\end{tabular*}
 \caption
 {$\rho$ is the normalized pupil radius, $\varphi$ is the azimuthal angle around the pupil,
 the coefficient $a_0,\ldots,a_8$ are the wavefront errors in wavelengths.}
@@ -937,10 +870,6 @@ and large image scale. The Cassegrain is affiliated with coma and spherical
 aberration to about the same degree as an equivalent Newtonian.
 
 \begin{figure}[th!]
-%\hfil{
-%\psfig{file=cassegraindetailed.eps,width=0.45\textwidth}\hfil
-%\psfig{file=newtoniandetailed.eps,width=0.45\textwidth}
-%}\hfil
 	\centering
 	\includegraphics[width=0.45\textwidth]{cassegraindetailed.eps}
 	\includegraphics[width=0.45\textwidth]{newtoniandetailed.eps}
@@ -1008,11 +937,6 @@ example of a Gregorian.
 {\it Refractors (and the Swedish 1-meter Solar Telescope).}
 
 \begin{figure}[th!]
-%\hfil{
-%\psfig{file=maksutovcassegraindetailed.eps,width=0.45\textwidth}
-%\hfil
-%\psfig{file=schmidtcassegraindetailed.eps,width=0.45\textwidth}
-%}\hfil
 	\centering
 	\includegraphics[width=0.45\textwidth]{maksutovcassegraindetailed.eps}
 	\includegraphics[width=0.45\textwidth]{schmidtcassegraindetailed.eps}
@@ -1160,5 +1084,25 @@ $D=24.5$~m of 7 8.4~m segments, and the Thirty Meter Telescope
 ({\tt www.tmt.org})
 $D=30$~m consisting of 492 1.4~m segments. Each of these telescopes has a cost of
 some $10^9$ US dollars.
+
+\section{Exercises}
+
+\begin{enumerate}
+	\item Show that Snell's law and the law of reflections follow from
+		Fermat's principle. (Hint: set up an expression for the optical path length
+		between two points as a function of, for example $x$ and $y$, and
+		minimize the expression, {\it i.e.} find ${d/dy}=0$, keeping the
+		positions $x_{1,2}$ constant.)
+	\item Make a figure showing the ray tracing of the image of an arrow (lying in the plane
+		of the sky) through:
+	\begin{enumerate}
+		\item A thin lens.
+		\item A spherical mirror.
+	\end{enumerate}
+	Use the appropriate rules for ray tracing in these separate cases.
+	Indicate in both cases the positions of the
+	object (the arrow), the focal points, and the image of the arrow.
+	\item What is the image scale expressed in arcsec per unit lenght?
+\end{enumerate}
 
 %\end{document}
