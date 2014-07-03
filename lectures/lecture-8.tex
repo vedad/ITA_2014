@@ -1,27 +1,3 @@
-%\documentclass{article}
-%\usepackage{amssymb}
-%\usepackage{wasysym}
-%\usepackage{graphicx}
-%\usepackage{bm}
-%\usepackage{psfig}
-%\newcommand{\bc}{\begin{center}}
-%\newcommand{\ec}{\end{center}}
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-%\newcommand{\eea}{\end{eqnarray}}
-%\newcommand{\bua}{\begin{eqnarray*}}
-%\newcommand{\eua}{\end{eqnarray*}}
-%\newcommand{\infint}{\int_{-\infty}^{\infty}}
-%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-%\newcommand{\ddt}[1]{\dd{#1}{t}}
-%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-%\newcommand{\aver}[1]{\langle{#1}\rangle}
-%\def\cl#1{{\cal #1}}               % for caligrafic letters
-%\def\labs{\mid\!}
-%\def\rabs{\!\mid}
-%\begin{document}
-%\setcounter{section}{7} No need when merging
 \chapter{Radio, EUV and X-ray telescopes}
 
 \section{Radio and microwave detection}
@@ -48,7 +24,6 @@ does not penetrate to the ground, because of reflection by the ionosphere.
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=jansky-antenna.eps,width=0.7\textwidth}
 	\includegraphics[width=0.7\textwidth]{jansky-antenna.eps}
   \caption{Karl Jansky and his antenna.}
   \label{fig:jansky-antenna}
@@ -114,7 +89,6 @@ acceptable level.
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=heterodyne.eps,width=0.95\textwidth}
 	\includegraphics[width=0.95\textwidth]{heterodyne.eps}
   \caption{Block diagram of a basic heterodyne receiver (figure adapted from Kitchin {\it
 Astrophysical Techniques}).}
@@ -122,7 +96,7 @@ Astrophysical Techniques}).}
 \end{figure}
 
 
-\paragraph{Heterodyne receiver.}  
+\subsection{Heterodyne receiver}
 In figure~\ref{fig:heterodyne} we show schematically the set up for a heterodyne receiver. The
 pre-amplifier operates at the signal frequency and will typically have a gain of 10 to 1000. The
 local oscillator produces a signal that is close to but different from the main signal in its 
@@ -175,7 +149,7 @@ transmissions often overlap these bands. For example the Russian GLONASS
 satellite navigation system overlaps into the band reserved for interstellar
 OH lines at 1.61~GHz.
 
-\section{Radio telescopes} % Changed from capital T to small t.
+\section{Radio telescopes}
 
 The nature of electro-magnetic radiation is the same whether it be radio waves
 or optical light that is discussed. On the other hand, the image in an optical 
@@ -223,7 +197,6 @@ little advantage over an isotropic receiver.
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=polar_plot.eps,width=0.95\textwidth}
 	\includegraphics[width=0.95\textwidth]{polar_plot.eps}
   \caption{Polar plots for a single half-wave dipole, collinear arrays with two and four 
 dipoles and an isotropic receiver.}
@@ -316,7 +289,8 @@ is no axis of symmetry, the lens can be used to observe in many directions simul
 simply by having many feeds distributed around it. The Luneburg lens has yet to 
 find application in radio astronomy, but may be used in the Square Kilometer Array.
 
-\paragraph{Spacecraft.} A number of spacecraft carrying microwave detectors have been launched. 
+\subsection{Spacecraft}
+A number of spacecraft carrying microwave detectors have been launched. 
 These include COBE, MAP and Planck which all are designed to measure anisotropies in
  the cosmic microwave background radiation.
 
@@ -358,7 +332,8 @@ above $10^9$~eV is only a few photons per square meter per day.
 
 \subsection{Detectors}
 
-\paragraph{Geiger counters.} Two electrodes inside an enclosure are held at such a 
+\subsubsection{Geiger counters}
+Two electrodes inside an enclosure are held at such a 
 potential difference that a discharge in the medium filling the enclosure
 is on the point of occurring. The medium inside the tube is typically argon at a 
 low pressure with a small amount of organic gas, such as alcohol vapour added.
@@ -375,7 +350,8 @@ time, caused by the reduction in the potential between the
 electrodes. The length of the dead time for this type of detector is of
 order 200~$\mu$s.
 
-\paragraph{Proportional counters.} Geiger counters run at a lower voltage, so that 
+\subsubsection{Proportional counters}
+Geiger counters run at a lower voltage, so that 
 saturation is avoided and the strength of the signal is proportional to the
 original signal. The gain is reduced to $10^4$, $10^5$. Provided all the
 energy of the ionizing radiation is absorbed withing the detector, its
@@ -404,7 +380,6 @@ of the loss of energy into the rotation or vibration of the molecules.
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=GLAST_allsky_labeled_HI.eps,width=0.95\textwidth}
 	\includegraphics[width=0.95\textwidth]{GLAST_allsky_labeled_HI.eps}
   \caption{First light on the Large Area Telescope on board the Fermi Gamma-ray
 Space Telescope. The photons that have made this image have an energy
@@ -412,7 +387,8 @@ greater than 1~GeV.}
   \label{fig:glast_allsky}
 \end{figure}
 
-\paragraph{Scintillation detectors.} The ionizing photons do not necessarily knock 
+\subsubsection{Scintillation detectors}
+The ionizing photons do not necessarily knock 
 out only the outermost electrons from the atom or molecule with which they 
 interact. Electrons in lower energy levels may also be removed. When this 
 happens a `hole' is left behind into which one of the higher electrons may
@@ -436,7 +412,8 @@ Several gases such as argon, xenon, nitrogen and their mixtures Can also
 be used as scintillators, and combined with an optical system to produce
 another imaging device.
 
-\paragraph{Gas scintillation proportional counters.} A combination of the two
+\subsubsection{Gas scintillation proportional counters}
+A combination of the two
 above types leads to a significant improvement in the low-energy spectral
 resolution. Resolution as good as 6\% at 6~keV has been acheived in practice.
 The x-ray radiation produces ion-electron pairs in an argon- or xenon-filled
@@ -444,7 +421,8 @@ chamber. The electrons are then gently accelerated until they cause
 scintillation of their own in the gas. These scintillations can then be
 observed by a conventional scintillation counter system. 
 
-\paragraph{Charge coupled devices.} (CCDs!) are becoming increasingly widely used as 
+\subsubsection{Charge-coupled devices (CCDs)}
+CCDs are becoming increasingly widely used as 
 primary detectors at EUV and x-ray wavelengths. The Chandra spacecraft 
 uses CCDs with a 24~$\mu$m pixel size, giving 0.5~arcsec resolution. CCDs
 become insensitive to radiation in the blue and ultraviolet because of the 
@@ -452,7 +430,8 @@ absorption in the electrode structure on their surfaces. They regain sensitivity
 shorter wavelengths as radiation is able to penetrate the structure
  (at $\lambda<10$~nm or so).
 
-\paragraph{Cerenkov detectors.} X-Ray and gamma radiation interest lies in the detection
+\subsubsection{Cherenkov detectors}
+X-Ray and gamma radiation interest lies in the detection
 of particles produced by the Compton interaction of very high energy photons. These
 particles can achieve velocities greater than that of light in the local medium producing
 Cerenkov radiation. For example, such particles can be produced high in the atmosphere 
@@ -461,14 +440,14 @@ MAGIC on La Palma.
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=magic.eps,width=0.7\textwidth}
 	\includegraphics[width=0.7\textwidth]{magic.eps}
   \caption{One of the two (almost) identical MAGIC telescopes on Roque
     de los Muchachos Observatory on La Palma.}
   \label{fig:magic}
 \end{figure}                    
 
-\paragraph{Solid-state detectors.} Solid state detectors have several advantages that suit them 
+\subsubsection{Solid-state detectors}
+Solid state detectors have several advantages that suit them 
 particularly for use in satellite-borne instrumentation> a wide range of photon energies
 detected (from 1~keV to 1~MeV), simplicity, reliability, low power consumption, high
 stopping power for radiation, room temperature operation, no entrance window needed,
@@ -489,7 +468,8 @@ include germanium doped with lithium, cadmium telluride and mercure-iodine. At l
 (0.4 -- 4~keV) silicon based  solid-state detectors may be used similarly. Their energy resolution
 ranges from 4 -- 30\%.
 
-\paragraph{Microchannel plates.} Microchannel plates are a variant of the photomultiplier. The devices 
+\subsubsection{Microchannel plates}
+Microchannel plates are a variant of the photomultiplier. The devices 
 are also known as Multi-Anode Micro-channel Arrays (MAMAs). A thin plate is pierced by numerous tiny holes, each perhaps only about 10~$\mu$m across or less. Its top surface is
 an electrode with a negative potential of some 1000~V with respect to the base. The top is
 coated with a photoelectron emitter for the x-ray energies of interest. An impinging photon
@@ -507,7 +487,8 @@ Microchannel plates can also be used in the optical and near ultraviolet.
 
 \subsection{Imaging}
 
-\paragraph{Collimation.} A collimator is a device that physically restricts the field of view of the detector
+\subsubsection{Collimation}
+A collimator is a device that physically restricts the field of view of the detector
 without contributing further any further to the formation of an image. The image is obtained by 
 scanning the system across the object. 
 
@@ -535,21 +516,23 @@ shadows of it on the detector, their position and structure can be reconstituted
 manner to that used for the modulation collimator. The technique is known as {\it coded 
 mask imaging}, and resolutions of 10~arcmin or better can be reached. 
 
-\paragraph{Coincidence detectors.} A telescope, in the sense of being a device with directional sensitivity, may be constructed for use at any energy and with any resolution, by using two
+\subsubsection{Coincidence detectors}
+A telescope, in the sense of being a device with directional sensitivity, may be constructed for use at any energy and with any resolution, by using two
 or more detectors in a line, and by rejecting all detections except those which occur in 
 both detectors and separated by the correct flight time. Two separated arrays of detectors 
 can similarly provide a two-dimensional imaging system.
 
-\paragraph{Occultation.} The occultation of a source by the Moon or other object can be used to 
+\subsubsection{Occultation}
+The occultation of a source by the Moon or other object can be used to 
 give very precise positional and structural information.
 
-\paragraph{Reflecting telescopes.} At energies below about 100~keV photons
+\subsubsection{Reflecting telescopes}
+At energies below about 100~keV photons
 may be reflected with up to 50\% efficiency off metal surfaces, when
 their angle of incidence approaches 90$^o$.
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=paraboloid_hyperboloid.eps,width=0.95\textwidth}
 	\includegraphics[width=0.95\textwidth]{paraboloid_hyperboloid.eps}
   \caption{Wolther telescope of type {\sc i}.}
   \label{fig:wolther_i}
@@ -585,7 +568,8 @@ inherent spectral resolution which can provide information on the energy spectru
 Devices akin to the more conventional idea of a spectroscope, however, can only 
 be used at the low end of the energy spectrum.
 
-\paragraph{Grating spectrometers.} Gratings may be either transmission or grazing
+\subsubsection{Grating spectrometers}
+Gratings may be either transmission or grazing
 incidence reflection. The theoretical background for x-ray gratings is identical
 to with that for optical gratings (discussed later). Typical transmission
 gratings have around $10^3$ lines per mm. The theoretical resolution is
@@ -621,7 +605,8 @@ dispersion for a glancing incidence reflection grating is therefore inversely
 proportional to the square root of $\lambda$, unlike the case for normal 
 incidence, when the dispersion is independent of wavelength.
 
-\paragraph{Bragg spectrometers.} Planes of atoms in a crystal are separated by $0.1$ to 10~nm, which
+\subsubsection{Bragg spectrometers}
+Planes of atoms in a crystal are separated by $0.1$ to 10~nm, which
 is comparable to the wavelength of x-rays. Thus, a beam of x-rays interacts with a crystal in 
 a complex manner. The details of this interaction was first described by the Braggs. Given
 a distance $d$ between crystal planes and an angle of incidence $\theta$ the path difference 
@@ -637,5 +622,3 @@ the approach angle varies over the crystal. The reflected beam then consists of 
 all wavelengths which can be detected in a single observation with a position sensitive detector. 
 Spectral resolutions of up to $10^3$ are possible at 1~keV, but large crystal areas are necessary for good sensitivity.  Among common crystals in use are lithium fluoride, lithium hydride, 
 tungsten disulphide, graphite, and potassium acid phthalate. 
-
-%\end{document}
