@@ -12,13 +12,13 @@ The primary goals are:
   * ~~Merge all chapters into a single document.~~ Done.
   * ~~Change document format to `book`.~~ Done.
   * ~~Add table of contents.~~ Done.
-  * **Fix sections, numbering and other to make it more consistent and neat.**
-* Content (text)
+  * ~~Fix sections, numbering and other to make it more consistent and neat.~~~Done.
+* **Content (text)**
   * Correct typos.
   * Rewrite unclear paragraphs.
   * Add relevant paragraphs.
   * Remove superflous paragraphs.
-* Content (figures)
+* **Content (figures)**
   * Create and add descriptive figures for most of the chapters.
 
 The secondary goals below will be carried out if there's time left.
