@@ -8,7 +8,7 @@ by Professor Viggo Hansteen.
 **Bold** font shows what I am currently working on.
 
 The primary goals are:
-* Layout
+* ~~Layout~~
   * ~~Merge all chapters into a single document.~~ Done.
   * ~~Change document format to `book`.~~ Done.
   * ~~Add table of contents.~~ Done.
@@ -20,6 +20,8 @@ The primary goals are:
   * Remove superflous paragraphs.
 * **Content (figures)**
   * Create and add descriptive figures for most of the chapters.
+
+The last two primary goals on content will be done simultaneously, chapter by chapter.
 
 The secondary goals below will be carried out if there's time left.
 * Create and add exercises and solutions to the lecture notes, or make it separate from
