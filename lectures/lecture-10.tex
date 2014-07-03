@@ -22,8 +22,8 @@
 %\def\rabs{\!\mid}
 %\begin{document}
 %\setcounter{section}{9}
-\newcounter{count}
-\setcounter{count}{\value{enumi}}
+%\newcounter{count}
+%\setcounter{count}{\value{enumi}}
 \chapter{Spectroscopy}
 
 Practical telescopes are usually based upon one or other of two quite separate optical
@@ -31,7 +31,7 @@ principles --- interference and differential refraction. In reality, the author 
 seen a prism based spectrograph professionally used $\ldots$ There are also some 
 hybrid designs according to Kitchin's {\it Astrophysical Techniques}. 
 
-\section{Diffraction Gratings}
+\section{Diffraction gratings}
 
 The operating principle of diffraction gratings relies on the effects of diffraction 
 and interference of light waves. 
@@ -122,28 +122,9 @@ or for small angles
 \[ \Sigma=\lambda_1-\lambda_2\approx{\lambda_2\over m}. \]
 For small $m$, $\sigma$ is large. 
 
-\begin{enumerate}
-\item The overlapping of multiple orders means that some method --- a
-  blocking filter or a detector of limited spectral sensitivity ---
-  must be used to eliminate unwanted orders. Suppose we limit
-  the response of a detector to wavelenghts shorter than some
-  $\lambda_{\rm max}$. If we attempt to observe the spectrum in order
-  $m$ with this detector, the spectrum from order $m+1$ overlaps
-  $\lambda_{\rm max}$ so that photons of wavelength 
-\[
-\lambda_{m+1}=\frac{m}{(m+1)}\lambda_{\rm max}
-\]
-are deposited at the same $\theta$ location. We therefore would insert
-a filter to block all light with wavelengths shorter than
-$\lambda_{\rm max}$ to eliminate the overlap. What is the free spectral range at
-  $\lambda_{\rm max}$? Explain why the free spectral for a particular
-  order, $m$, and maximum wavelength $\lambda_{\rm max}$ is not
-  restricted by overlapping light from order $m-1$.
-\item Compute the free spectral range of grating orders 50, 100, and
-  101 if $\lambda_{\rm max}=600$~nm in each case.
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
-
+%\begin{enumerate}
+%\setcounter{count}{\value{enumi}} 
+%\end{enumerate}
 Some spectroscopes, such as those based on Fabry-Perot etalons and echelle gratings, 
 operate at very high spectral order and both of the overlapping wavelengths may be
 desired. Then it is necessary to use a cross disperser so that the final spectrum 
@@ -165,19 +146,10 @@ that is usually obtained by placing a slit at the focus of a collimating lens (b
 After reflection from the grating, the light is focused by the imaging lens (camera lens)
 to form the required spectrum. The collimator and imaging lens may be simple lenses or they may be achromats or mirrors.
 
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Make a sketch of such a spectroscope, indicating the focal lengths
-of the collimator, $f_1$, and imaging (camera) lens, $f_2$, the position of
-the entrance slit, the grating and the detector. Also make a sketch
-of the expected input and output images of the spectrograph, both
-parallell and perpendicular to the plane of the sketch.
-\item Show, or explain, why the width of a monchromatic image of the
-  entrance slit is given by $S={sf_2/f_1}$ where $s$ is the width of
-  the entrance slit.
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
-
+%\begin{enumerate}
+%\setcounter{enumi}{\value{count}}
+%\setcounter{count}{\value{enumi}} 
+%\end{enumerate}
 If $x$ is the linear distance along the spectrum from some reference point, then we have
 for an achromatic imaging element of focal length $f_2$
 \[
@@ -220,28 +192,36 @@ Optimum resolution occurs when $S=W''$, {\it i.e.} when
 s={f_1\lambda\over D}={f_1\lambda\over L\cos\theta}.
 \]
 
-\noindent
-{\it Blazing.} It is common to design a grating so that light is concentrated into a smaller
+%\noindent
+%{\it Blazing.}
+\subsection{Blazing}
+It is common to design a grating so that light is concentrated into a smaller
 number of orders. In this technique, called blazing, the individual mirrors that comprise
 the grating are angled so that they concentrate into a narrow sold angle. For instruments
 based on on gratings at low orders, the angle of the mirrors is arranged so that the light
 is concentrated into the spectrum to be used, and by this means 90\% efficiency can be
 achieved. 
 
-\noindent
-{\it Shadowing.} If the incident and/or reflected light makes a large angle to the normal of
+%\noindent
+%{\it Shadowing.}
+\subsection{Shadowing}
+If the incident and/or reflected light makes a large angle to the normal of
 the grating, then the step-like nature of the surface will cause a significant fraction 
 of the light to be intercepted by the vertical portions of the grooves, and so lost to the final spectrum. 
 
-\noindent
-{\it Rowland circle.} Curved reflection gratings are often used. By making the curve that of
+%\noindent
+%{\it Rowland circle.}
+\subsection{Rowland circle}
+Curved reflection gratings are often used. By making the curve that of
 an optical surface, the grating itself can be made to fulfill the function of the collimator
 and/or the imaging element of the spectroscope, thus reducing light losses. The simplest optical principle employing a curved is due to Rowland. The slit, grating and 
 spectrum all lie on a single circle called the Rowland circle. This has a diameter equal
 to the radius of the curvature of the grating. 
 
-\noindent
-{\it Echelle gratings} By increasing the angle of a blazed grating, we obtain an echelle 
+%\noindent
+%{\it Echelle gratings}
+\subsection{Echelle gratings}
+By increasing the angle of a blazed grating, we obtain an echelle 
 grating. This is illuminated more or less normally to the groove surfaces and therefore at
 a very large angle to the normal to the grating. It is usually a very coarse grating ---
 ten lines per millimeter or so --- so that the separation of the apertures $d$ is very large. The reciprocal linear dispersion
@@ -252,8 +232,10 @@ is therefore also very large. Such gratings concentrate the light into many over
 low dispersion grating or prism whose dispersion is perpendicular to that of the echelle
 and is called a cross disperser in order to separate the orders. Alternately, one can use filters to remove unwanted orders.
 
-\noindent
-{\it Littrow spectroscopes} A type of arrangement often used for long focus spectroscopes in laboratory and solar work, is called the Littrow or auto-collimating spectroscope. A single lens, or occasionally a mirror, acts as both the collimator and imaging element.
+%\noindent
+%{\it Littrow spectroscopes}
+\subsection{Littrow spectroscopes}
+A type of arrangement often used for long focus spectroscopes in laboratory and solar work, is called the Littrow or auto-collimating spectroscope. A single lens, or occasionally a mirror, acts as both the collimator and imaging element.
 
 \subsection{Ghosts and other anamolies}
 
@@ -295,7 +277,6 @@ second medium formed as a prism we can separate light into a spectrum. This is e
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=michelson-interferometer.eps,width=0.95\textwidth}
 	\includegraphics[width=0.95\textwidth]{michelson-interferometer.eps}
   \caption{Optical pathway of a Michelson interferometer}
   \label{fig:michelson-interferometer}
@@ -383,17 +364,10 @@ number of disparate intervals in the final transform is $2n$. Thus, the interval
 \Delta x={(\lambda_1+\lambda_2)^2\over 16(\lambda_1-\lambda_2)}.
 \]
 
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item What is the step size needed in case one looks for the spectrum
-  in the range $500-550$~nm? or in the range $2000-2050$~nm? Assume
-  that the movable mirror moves 2~m. What are the resolving powers
-  $\cl{R}$ for these examples?
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
-
-
+%\begin{enumerate}
+%\setcounter{enumi}{\value{count}}
+%\setcounter{count}{\value{enumi}}
+%\end{enumerate}
 \subsection{Fabry-P\'erot interferometer}
 
 \begin{figure}[h]
@@ -405,7 +379,7 @@ left and exits to the right (and left).}
   \label{fig:fabry-perot-schematic}
 \end{figure}
 
-A Fabry-P\'erot interferometry is based on trapping monochromatic light between two
+Fabry-P\'erot interferometry is based on trapping monochromatic light between two
 highly reflecting surfaces. Let us consider the situation sketched in figure~\ref{fig:fabry-perot-schematic} where we have drawn two reflecting surfaces that are parallel and a distance $d$ apart. In between these plates there is a transparent medium with an index of refraction $n$, while outside the plates it is $n'$. Such a device is called an {\it etalon}. One example is a glass slab in air, another is a vacuum maintained between two glass mirrors. Suppose a plane wave with circular frequency $\omega$ is incident on one of the reflecting surfaces, where it is partially reflected and partially transmitted. The transmitted wave will propagate through to the second surface where it will be partially reflected and partially transmitted. The reflected portion will return to the first surface to be split, and so on. The resulting total fields in the slab
 and beyond could be computed by summing the series of sequential reflections and transmission. Alternately one can proceed as below:
 
@@ -419,7 +393,6 @@ from inside. These coefficients are functions of the angles of incidence and the
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=fabry-phase-diff.eps,width=0.95\textwidth}
 	\includegraphics[width=0.95\textwidth]{fabry-phase-diff.eps}
   \caption{Construction for calculating the phase differences across each slab for the
 two internal waves in an etalon.}
@@ -464,17 +437,8 @@ where
 \phi={2n\omega d\cos\theta/c}
 \]
 
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Derive the relations for $\psi_r$ and $\psi_t$ as functions of
-  $r$, the incident field $\psi_i$ and the `angle' $\phi={2n\omega
-    d\cos\theta/c}$. 
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
-
 \begin{figure}[h]
   \centering
-%	\psfig{file=fabry-transmission.eps,width=0.95\textwidth}
 	\includegraphics[width=0.95\textwidth]{fabry-transmission.eps}
   \caption{Transmission coefficient for an etalon as a function of the phase $\phi$ for 
 reflectivities of $r=0.2$, $r=0.4$, and $r=0.9$.}
@@ -504,15 +468,6 @@ almost all the incident light is reflected by the etalon. The exception is when 
 free spectral range, is $\delta\phi=\pi$, so the finesse is the ratio of the free spectral 
 range to the resonance half width.
 
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Compute the reflection $R$ and transmission $T$ {\bf flux}
-  coefficients. 
-\item Find the expression for the transmission coefficient in terms of
-  the finesse. Using {\sc idl} plot $T$ as a function of $\phi$ with $r=0.2,0.4,0.9$.
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
-
 The etalon can be tuned to a particular frequency by varying either the slab width $d$ or the angle of incidence of the radiation (and thus $\theta$ inside the etalon). Either way very good chromatic resolving power can be achieved. One can say that waves with nearly the same frequencies are resolved by an etalon when the half power point of the transmission coefficient of one wave coincides with the half power point of the transmission coefficient of the other. {\it I.e.} using equation~\ref{eq:reflection-transmission} the phases for the two frequencies must differ by $d\phi\sim{2\pi/\cl{F}}$; and since $\phi={2n\omega d\cos\theta/c}$, the chromatic resolving power is 
 \[
 \cl{R}={\lambda\over\delta\lambda}={2\pi nd\over\lambda_{\rm vac}\delta\phi}
@@ -520,4 +475,44 @@ The etalon can be tuned to a particular frequency by varying either the slab wid
 \]
 \noindent
 where $\lambda_{\rm vac}$ is the wavelength in vacuum --- {\it i.e.} outside the etalon. The finesse $\cl{F}$ can be regarded as a quality factor for the resonator. It is roughly the number of times a typical photon traverses the etalon before escaping. 
-%\end{document}
+
+\section{Exercises}
+\begin{enumerate}
+\item The overlapping of multiple orders means that some method --- a
+  blocking filter or a detector of limited spectral sensitivity ---
+  must be used to eliminate unwanted orders. Suppose we limit
+  the response of a detector to wavelenghts shorter than some
+  $\lambda_{\rm max}$. If we attempt to observe the spectrum in order
+  $m$ with this detector, the spectrum from order $m+1$ overlaps
+  $\lambda_{\rm max}$ so that photons of wavelength 
+\[
+\lambda_{m+1}=\frac{m}{(m+1)}\lambda_{\rm max}
+\]
+are deposited at the same $\theta$ location. We therefore would insert
+a filter to block all light with wavelengths shorter than
+$\lambda_{\rm max}$ to eliminate the overlap. What is the free spectral range at
+  $\lambda_{\rm max}$? Explain why the free spectral for a particular
+  order, $m$, and maximum wavelength $\lambda_{\rm max}$ is not
+  restricted by overlapping light from order $m-1$.
+\item Compute the free spectral range of grating orders 50, 100, and
+  101 if $\lambda_{\rm max}=600$~nm in each case.
+\item Make a sketch of a spectroscope, indicating the focal lengths
+of the collimator, $f_1$, and imaging (camera) lens, $f_2$, the position of
+the entrance slit, the grating and the detector. Also make a sketch
+of the expected input and output images of the spectrograph, both
+parallell and perpendicular to the plane of the sketch.
+\item Show, or explain, why the width of a monchromatic image of the
+  entrance slit is given by $S={sf_2/f_1}$ where $s$ is the width of
+  the entrance slit.
+\item What is the step size needed in case one looks for the spectrum
+  in the range $500-550$~nm? or in the range $2000-2050$~nm? Assume
+  that the movable mirror moves 2~m. What are the resolving powers
+  $\cl{R}$ for these examples?
+\item Derive the relations for $\psi_r$ and $\psi_t$ as functions of
+  $r$, the incident field $\psi_i$ and the `angle' $\phi={2n\omega
+    d\cos\theta/c}$. 
+\item Compute the reflection $R$ and transmission $T$ {\bf flux}
+  coefficients. 
+\item Find the expression for the transmission coefficient in terms of
+  the finesse. Using {\sc idl} plot $T$ as a function of $\phi$ with $r=0.2,0.4,0.9$.
+\end{enumerate}
