@@ -1,29 +1,3 @@
-%\documentclass{article}
-%\usepackage{amssymb}
-%\usepackage{wasysym}
-%\usepackage{graphicx}
-%\usepackage{bm}
-%\usepackage{psfig}
-%\newcommand{\bc}{\begin{center}}
-%\newcommand{\ec}{\end{center}}
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-%\newcommand{\eea}{\end{eqnarray}}
-%\newcommand{\bua}{\begin{eqnarray*}}
-%\newcommand{\eua}{\end{eqnarray*}}
-%\newcommand{\infint}{\int_{-\infty}^{\infty}}
-%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-%\newcommand{\ddt}[1]{\dd{#1}{t}}
-%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-%\newcommand{\aver}[1]{\langle{#1}\rangle}
-%\def\cl#1{{\cal #1}}               % for caligrafic letters
-%\def\labs{\mid\!}
-%\def\rabs{\!\mid}
-%\begin{document}
-%\setcounter{section}{11}
-\newcounter{count}
-\setcounter{count}{\value{enumi}}
 \chapter{Photometry}
 
 The brightness of stars has, along with their locations, been studied
@@ -56,23 +30,6 @@ the Pogson normal scale
 \]
 where $b_1$ and $b_2$ are the brightness of objectes $1$ and $2$ was
 standard amongst all astronomers. 
-
-\begin{enumerate}
-\item The faintest stars visible to the naked eye, from the definition
-  of the scale, are magnitude six. For point sources the brightness is
-  increased by the use of a telescope by a factor $G$, called the
-  light grasp. If the dark adapted human eye has a diameter of 7~mm,
-  show that 
-\[
-G\approx 2\times10^4 d^2
-\]
-where $d$ is the telscope diameter in meters. Show further that the
-limiting magnitude through a visually used telescope, $m_{\rm L}$ is 
-\[
-m_{\rm L}=16.8+5\log d.
-\]
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
 
 In the same period photography progressed and astronomers were able to
 record the light of stars too faint to be seen by eye in any
@@ -113,7 +70,9 @@ photometry in astronomy.
 
 \subsection{Types of photometry}
 
-\paragraph{Single-band photometry} For applications such as finding
+\subsubsection{Single-band photometry}
+%\paragraph{Single-band photometry}
+For applications such as finding
 planets via occultations where one is only interested in measuring the
 fraction of light from the star blocked by a planet one needs only a
 single band. In this case one would generally want to construct a
@@ -122,7 +81,10 @@ of brightness as a function of time, choosing a wide band to maximize
 signal and minimize the required exposure time and telescope size. An
 example of this is the Super Wasp telescope arrays placed on La Palma
 and in South Africa.
-\paragraph{Broadband multi-color photometry} Broadband multi-color
+
+\subsubsection{Broadband multi-color photometry}
+%\paragraph{Broadband multi-color photometry}
+Broadband multi-color
 photometry measures a very low resolution spectrum by sampling the
 brightness in several different bands. Broad band in this sense means
 that the spectroscopic resolving power $R={\lambda_{\rm c}/\Delta
@@ -143,7 +105,10 @@ other astrophysical variables such as the surface temperature. Color
 can also have a second meaning: the difference between two
 magnitudes. For example, the results of two-color photometry in $B$ and
 $V$ will be reported as a $V$ magnitude and {\it one} $(B-V)$ color.
-\paragraph{Narrow and intermediate-band photometry} The intent of
+
+\subsubsection{Narrow and intermediate-band photometry}
+%\paragraph{Narrow and intermediate-band photometry}
+The intent of
 narrow band photometry $(R>50)$ is usually to isolate a specific line,
 molecular band, or other spectral feature. Common applications include
 the measurement of the strength of absorption features like
@@ -156,6 +121,7 @@ spectra, such as the Balmer discontinuity at $364.6$~nm or very broad
 absorption features due to blended lines or molecular bands such as
 the band due to TiO in the spectra of M stars extending from 705 to
 730~nm.
+
 \section{Magnitudes}
 We can write the {\it apparent magnitude} of the source as 
 \[
@@ -221,23 +187,8 @@ For ground based observations {\it atmospheric transmission}, $S_{\rm
   atm}(\lambda)$, limits the wavelength that are accessible, and may
 define all or parts of a response function. 
 
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Find a plot of the Earth's atmospheric transmission as a
-  function of wavelength $\lambda$.
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
-
 Normally magnitudes are defined outside the Earth's atmosphere, and
-astronomers must remove atmospheric effects during data reduction.
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Give reasons as to why it is better to define the response
-  function $R(\lambda)$ {\it outside} the Earth's atmosphere. What are
-  the advantages and disadvantages of doing this?
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
+astronomers must remove atmospheric effects during data reduction.\footnote{See Exercise 3.}
 
 \subsection{Response function description}
 
@@ -324,13 +275,6 @@ function of $\lambda$.
   \label{fig:color_index}
 \end{figure}
 
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Reproduce figure~\ref{fig:color_index} using {\it e.g} {\sc idl}.
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
-
 For two (broad) bands centered at $0.4~\mu{\rm m}$ and at $0.8~\mu{\rm
   m}$ is clear that the arithmetical difference between these two
 magnitudes for a particular spectrum depends on the average slope of
@@ -366,13 +310,6 @@ The color index is then
 \ee
 Thus, at very low temperature or short wavelengths the index is a
 linear function of $1/T$. 
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Show that equations~\ref{eq:index_rayleigh-jeans} and
-  \ref{eq:index_wien-approx} are correct.
-\setcounter{count}{\value{enumi}} 
-\end{enumerate}
 
 \subsection{Line and feature index}
 Real objects such as stars will of course have more complex spectra
@@ -451,7 +388,9 @@ observations in the system.
 
 \subsection{Common photometric systems}
 
-\paragraph{Visual and photographic systems} The dark-adapted human eye
+\subsubsection{Visual and photographic systems}
+%\paragraph{Visual and photographic systems}
+The dark-adapted human eye
 determines the band of the {\it visual photometric system}. The
 introduction of optical/mechanical visual photometers led to the
 establishment of {\it standard sequences} of stars, including
@@ -472,7 +411,9 @@ IAU in 1922 set the zero point of both magnitudes so that the $6^{\rm
   m}$ magnitude A0 V stars in the north polar sequence would have
 (roughly) the same values as on the old Harvard visual system.
 
-\paragraph{The $UBVRI$ system} The most widely used photometric system
+\subsubsection{The $UBVRI$ system}
+%\paragraph{The $UBVRI$ system}
+The most widely used photometric system
 prior to the present has been the Johnson-Cousins $UBVRI$ system. This
 system was originally based on the RCA 1P21 photomultiplier, a set of
 colored glass filters, and a list of magnitudes for a relatively small
@@ -496,8 +437,11 @@ for G stars). The discontinuity  depends on luminosity for hot
 stars. The other indices are primarily sensitive to temperature. The
 $B-V$ index is more sensitive to metal abundance than $V-R$ or
 $R-I$. The $V-I$ index is the most purely temperature sensitive index
-in this system. 
-\paragraph{The Broadband infrared system: $JHKLMNQ$} This broadband
+in this system.
+
+\subsubsection{The broadband infrared system: $JHKLMNQ$}
+%\paragraph{The Broadband infrared system: $JHKLMNQ$}
+This broadband
 system might be regarded as an extension of the $UBVRI$ system, it
 shares a common zero point so that the colors of an unreddened A0 V
 star are zero. Detectors in this region cannot be silicon CCDs but
@@ -512,7 +456,9 @@ can experience similar bandpass variations due to changing humidity.
 
 The IAU in 2000 recommended a preferred natural system --- the Mauna
 Kea Observatory near-infrared system (MKO).
-\paragraph{The intermediate band Str\"omgren system: $uvby\beta$}
+
+\subsubsection{The intermediate band Str\"omgren system: $uvby\beta$}
+%\paragraph{The intermediate band Str\"omgren system: $uvby\beta$}
 Bengt Str\"omgren designed this intermediate-band system in the late
 1950s. The system avoids many of the shortcomings of the $UBV$ system
 and aims to classify stars according to three characteristics:
@@ -532,10 +478,10 @@ Balmer discontinuity.
 At least four different effects can alter the photons on their way to
 the telescope:
 \begin{itemize}
-\item wavelength shifts
-\item extragalactic absorption
+\item Wavelength shifts
+\item Extragalactic absorption
 \item Galactic and Solar System absorption
-\item atmospheric absorption
+\item Atmospheric absorption
 \end{itemize}
 \subsection{Wavelength shifts}
 The photons that leave the source is written $\phi_{\rm
@@ -701,4 +647,29 @@ m_{\rm P}=-2.5\log\int T_{\rm
 \]
 where $T_{\rm P}(\lambda)$ and $C_{\rm P}$ characterize the
 instrumental system located outside the atmosphere.
-%\end{document}
+
+\section{Exercises}
+
+\begin{enumerate}
+\item The faintest stars visible to the naked eye, from the definition
+  of the scale, are magnitude six. For point sources the brightness is
+  increased by the use of a telescope by a factor $G$, called the
+  light grasp. If the dark adapted human eye has a diameter of 7~mm,
+  show that 
+\[
+G\approx 2\times10^4 d^2
+\]
+where $d$ is the telscope diameter in meters. Show further that the
+limiting magnitude through a visually used telescope, $m_{\rm L}$ is 
+\[
+m_{\rm L}=16.8+5\log d.
+\]
+\item Find a plot of the Earth's atmospheric transmission as a
+  function of wavelength $\lambda$.
+\item Give reasons as to why it is better to define the response
+  function $R(\lambda)$ {\it outside} the Earth's atmosphere. What are
+  the advantages and disadvantages of doing this?
+\item Reproduce figure~\ref{fig:color_index} using {\it e.g} {\sc idl}.
+\item Show that equations~\ref{eq:index_rayleigh-jeans} and
+  \ref{eq:index_wien-approx} are correct.
+\end{enumerate}
