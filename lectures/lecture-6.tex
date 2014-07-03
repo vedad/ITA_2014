@@ -351,19 +351,23 @@ humidity, so can only be used in protected environments.
 % Maybe change table width to fill the textwidth.
 \begin{table}
 \centering
-\begin{tabular}{llllll}
-\hline\hline
-& & & & & \\
-\multicolumn{6}{c}{Refractive index at the specified wavelengths (nm)} \\
+\begin{tabular*}{\textwidth}{p{0.3\textwidth}@{\extracolsep{\fill}}p{0.1\textwidth}p{0.1\textwidth}p{0.1\textwidth}p{0.1\textwidth}p{0.1\textwidth}}
+%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}lllll}
+\toprule
+\toprule
+%& & & & & \\
+& \multicolumn{5}{c}{Refractive index at the specified wavelengths (nm)} \\
+\cmidrule{2-6}
 Glass type & 361 & 486 & 589 & 656 & 768  \\
-\hline
-& & & & & \\
+\midrule
+%& & & & & \\
 Crown & 1.539 & 1.523 & 1.517 & 1.514 & 1.511 \\
 High dispersion crown & 1.546 & 1.527 & 1.520 & 1.517 & 1.514 \\
 Light flint & 1.614 & 1.585 & 1.575 & 1.571 & 1.567 \\
 Dense flint & 1.705 & 1.664 & 1.650 & 1.644 & 1.638 \\
-\hline
-\end{tabular}
+\bottomrule
+\bottomrule
+\end{tabular*}
 \caption{Index of refraction in various glass types vary as a function
 of wavelength and are thus dispersive.}
 \label{tab:glass-refraction}
@@ -685,16 +689,12 @@ the light path by parts of the instrument.
  \label{fig:zernike-polynomials}
 \end{figure}
 
-% Do something about the table. Too wide for the paragraph. Might change if book is used.
 \begin{table}
 	\centering
 	\begin{tabular*}{\textwidth}{p{0.25\textwidth}@{\extracolsep{\fill}}p{0.70\textwidth}}
 \toprule
 \toprule
 Zernike polynomials & Roles of the Zernike polynomials \\ 
-%&\multicolumn{1}{c}{Roles of the Zernike polynomials} \\
-%\cmidrule{1}
-%\cmidrule{2}
 \midrule
 $a_0$ & ``Piston'', equal to the mean value of the wavefront \\
 $a_1\times\rho\cos(\varphi)$ & ``X-tilt'', deviation of the overall beam in the sagittal direction \\
