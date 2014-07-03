@@ -1,30 +1,3 @@
-%\documentclass{article}
-%\usepackage{amssymb}
-%\usepackage{wasysym}
-%\usepackage{graphicx}
-%\usepackage{bm}
-%\usepackage{psfig}
-%\newcommand{\bc}{\begin{center}}
-%\newcommand{\ec}{\end{center}}
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-%\newcommand{\eea}{\end{eqnarray}}
-%\newcommand{\bua}{\begin{eqnarray*}}
-%\newcommand{\eua}{\end{eqnarray*}}
-%\newcommand{\infint}{\int_{-\infty}^{\infty}}
-%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-%\newcommand{\ddt}[1]{\dd{#1}{t}}
-%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-%\newcommand{\aver}[1]{\langle{#1}\rangle}
-%\def\cl#1{{\cal #1}}               % for caligrafic letters
-%\def\labs{\mid\!}
-%\def\rabs{\!\mid}
-%\newenvironment{mylisting}
-%{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
-%{\end{list}}
-%\begin{document}
-%\setcounter{section}{6} No need for merging
 \chapter{Diffraction II}
 
 \section{Fresnel diffraction}
@@ -34,13 +7,12 @@ regime, where the aperture is much larger than the Fresnel length $r_F=(\lambda 
 there is a large phase variation over the aperture. Specialize to incoming wave
 vectors that are approximately orthogonal to the aperture and to small 
 diffraction angles so that we can ignore the obliquity factor. In contrast 
-to the Frauenhofer case, identify $\cal{P}$ by its distance $z$ from the
+to the Fraunhofer case, identify $\cal{P}$ by its distance $z$ from the
 aperture plane, instead of its distance $r$ from the aperture center, and
 use as integration variable in the aperture 
 ${\bf x'}\equiv{\bf x}-r{\bm\theta}$ (see figure~\ref{fig:path-length}).
 
 \begin{figure}[h!]
-%  \hfil\psfig{file=path-length.eps,width=0.9\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.9\textwidth]{path-length.eps}
   \caption{Geometry for computing the path length between a point $\cal{Q}$ in 
@@ -55,17 +27,9 @@ the form
 \[
 \Delta\phi\equiv k\times[({\rm path~length~from~}{\bf x}~{\rm to}~{\cal P})-z]
  = {k{\bf x'}^2\over 2z}+O\left({kx'^4\over z^3}\right)
+ \label{eq:phase_difference}
 \]
 
-{\bf Exercise}
-
-\begin{enumerate}
-\item Why is $\Delta\phi\approx {k{\bf x'}^2\over 2z}$?
-\newcounter{count}
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
-
-\noindent
 In the Fresnel regime the term quadratic in ${\bf x}$ is significant, and
 this the reason the new variable ${\bf x'}$ has been introduced is to simplify 
 this expression. 
@@ -88,18 +52,10 @@ to
 \[
 \psi_{\cal P}=-{ike^{ikz}\over 2\pi z}\int_{\cal Q}e^{i\Delta\phi}\psi_{\cal Q}dx'dy'
 =-{i\over 2}\int\int e^{i\pi s^2/2}e^{i\pi t^2/2}\psi_{\cal Q}e^{ikz}dsdt.
+\label{eq:exercise2-chapter7-eq}
 \]
 
-{\bf Exercise}
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Check that this is correct. 
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
-
 \begin{figure}[th!]
-%  \hfil\psfig{file=cornu.eps,width=0.7\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.7\textwidth]{cornu.eps}
   \caption{The Cornu Spiral showing the behaviour of the Fresnel integrals
@@ -158,7 +114,7 @@ total has a net extra phase of $\pi/2$, relative the geometric optics ray. This 
 cancels exactly the prefactor $-i$ in the Fresnel-Kirchhoff integral.
 \end{itemize}
 
-\section{Lunar Occultation of a Radio Source}
+\section{Lunar occultation of a radio source}
 
 The next simplest case of Fresnel diffraction is the pattern formed by a straight 
 edge. Let us take the example of a quasar's radio waves being occulted by the 
@@ -184,53 +140,6 @@ oscillate.
 
 Historically, diffraction of a radio source's waves by the moon led to the 
 discovery of quasars. 
-
-{\bf Exercise}
-
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Derive a formula for the intensity diffraction pattern $F(x)$ of a slit with width $a$, as a
-function of distance $x$ from the center of the slit, in terms of Fresnel integrals. 
-\item Recreate figure~\ref{fig:cornu} using {\sc idl}. The following fragments of code might 
-be useful
-\begin{mylisting}
-\begin{verbatim}
-function fresnel_cos,xi
-;
-fcos=fltarr(n_elements(xi))
-for i=0,n_elements(xi)-1 do begin
-  npt=10000
-  s=findgen(npt)/npt*xi[i]
-  fcos[i]=trapez(s,cos(!pi*s*s/2.))
-endfor
-return,fcos
-;
-end
-\end{verbatim}
-\end{mylisting}
-and equivalent for {\tt fsin}, which both call the fuction
-\begin{mylisting}
-\begin{verbatim}
-function trapez,x0,y0
-;
-n=n_elements(x0)
-x=fltarr(n)+x0
-y=fltarr(n)+y0
-integrand=(y+shift(y,-1))*(shift(x,-1)-x)
-return,total(integrand(0:n-2))*0.5
-;
-end
-\end{verbatim}
-\end{mylisting}
-(I am sure that this integral can be done in a {\bf much} better way
-using calls to the error function ${\rm
-  erf}(x)={2\over\sqrt{\pi}}\int_0^xe^{-t^2}dt$!, but this will work.)
-\item Using {\sc idl}  and the routines above, plot the one-dimensional intensity diffraction pattern
-  $\labs\psi\rabs^2$ produced by a slit, $t(x)=1$ for $\rabs x\labs<
-  {a/2}$ and $t(x)=0$ for $\labs x\rabs > {a/2}$, for the values
-  ${r_F/a}=0.05, 0.5, 1, 2$.
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
 
 \section{Circular Apertures}
 
@@ -291,20 +200,9 @@ have
 the interesting property that they posses secondary foci, where the fields from
 $3,5,7,\ldots$ contiguous zones add up coherently.
 
-\section{Exercises}
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Explain why the focal length of a zone plate is $f={kA/2\pi^2}$. 
-\item An opaque, perfectly circular disk of diameter $D$ is placed perpendicular
-to an incoming plane wave. Show that, at distances $r$ such that $r_F\ll D$, the
-disk casts a rather sharp shadow, but at the precise center of the shadow there
-should be a bright spot. How bright?
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
-
 \section{Seeing in the atmosphere}
 
-\subsection{A simple model (with exercises)}
+\subsection{A simple model (with exercises)} \label{sec:seeing-model}
 
 Stars viewed through the atmosphere appear to have angular diameters of 
 order an arc second and to exhibit large amplitude fluctuations of flux with
@@ -329,16 +227,6 @@ the irregularities and the diffraction pattern past the observer. The
 information given above is sufficient to estimate the Fresnel length $r_{F}$, 
 the atmospheric fluctuation scale size $a$, and the rms phase variation 
 $\Delta\phi$.
-
-\section*{Exercises}
-\begin{enumerate}
-\setcounter{enumi}{\value{count}}
-\item Explain why $\Delta\theta\sim({\lambda/a})\Delta\phi$.
-\item Show that the Fresnel length in the screen is $\sim\sqrt{ab}$. 
-\item Use the information given above to estimate $r_F$, the atmospheric fluctuation
-scale $a$, and the rms phase variation $\Delta\phi$.
-\setcounter{count}{\value{enumi}}
-\end{enumerate}
 
 \subsection{Effects of the atomsphere (including better model)}
 
@@ -368,7 +256,6 @@ towards the zenith than red.
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=seeing_global.eps,width=0.9\textwidth}
 	\includegraphics[width=0.9\textwidth]{seeing_global.eps}
   \caption{Sketch of atmospheric circulation in the troposphere and
     the effects it has on incoming wavefronts. Locally heated air near
@@ -399,7 +286,6 @@ wind speed, the distortion in the wavefront changes very quickly.
 
 \begin{figure}[h]
   \centering
-%	\psfig{file=wavefront_rn.eps,width=0.9\textwidth}
 	\includegraphics[width=0.9\textwidth]{wavefront_rn.eps}
   \caption{Quantifying the wavefront is done by fitting the wavefront
   with straight segments along which the difference between vertical
@@ -494,7 +380,6 @@ or thermal stresses. Correction of these sorts of effects also goes under
 the heading active optics. 
 
 \begin{figure}[h]
-%  \hfil\psfig{file=AO_live_display.eps,width=0.9\textwidth}\hfil
 	\centering
 	\includegraphics[width=0.9\textwidth]{AO_live_display.eps}
   \caption{The multiple images of the Shack-Hartmann micro lenses as seen 
@@ -573,4 +458,60 @@ Plans for future 50~m and 100~m telescopes include adaptive secondary or
 tertiary mirrors up to 8~m in diameter, requiring up to $500\,000$ actuators
 to compensate the atmospheric distortions of the wave front.
 
-%\end{document}
+\section{Exercises}
+\begin{enumerate}
+	\item Why is $\Delta\phi\approx {k{\bf x'}^2\over 2z}$ in Eq.~\ref{eq:phase_difference}?
+	\item Check that the transition to a double integral in Eq.~\ref{eq:exercise2-chapter7-eq}
+		is correct.
+	\item Derive a formula for the intensity diffraction pattern $F(x)$ of a slit with width
+		$a$, as a
+		function of distance $x$ from the center of the slit, in terms of Fresnel integrals. 
+	\item Recreate figure~\ref{fig:cornu} using {\sc idl}. The following fragments of code might 
+		be useful
+\belowcaptionskip=-10pt
+\begin{lstlisting}[caption=Useful code I]
+function fresnel_cos,xi
+;
+fcos=fltarr(n_elements(xi))
+for i=0,n_elements(xi)-1 do begin
+	npt=10000
+	s=findgen(npt)/npt*xi[i]
+	fcos[i]=trapez(s,cos(!pi*s*s/2.))
+endfor
+return,fcos
+;
+end
+\end{lstlisting}
+and equivalent for {\tt fsin}, which both call the function
+\belowcaptionskip=-10pt
+\begin{lstlisting}[caption=Useful code II]
+function trapez,x0,y0
+;
+n=n_elements(x0)
+x=fltarr(n)+x0
+y=fltarr(n)+y0
+integrand=(y+shift(y,-1))*(shift(x,-1)-x)
+return,total(integrand(0:n-2))*0.5
+;
+end
+\end{lstlisting}
+(I am sure that this integral can be done in a {\bf much} better way
+using calls to the error function ${\rm
+  erf}(x)={2\over\sqrt{\pi}}\int_0^xe^{-t^2}dt$!, but this will work.)
+\item Using {\sc idl}  and the routines above, plot the one-dimensional intensity diffraction pattern
+  $\labs\psi\rabs^2$ produced by a slit, $t(x)=1$ for $\rabs x\labs<
+  {a/2}$ and $t(x)=0$ for $\labs x\rabs > {a/2}$, for the values
+  ${r_F/a}=0.05, 0.5, 1, 2$.
+\item Explain why the focal length of a zone plate is $f={kA/2\pi^2}$. 
+\item An opaque, perfectly circular disk of diameter $D$ is placed perpendicular
+	to an incoming plane wave. Show that, at distances $r$ such that $r_F\ll D$, the
+	disk casts a rather sharp shadow, but at the precise center of the shadow there
+	should be a bright spot. How bright?
+\end{enumerate}
+\hspace{8pt} Use Section~\ref{sec:seeing-model} to answer the questions below.
+\begin{enumerate}[resume]
+\item Explain why $\Delta\theta\sim({\lambda/a})\Delta\phi$.
+\item Show that the Fresnel length in the screen is $\sim\sqrt{ab}$. 
+\item Use the information given above to estimate $r_F$, the atmospheric fluctuation
+scale $a$, and the rms phase variation $\Delta\phi$.
+\end{enumerate}
