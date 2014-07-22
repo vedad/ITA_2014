@@ -8,12 +8,18 @@
 \usepackage{a4wide}		% In case margins are too wide
 \usepackage{booktabs}	% Functionality for tabular* environment
 \usepackage{enumitem}	% Functionality for enumerate environment
-
+\usepackage{subcaption}
 %----------------------------- Used for listings -----------------------------%
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{listings}	
 \usepackage{xcolor}
-\usepackage{caption}
+\usepackage[labelfont=bf]{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{intersections,calc,fadings,decorations.pathreplacing}
+\usepackage{verbatim}
+\usepackage{xparse}
+\usepackage{standalone}
 
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{%
@@ -58,6 +64,53 @@
 {\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
 {\end{list}}
 
+% ---------------------------- For TikZ -----------------------------------%
+
+%% helper macros
+
+\newcommand\pgfmathsinandcos[3]{%
+  \pgfmathsetmacro#1{sin(#3)}%
+  \pgfmathsetmacro#2{cos(#3)}%
+}
+\newcommand\LongitudePlane[3][current plane]{%
+  \pgfmathsinandcos\sinEl\cosEl{#2} % elevation
+  \pgfmathsinandcos\sint\cost{#3} % azimuth
+  \tikzset{#1/.style={cm={\cost,\sint*\sinEl,0,\cosEl,(0,0)}}}
+}
+\newcommand\LatitudePlane[3][current plane]{%
+  \pgfmathsinandcos\sinEl\cosEl{#2} % elevation
+  \pgfmathsinandcos\sint\cost{#3} % latitude
+  \pgfmathsetmacro\yshift{\cosEl*\sint}
+  \tikzset{#1/.style={cm={\cost,0,0,\cost*\sinEl,(0,\yshift)}}} %
+}
+\newcommand\DrawLongitudeCircle[3][1]{
+  \LongitudePlane{\angEl}{#2}
+  \tikzset{current plane/.prefix style={scale=#1}}
+   % angle of "visibility"
+  \pgfmathsetmacro\angVis{atan(sin(#2)*cos(\angEl)/sin(\angEl))} %
+  \draw[name path=#3,current plane] (\angVis:1) arc (\angVis:\angVis+180:1);
+  \draw[name path=dashed#3,current plane,dashed] (\angVis-180:1) arc (\angVis-180:\angVis:1);
+}
+\newcommand\DrawLatitudeCircle[3][2]{
+  \LatitudePlane{\angEl}{#2}
+  \tikzset{current plane/.prefix style={scale=#1}}
+  \pgfmathsetmacro\sinVis{sin(#2)/cos(#2)*sin(\angEl)/cos(\angEl)}
+  % angle of "visibility"
+  \pgfmathsetmacro\angVis{asin(min(1,max(\sinVis,-1)))}
+  \draw[name path=#3,current plane] (\angVis:1) arc (\angVis:-\angVis-180:1);
+  \draw[name path=dashed#3,current plane,dashed] (180-\angVis:1) arc (180-\angVis:\angVis:1);
+}
+
+% document-wide tikz options and styles
+
+\tikzset{%
+  >=latex, % option for nice arrows
+  inner sep=0pt,%
+  outer sep=2pt,%
+  mark coordinate/.style={inner sep=0pt,outer sep=0pt,minimum size=3pt,
+    fill=black,circle}%
+}
+%---------------------------------------------------------------------------%
 
 %\lstdefinestyle{customidl}{
 %	belowcaptionskip=0.2\baselineskip,
