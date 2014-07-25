@@ -109,21 +109,26 @@
     \coordinate[mark coordinate] (S) at (0,-\H);
 		\coordinate (Equator) at (\H,0);
 		\coordinate (Horizon) at (-30.0:\R);
+		\coordinate (Horizon2) at (150:\R);
 		\coordinate[mark coordinate] (Z) at (60:\R);
 		\node[below=7pt, left=3pt] at (Z) {$Z$};
     \path[xzplane] (\R,0) coordinate (XE);
 
 		\draw[<-] (90:0.4*\R) arc (90:(90-30):0.4*\R);
 		\draw[<-,ultra thick] (90:\R) arc (90:(90-30):\R);
+		\draw[->,ultra thick] (-30:\R) arc (-30:0:\R);
 		\coordinate (obslat) at (78:0.4*\R);
 		\coordinate (obslat2) at (78:\R);
-		\node[above=4pt] at (obslat) {$90 - \phi$};
-		\node[above=5pt] at (obslat2) {$90- \phi$};
+		\coordinate (obslatdiff) at (-15:\R);
+		\node[above=4pt] at (obslat) {$30^{\circ}$};
+		\node[above=5pt] at (obslat2) {$90^{\circ} - \phi$};
+		\node[above, right=5pt] at (obslatdiff) {$90^{\circ} - \phi$};
 		\DrawLatitudeCircle[\R,fill opacity =0.1, color=blue]{0} % equator
 %		\draw 
 		\DrawLatitudeCircle[\R,rotate=-30.0, color=red]{0} % Celestial horizon
 		\node[above right, color=blue] at (Equator) {\textbf{Celestial equator}};
 		\node[right, color=red] at (Horizon) {\textbf{Celestial horizon}};
+		\node[left] at (Horizon2) {\textbf{N}};
 %		\node[label={above right:\bf{Celestial horizon}},color=red] at (Horizon) {};
 %		\node[label={right:\bf{Celestial equator}},color=red] at (Equator) {};
 
