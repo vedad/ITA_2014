@@ -10,7 +10,6 @@
 \usepackage{verbatim}
 \usepackage{xparse}
 
-\begin{comment}
 :Title: Stereographic and cylindrical map projections
 :Tags: 3D
 :Slug: map-projections
@@ -45,7 +44,6 @@ coordinate system with an appriopriate transformation. Some highlights:
 
 .. _LaTeX-Community.org: http://www.latex-community.org/viewtopic.php?f=4&t=2111
 
-\end{comment}
 
 
 %% helper macros
@@ -65,7 +63,7 @@ coordinate system with an appriopriate transformation. Some highlights:
   \pgfmathsetmacro\yshift{\cosEl*\sint}
   \tikzset{#1/.style={cm={\cost,0,0,\cost*\sinEl,(0,\yshift)}}} %
 }
-\newcommand\DrawLongitudeCircle[3][1]{
+\newcommand\DrawLongitudeCircleName[3][1]{
   \LongitudePlane{\angEl}{#2}
   \tikzset{current plane/.prefix style={scale=#1}}
    % angle of "visibility"
@@ -73,7 +71,7 @@ coordinate system with an appriopriate transformation. Some highlights:
   \draw[name path=#3,current plane] (\angVis:1) arc (\angVis:\angVis+180:1);
   \draw[name path=dashed#3,current plane,dashed] (\angVis-180:1) arc (\angVis-180:\angVis:1);
 }
-\newcommand\DrawLatitudeCircle[3][2]{
+\newcommand\DrawLatitudeCircleName[3][2]{
   \LatitudePlane{\angEl}{#2}
   \tikzset{current plane/.prefix style={scale=#1}}
   \pgfmathsetmacro\sinVis{sin(#2)/cos(#2)*sin(\angEl)/cos(\angEl)}
@@ -93,6 +91,7 @@ coordinate system with an appriopriate transformation. Some highlights:
     fill=black,circle}%
 }
 
+
 \begin{document}
 
 \begin{tikzpicture} % "THE GLOBE" showcase
@@ -100,17 +99,17 @@ coordinate system with an appriopriate transformation. Some highlights:
 \def\R{2.5} % sphere radius
 \def\angEl{25} % elevation angle
 \filldraw[ball color=white] (0,0) circle (\R);
-\DrawLatitudeCircle[\R]{0}{lat}
-\DrawLongitudeCircle[\R]{-110}{lon1}
-\DrawLongitudeCircle[\R]{-50}{lon2}
+\DrawLatitudeCircleName[\R]{0}{lat}
+\DrawLongitudeCircleName[\R]{-110}{lon1}
+\DrawLongitudeCircleName[\R]{-50}{lon2}
 %\foreach \t in {-80,-60,...,80} { \DrawLatitudeCircle[\R]{\t} }
 %\foreach \t in {-5,-35,...,-175} { \DrawLongitudeCircle[\R]{\t} }
 
 % Find the intersection points and mark them with dots
 \path[name intersections={of = lat and lon1,by={a}}];
 \path[name intersections={of = lat and lon2,by={b}}];
-\node[mark coordinate, label={above right: $A'$}] at (a) {};
-\node[mark coordinate, label={above left: $B'$}] at (b) {};
+\node[mark coordinate, label={above right: $A$}] at (a) {};
+\node[mark coordinate, label={above left: $B$}] at (b) {};
 
 \pgfmathsetmacro\H{\R*cos(\angEl)} % distance to north pole
 \coordinate (O) at (0,0);
@@ -125,13 +124,14 @@ coordinate system with an appriopriate transformation. Some highlights:
 \draw[->] (0,\H) -- (0,1.2*\R) node[above] {Zenith};
 %\draw[dashed] (0,-\H) -- (0,-\R);
 \draw (0,-\R) -- (0,-1.2*\R) node[below] {Nadir};
+%\node[below right] at (O) {$O$};
 %\draw (a) node[above right] {$A$};
 %\draw (b) node[above left] {$B$};
 %\draw (Z) node[left 3pt] {$C$};
 %\node[label={[label distance=5pt]-60:$C$}] {};
 %\node[label={2:$C'$}] at (Z) {};
 %\node[label={below : $C$}] at (Z) {};
-\node[label={[xshift=-0.3cm,yshift=-0.40cm]$C'$}] at (Z) {};
+\node[label={[xshift=-0.3cm,yshift=-0.40cm]$C$}] at (Z) {};
 %\draw[blue] (a) to (b);
 
 
