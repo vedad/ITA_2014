@@ -1,37 +1,26 @@
-%\documentclass{article}
-%\usepackage{wasysym}
-%\usepackage{graphicx}
-%\newcommand{\bc}{\begin{center}}
-%\newcommand{\ec}{\end{center}}
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-%\newcommand{\eea}{\end{eqnarray}}
-%\newcommand{\bua}{\begin{eqnarray*}}
-%\newcommand{\eua}{\end{eqnarray*}}
-%\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
-%\newcommand{\ddt}[1]{\dd{#1}{t}}
-%\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
-%\newcommand{\aver}[1]{\langle{#1}\rangle}
-
-%\begin{document}
-%\setcounter{section}{1} % No need when combining files I think
 \chapter{Celestial coordinate systems}
 
-In order to find something one needs a system of coordinates. For 
-determining the positions of the stars and planets where the 
-distance to the object often is unknown it usually suffices to use {\it two} 
-coordinates. On the other hand, since the Earth rotates around it's 
-own axis as well as around the Sun the positions of stars and planets 
-is continually changing, and the measurement of {\it when} an object 
+%In order to find something one needs a system of coordinates. % Don't like the sentence.
+In order to identify an object's position, one needs a system of coordinates.
+%For determining the positions of the stars and planets where the 
+%distance to the object often is unknown it usually suffices to use {\it two} 
+%coordinates.
+When the distance to the object is unknown, we can restrict ourselves to using two
+coordinates. 
+On the other hand, since the Earth rotates around its 
+own axis as well as around the Sun, the positions of stars and planets 
+are continually changing. Hence, the measurement of {\it when} an object 
 is in a certain place is as important as deciding {\it where} it is. 
 
-Our first task is to decide on a coordinate system and the position of
+%Our first task is to decide on a coordinate system and the position of the following:
+When setting up a coordinate system, one must first decide on the positions
+of the following:
 \begin{enumerate}
 \item The origin. {\it E.g.} one's own location, the center of the Earth,
-the, the center of the Solar System, the Galaxy, etc. 
+the center of the Solar System, the Galaxy, etc. 
 \item The fundamental plane ($x-y$ plane). This is often a plane of some
-physical significance such as the horizon, the equator, or the ecliptic.
+	physical significance such as the horizon, the equator, or the
+	ecliptic.\footnote{See later sections for definitions of these terms.}
 \item Decide on the direction of the positive $x$-axis, also known as
 the ``reference direction''. 
 \item And, finally, on a convention of signs of the $y-$ and $z-$ axes, {\it i.e} whether
@@ -44,77 +33,147 @@ this coordinate system was the center of the Earth and the fundamental plane was
 equator, which location Eratosthenes calculated relative to the parts of the Earth known
 to him. 
 
+In this text, we restrict ourselves to the use of spherical coordinates. We will generally
+differentiate between two types of coordinate sytems: The \textbf{horizontal coordinate system} and
+the \textbf{equatorial coordinate system}. A big difference between these two types
+is the choice of the fundamental plane; respectively the horizon and the equator.
+
 \section{Definitions}
-When viewed from the surface of the Earth the sky above forms a hemisphere, 
-astronomical objects are seen to be projected onto this hemisphere. and their 
-locations are convenient to describe their location with two angular coordinates in the
-same manner as latitude and longitude are decided on the sphere of the Earth. 
+When viewed from the surface of Earth, the sky above forms a hemisphere, and 
+astronomical objects are seen to be projected onto this hemisphere. The hemisphere is part
+of the \textbf{celestial sphere}.
+It is convenient to describe the location of the objects with two angular coordinates in the
+same manner as latitude and longitude are decided on the sphere of the earth. 
 Note that the location of the origin of longitude for both the earth and the 
 sky are not obvious. In any case, it is necessary to review a few aspects of 
 trigonometry on a sphere in order to understand the use of these coordinate 
 systems.
 
 Any plane passing through the center of a sphere cuts the surface in a
-circle which is called a {\it great circle}. Any other plane that cuts
-the sphere, but that does not pass through the center is a {\it small
+circle which is called a {\bf great circle}. Any other plane that cuts
+the sphere, but that does not pass through the center is a {\bf small
   circle}. When two great circles intersect at a point they are said
-to include a {\it spherical angle} which is defined between the
+to include a {\bf spherical angle} which is defined between the
 tangents of the great circles at the point of their intersection. A
 spherical angle is only defined with respect to intersecting great
 circles.
-
+%
+\begin{figure}[htpb]
+	\centering
+	\begin{subfigure}[t]{0.50\linewidth}
+%	\captionsetup{width=0.9\textwidth}
+	\centering
+	\includestandalone[scale=0.8]{celestial-sphere}
+	\caption{}
+%		\caption{Three great circles are drawn: The equator (latitudinal
+%			circle), and two
+%			longitudinal circles that pass through a point on the zenith, $C'$.
+%			At the intersections, $A',B',C'$ they form spherical angles which includes a spherical
+%			triangle.}
+		\label{fig:cel-sph-tri}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.50\linewidth}
+%	\captionsetup{width=0.9\textwidth}
+	\centering
+	\includestandalone[scale=0.8]{celestial-sphere-circles}
+	\caption{}
+%		\caption{The figure illustrates different kinds of circles on a sphere.}
+		\label{fig:cel-sph-circ}
+	\end{subfigure}
+	\caption{Figure \textbf{(a)} shows how three great circles can form a spherical triangle.
+	Figure \textbf{(b)} illustrates some circle types.}
+\end{figure}
+%
 Given any three points on the surface of a sphere, the sphere can be
 bisected so that all three points lie in the same hemisphere. Joining
-the points by great circle arcs all in this hemisphere defines a {\it
-  spherical triangle}. The length of a great circle arc is defined as
+the points by great circle arcs all in this hemisphere defines a {\bf
+spherical triangle}, as shown in Figure~\ref{fig:cel-sph-tri}.
+The length of a great circle arc is defined as
 the radius times the angle $A$ formed between the two endpoints of the
-arc and the spheres center measured in radians: $R\times A$.
-
+arc and the sphere's center measured in radians: $R\times A$.
 As discussed above there are several methods of specifying a given position on the
 celestial sphere, depending on which principal great circles are
-chosen as reference. 
+chosen as reference.
 
-%\subsection{Altitude -- Azimuth}
+Let's get familiar with the celestial sphere. The choice of coordinate system depends on
+the choice of the fundamental plane. We first consider the horizontal coordinate system.
+We define the \textbf{zenith}, $Z$, to be the direction
+directly overhead, while the opposite direction is the \textbf{nadir}. The fundamental plane
+in this system is the horizon, and is the plane at a right angle to the zenith.
+The extended plane of the horizon that intersects the celestial sphere is the
+\textbf{celestial horizon}.
+The celestial horizon is then simply just an extension of
+Earth's horizon.
+
+%
+\begin{figure}[htpb]
+%	\captionsetup{width=0.9\textwidth}
+	\centering
+	\includestandalone[scale=0.9]{celestial-sphere-test}
+	\caption{The relation between the horizon and the equator. The figure shows the
+		celestial sphere as seen from Oslo ($\phi = 60^{\circ}$, since Oslo lies at 
+		$60^{\circ}$ N).}
+	\label{fig:cel-sph-test}
+\end{figure}
+%
+In the equatorial coordinate system, the equatorial plane is chosen as the fundamental
+plane. The extension of the plane of Earth's equator is the plane of the
+\textbf{celestial equator},
+which intersects the celestial sphere.
+In this system, the $z$-axis is aligned with Earth's spin
+axis, i.e. the north pole (or south pole in the southern hemisphere). This axis intersects
+the celestial sphere in the \textbf{north celestial pole} and \textbf{south celestial pole}.
+
+The angle $ZP$ between the celestial horizon and the celestial equator is called the
+colatitude and depends on the
+observer's latitude $\phi$. It's easy to see that the colatitude is then defined as
+\[ ZP = 90^{\circ} - \phi. \]
+When observing the night sky from any place on Earth, the
+zenith is always be directly overhead, but the pole's angle above the horizon (altitude)
+is equal to the observer's latitude.
+
 \section{Altitude -- azimuth}
 
+This coordinate system has the horizon as the fundamental plane, and is thus a horizontal
+coordinate system.
 With reference to figure~\ref{fig:alt-az} let $O$, the observer on
 the surface of the earth (supposed spherical), be the center of the
 celestial sphere. 
-
-\begin{figure}[h]
-%{\hfil\psfig{file=alt-az.eps,width=0.66\textwidth}\hfil}
+%
+\begin{figure}[htpb]
 \centering
 \includegraphics[width=0.66\textwidth]{alt-az.eps}
 \caption{The altitude -- azimuth coordinate system.}
 \label{fig:alt-az}
 \end{figure}
-
-Let $Z$ be the zenith, vertically overhead be defined by the direction
-of gravity. $OZ$ is thus the continuation of the straight line joining
-the earth's center to $O$. The plane through $O$ at right angles to
-$OZ$ is the plane of the horizon, cutting the celestial sphere in the
-great circle $NAS$, called the {\it celestial horizon}. 
+%
+Let $Z$ be the zenith.
+The path $OZ$ is thus the straight line joining
+the earth's center, $O$, and the zenith. The plane through $O$ at right angles to
+$OZ$ is the plane of the celestial horizon,
+cutting the celestial sphere in the
+great circle $NAS$.
 
 Let $X$ be the position of a star on the celestial sphere. Any great
-circle drawn through $Z$ is called a {\it vertical circle}; in
+circle drawn through $Z$ is a vertical circle; in
 particular, the vertical circle through $X$ is $ZXA$. In the plane of
 $ZXA$, the angle $AOX$ (or the great circle arc $AX$) is called the
-{\it altitude} denoted by $a$. Since $OZ$ is perpendicular to the plane of
+{\bf altitude} denoted by $a$. Since $OZ$ is perpendicular to the plane of
 the horizon, the great circle arc $ZA$ is 90$^\circ$; hence
-$ZX=90^\circ-a$. $ZX$ is called the {\it zenith distance} of the star
-$X$. Draw $LXM$ as a small circle through $X$ parallel to the
-horizon, it is called the {\it parallel of altitude}. 
+$ZX=90^\circ-a$. This angle, $ZX$, is called the {\bf zenith distance} of the star
+$X$. Drawing $LXM$ as a small circle through $X$ parallel to the
+horizon, we get what is called the {\bf parallel of altitude}. 
 
-To define a stars position completely on the celestial sphere the
+In order to completely define a star's position on the celestial sphere, the
 particular vertical circle on which it lies must also be
 specified. Let $OP$ be parallel to the axis about which the earth
-spins. On the northern hemisphere the position $P$ is called the {\it
-  north celestial pole}. Due to this rotation the celestial sphere
+spins. On the northern hemisphere the position $P$ is the
+north celestial pole. Due to this rotation the celestial sphere
 appears to rotate and the stars to continuously change altitude and
-direction. In the northern hemisphere Polaris lies almost directly on
+direction. In the northern hemisphere, Polaris lies almost directly on
 $OP$ and changes direction very little. Define the vertical circle
 through $P$ that is $ZPN$ as the principal vertical circle and the
-point $N$ as the {\it north point of the horizon}. 
+point $N$ as the {\bf north point of the horizon}. 
 
 The position of a star $X$ on the celestial sphere at a given moment
 is given by reference to the horizon and the principal vertical circle
@@ -122,15 +181,16 @@ $ZPN$. If the star is in the western part of the celestial sphere the
 spherical angle $PZX$ or the great circle arc $NA$ is called the
 {\it azimuth} (W). 
 
+\begin{comment}
 Note that the angle $POZ$ (or great circle arc $PZ$) is equivalent to
 the angle between the radius of the earth which passes through the
 observer's position and the earth's axis is equal to the co-latitude of
 the observer or 
 \[ PZ=90^\circ-\phi \]
-where $\phi$ is the observers latitude. Hence the altitude of the pole
+where $\phi$ is the observer's latitude. Hence the altitude of the pole
 is equal to the observers latitude.
+\end{comment}
 
-%\subsection{Some spherical trigonometry}
 \section{Some spherical trigonometry}
 
 Both great circle angles and arcs are measured in radians (or
@@ -141,12 +201,21 @@ sum of the angles in a spherical triangle is greater than
 $180^\circ$, the difference between the sum of the angles and
 $180^\circ$ is called the {\it spherical excess}.
 
-Consider a spherical triangle with corners $A,B,C$ on a unit
+Consider a spherical triangle, such as Figure~\ref{fig:spherical-triangle}, with corners $A,B,C$ on a unit
 sphere\footnote{Useful in the following: 
 \bua
 \cos(\alpha\pm\beta)&=&\cos\alpha\cos\beta\mp\sin\alpha\sin\beta \\
 \sin(\alpha\pm\beta)&=&\sin\alpha\cos\beta\pm\cos\alpha\sin\beta
-\eua}. Assume that these corners follow each other in the positive sense.
+\eua}.
+%
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.3\textwidth]{spherical-triangle.pdf}
+	\caption{A spherical triangle. Each of its sides are part of separate great circles.}
+	\label{fig:spherical-triangle}
+\end{figure}
+%
+Assume that these corners follow each other in the positive sense.
 The sides $a,b,c$ lie directly opposite these corners.
 Insert a right handed coordinate system $x,y,z$ with origin at the
 sphere's center, let the $z$ axis go through the point $A$, and the
@@ -171,7 +240,6 @@ y' & = & \sin a \sin B.
 \end{eqnarray}
 
 \begin{figure}[h]
-%{\hfil\psfig{file=sph-trig.eps,width=0.66\textwidth}\hfil}
 \centering
 \includegraphics[width=0.66\textwidth]{sph-trig.eps}
 \caption{Two axis systems used to derive the basic formula of spherical
@@ -212,13 +280,11 @@ trigonometry:
 The first of these is the {\it cosine formula}, the second the {\it
   sine--cosine} formula, and the third the {\it sine} formula.
 
-%\subsection{Declination -- hour angle}
-	\section{Declination -- hour angle}
+\section{Declination -- hour angle}
 
 Consider now again the celestial sphere as drawn in figure~\ref{fig:hr-dec}.
 
 \begin{figure}[h]
-%{\hfil\psfig{file=hr-dec.eps,width=0.66\textwidth}\hfil}
 \centering
 \includegraphics[width=0.66\textwidth]{hr-dec.eps}
 \caption{Relation between altitude -- azimuth and declination -- hour angle
@@ -227,7 +293,7 @@ coordinates.}
 \end{figure}
 
 The great circle $RWT$ whose plane is perpendicular to $OP$ is the
-{\it celestial equator} and its plane is parallel to that of the
+celestial equator and its plane is parallel to that of the
 earth's equator. The celestial equator and the horizon intersect in
 two points $W$ and $E$. Now $Z$ is the pole of the great circle $NWS$
 and $P$ is the pole of the great circle $RWT$; hence $W$ is $90^\circ$
@@ -235,7 +301,7 @@ from both $Z$ and $P$ and therefore $90^\circ$ from all points on the
 great circle through the great circle through $Z$ and $P$. This means
 that $W$ is the pole of the great circle $NPZQ$; hence $NW=90^\circ$
 and $WS=90^\circ$. Similarly  $EN=90^\circ$ and  $ES=90^\circ$. Thus
-$W$ and $E$ are the remaining {\it cardinal points}, in addition to
+$W$ and $E$ are the remaining {\bf cardinal points}, in addition to
 $N$ and $S$. 
 
 The rotation of the earth results in an apparent rotation of the
@@ -245,33 +311,32 @@ observer at $O$ to any particular star and the straight line $OP$
 remains unaltered. The earth's rotations makes the star $X$ describe a
 small circle $LXM$, parallel to the celestial equator. Let $PXDQ$ be
 the semi-great circle through $X$ and the poles of the celestial
-sphere. Then $DX$ is called the {\it declination} of the star and is
-{\it north declination} if the star is between the celestial equator and
+sphere. Then $DX$ is called the {\bf declination} of the star and is
+{\bf north declination} if the star is between the celestial equator and
 the north pole. Denoting the stars declination $DX$ by $\delta$ and
-$PX=90^\circ-\delta$ is called the {\it north polar distance} of the
+$PX=90^\circ-\delta$ is called the {\bf north polar distance} of the
 star. 
 
-When we know the declination of a star, a small circle, {\it the
+When we know the declination of a star, a small circle, {\bf the
   parallel of declination}, is defined. In order to completely
 specify the stars position we need another great circle of
-reference. This is the semi-great circle $PZRSQ$ called the {\it
+reference. This is the semi-great circle $PZRSQ$ called the {\bf
   observer's meridian}. When the star is at $L$ on the observers
-meridian it is is said to {\it transit} or {\it culminate} at which
+meridian it is is said to {\bf transit} or {\bf culminate} at which
 time it is at its greatest altitude. Afterward the star moves along
 the small circle $LFM$ crossing the horizon at $F$, when it is said to
-{\it set} with an altitude of $0^\circ$. Eventually it will pass through
+{\bf set} with an altitude of $0^\circ$. Eventually it will pass through
 its position of maximum depression at $M$ before continuing on to $G$
-where the altitude again is $0^\circ$ and is said to {\it rise}. At
+where the altitude again is $0^\circ$ and is said to {\bf rise}. At
 any moment the star's position on the parallel of declination is
 specified by the angle $P$ between the observer's meridian and the
 meridian ($PXQ$) through the star at this time; this angle is $RPX$ or
 arc $RD$ on the equator. This angle, denoted by $H$, is called the
-{\it hour angle} and is measured from the observer's meridian {\it
-  westwards} from $0^\circ$ (at $L$) to $360^\circ$ (when the star
+{\bf hour angle} and is measured from the observer's meridian
+\textit{westwards} from $0^\circ$ (at $L$) to $360^\circ$ (when the star
 returns to the observer's meridian), or more usually from $0^h$ to 
 $24^h$. 
 
-%\subsection{The standard geocentric celestial sphere}
 \section{The standard geocentric celestial sphere}
 
 
@@ -285,7 +350,6 @@ dependent on position of the observer on the earth.
 Accordingly, the center of the standard celestial sphere is taken to
 be at $C$ the earth's center. 
 
-%\subsection{Right ascension and declination}
 \section{Right ascension and declination}
 
 In the hour angle and declination method of specifying a star's
@@ -293,7 +357,6 @@ position on the celestial sphere only one coordinate, the declination,
 remains constant as the star travels across the sky. 
 
 \begin{figure}[h]
-%{\hfil\psfig{file=ra-dec.eps,width=0.66\textwidth}\hfil}
 \centering
 \includegraphics[width=0.66\textwidth]{ra-dec.eps}
 \caption{Definition of the right ascension -- declination coordinate system.}
@@ -327,7 +390,6 @@ time has elapsed. This interval is the same as is required for the
 complete revolution of the earth about its axis and is called a {\it
   sidereal day}. 
 
-%\subsection{The earth's orbit}
 \section{The earth's orbit}
 
 According to Kepler's first law of planetary motion, the earth is a 
@@ -345,7 +407,6 @@ inclined at an angle of about $23{1\over 2}^\circ$ to the celestial
 equator. 
 
 \begin{figure}[h]
-%{\hfil\psfig{file=ecliptic.eps,width=0.66\textwidth}\hfil}
 	\centering
 	\includegraphics[width=0.66\textwidth]{ecliptic.eps}
 	\caption{Celestial longitude and latitude.}
@@ -450,7 +511,6 @@ a time varying quantity, slowly moving according to well established principles 
 reference to the background stars.
 
 \begin{figure}[h]
-%{\hfil\psfig{file=sidereal.eps,width=0.66\textwidth}\hfil}
 	\centering
 	\includegraphics[width=0.66\textwidth]{sidereal.eps}
 	\caption{Definition of sidereal time and the effects of precession; motion 
@@ -556,9 +616,7 @@ ongoing work made retaining the old scale preferable.
 
 In 2006 (Resolution B3)
 \footnote{
-%\begin{verbatim}
 \tt www.iau.org\/static\/resolutions\/IAU2006\_Resol3.pdf
-%\end{verbatim}
 }
 , responding to the ``multiple realizations of TDB''
 and other factors, the IAU defined TDB in terms of TCB. One result is that, 
@@ -694,5 +752,3 @@ hour angle for stars observed from Oslo with declinations of
 to produce a figure of altitude as function of
 azimuth for the same stars (also as observed from Oslo).
 \end{enumerate}
-
-%\end{document}
