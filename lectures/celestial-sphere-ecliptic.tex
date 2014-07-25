@@ -1,6 +1,6 @@
 \documentclass{standalone}
 \usepackage{tikz}
-\usetikzlibrary{calc,fadings,decorations.pathreplacing}
+\usetikzlibrary{intersections,calc,fadings,decorations.pathreplacing}
 \usepackage{verbatim}
 \usepackage{xparse}
 %% helper macros
@@ -19,22 +19,22 @@
   \pgfmathsetmacro\yshift{\cosEl*\sint}
   \tikzset{#1/.style={cm={\cost,0,0,\cost*\sinEl,(0,\yshift)}}} %
 }
-\newcommand\DrawLongitudeCircle[2][1]{
+\newcommand\DrawLongitudeCircle[3][1]{
   \LongitudePlane{\angEl}{#2}
   \tikzset{current plane/.prefix style={scale=#1}}
    % angle of "visibility"
   \pgfmathsetmacro\angVis{atan(sin(#2)*cos(\angEl)/sin(\angEl))} %
-  \draw[current plane] (\angVis:1) arc (\angVis:\angVis+180:1);
-  \draw[current plane,dashed] (\angVis-180:1) arc (\angVis-180:\angVis:1);
+  \draw[name path=#3,current plane] (\angVis:1) arc (\angVis:\angVis+180:1);
+  \draw[name path=dashed#3,current plane,dashed] (\angVis-180:1) arc (\angVis-180:\angVis:1);
 }
-\newcommand\DrawLatitudeCircle[2][2]{
+\newcommand\DrawLatitudeCircle[3][2]{
   \LatitudePlane{\angEl}{#2}
   \tikzset{current plane/.prefix style={scale=#1}}
   \pgfmathsetmacro\sinVis{sin(#2)/cos(#2)*sin(\angEl)/cos(\angEl)}
   % angle of "visibility"
   \pgfmathsetmacro\angVis{asin(min(1,max(\sinVis,-1)))}
-  \draw[current plane] (\angVis:1) arc (\angVis:-\angVis-180:1);
-  \draw[current plane,dashed] (180-\angVis:1) arc (180-\angVis:\angVis:1);
+  \draw[name path=#3,current plane] (\angVis:1) arc (\angVis:-\angVis-180:1);
+  \draw[name path=dashed#3,current plane,dashed] (180-\angVis:1) arc (180-\angVis:\angVis:1);
 }
 
 %% document-wide tikz options and styles
@@ -44,7 +44,9 @@
   inner sep=0pt,%
   outer sep=2pt,%
   mark coordinate/.style={inner sep=0pt,outer sep=0pt,minimum size=4pt,
-  fill=black,circle}%
+  fill=black,circle},%
+	sundot/.style={
+	fill, color=yellow, circle, inner sep=3.5pt}
 }
 
 \begin{document}
@@ -83,11 +85,13 @@
 %		\node[above=9pt, right=-5pt, color=blue] at (equator) {\bf{Equator}};
 %		\node[label={above right:\bf{Equator}}] at (equator) {};
 
-    \node[above=10pt, left=3pt] at (N) {\bf{North}};
-    \node[above=2pt, left=12pt] at (N) {\bf{pole}};
+		\path (N) node[align=left, above=1.5em, right] {\textbf{North}\\ \textbf{pole}} (N);
+		\path (S) node[align=left, below=1.5em, right] {\textbf{South}\\ \textbf{pole}} (S);
+%    \node[above=10pt, left=3pt] at (N) {\bf{North}};
+%    \node[above=2pt, left=12pt] at (N) {\bf{pole}};
 
-    \node[below=5pt, right=4pt] at (S) {\bf{South}};
-    \node[below=14pt, right=4pt] at (S) {\bf{pole}};
+%    \node[below=5pt, right=4pt] at (S) {\bf{South}};
+%    \node[below=14pt, right=4pt] at (S) {\bf{pole}};
 
     \def\R{6} % sphere radius
     \def\angEl{5} % elevation angle
@@ -116,11 +120,32 @@
 		\node[right=5pt] at (tilt) {$23.5^{\circ}$};
 %		\coordinate (obslat) at (75:0.4*\R);
 %		\node[above=5pt] at (obslat) {$30^{\circ}$};
-		\DrawLatitudeCircle[\R,color=blue]{0} % equator
+		\DrawLatitudeCircle[\R,color=blue]{0}{celeq} % equator
 %		\draw 
-		\DrawLatitudeCircle[\R,rotate=23.5, color=orange]{0} % ecliptic
-		\node[right, color=blue] at (Equator) {\textbf{Celestial equator}};
-		\node[above right, color=orange] at (Ecliptic) {\textbf{Ecliptic}};
+		\DrawLatitudeCircle[\R,rotate=23.5, color=orange]{0}{ecl} % ecliptic
+		\node[right=0.5em, color=blue] at (Equator) {\textbf{Celestial equator}};
+		\node[above=0.5em, right=0.5em, color=orange] at (Ecliptic) {\textbf{Ecliptic}};
+		\path[name intersections={of= celeq and ecl,by={vereq}}];%, [label=above left:\textbf{Autumnal equinox}]b}}];
+		\coordinate[mark coordinate] () at (vereq) {};
+		\path (vereq) node[align=right, below=1.3em, right] {\textbf{Vernal equinox}\\ March 20th}
+		(vereq);
+		\coordinate[mark coordinate] (sumsol) at (23.5:\R);
+		\path (sumsol) node[align=right, above=1.3em, left=1em] {\textbf{Summer solstice}\\ June
+		21st} (sumsol);
+		\coordinate[mark coordinate] (winsol) at (23.5+180:\R);
+		\path (winsol) node[align=right, below=1.5em, right=0.5em] {\textbf{Winter solstice}\\
+		December 21st} (winsol);
+		\coordinate[mark coordinate] (auteq) at (100.5:0.09*\R);
+		\path (auteq) node[align=right, above=1.3em, left=0.5em] {\textbf{Autumnal equinox}\\
+		September 23rd} (auteq);
+		\coordinate[sundot] (sun) at (15:0.5*\R);
+		\draw[->,very thick] (sun) -- (18.4:0.7*\R);
+		\node[below=1.0em] at (sun) {\textbf{The sun}};
+%		\draw[->] (auteq) -- (120:0.3*\R);
+%		\node[mark coordinate,align=center,below right] at (a) {Vernal \\ equinox};
+%		\node[mark coordinate,label=above left:\textbf{Summer solstice}]<++>
+%		\node[mark coordinate] at (a) {};
+%		\coordinate[mark coordinate] (a) at (intersection-2);
 %		\node[label={above right:\bf{Celestial horizon}},color=red] at (Horizon) {};
 %		\node[label={right:\bf{Celestial equator}},color=red] at (Equator) {};
 
