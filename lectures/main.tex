@@ -9,6 +9,7 @@
 \usepackage{booktabs}	% Functionality for tabular* environment
 \usepackage{enumitem}	% Functionality for enumerate environment
 \usepackage{subcaption}	% Subfigure environment
+\usepackage{fancyref}
 %\captionsetup{width=0.8\textwidth}
 %\usepackage[export]{adjustbox} % For aligning figures next to eachother
 %----------------------------- Used for listings -----------------------------%
@@ -18,7 +19,7 @@
 \usepackage[labelfont=bf]{caption}
 
 \usepackage{tikz}
-\usetikzlibrary{intersections,calc,fadings,decorations.pathreplacing}
+\usetikzlibrary{intersections,calc,fadings,decorations.pathreplacing,shapes.geometric}
 \usepackage{verbatim}
 \usepackage{xparse}
 \usepackage{standalone}
@@ -127,8 +128,10 @@
   >=latex, % option for nice arrows
   inner sep=0pt,%
   outer sep=2pt,%
-  mark coordinate/.style={inner sep=0pt,outer sep=0pt,minimum size=3pt,
-    fill=black,circle}%
+  mark coordinate/.style={inner sep=0pt,outer sep=0pt,minimum size=4pt,
+    fill=black,circle},%
+	sundot/.style={
+	fill, color=yellow, circle, inner sep=3.5pt}%
 }
 
 %\input{celestial-sphere-preamble}
