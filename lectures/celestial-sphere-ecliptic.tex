@@ -3,6 +3,7 @@
 \usetikzlibrary{intersections,calc,fadings,decorations.pathreplacing}
 \usepackage{verbatim}
 \usepackage{xparse}
+\usepackage{wasysym}
 %% helper macros
 \newcommand\pgfmathsinandcos[3]{%
   \pgfmathsetmacro#1{sin(#3)}%
@@ -19,7 +20,7 @@
   \pgfmathsetmacro\yshift{\cosEl*\sint}
   \tikzset{#1/.style={cm={\cost,0,0,\cost*\sinEl,(0,\yshift)}}} %
 }
-\newcommand\DrawLongitudeCircle[3][1]{
+\newcommand\DrawLongitudeCircleName[3][1]{
   \LongitudePlane{\angEl}{#2}
   \tikzset{current plane/.prefix style={scale=#1}}
    % angle of "visibility"
@@ -27,7 +28,7 @@
   \draw[name path=#3,current plane] (\angVis:1) arc (\angVis:\angVis+180:1);
   \draw[name path=dashed#3,current plane,dashed] (\angVis-180:1) arc (\angVis-180:\angVis:1);
 }
-\newcommand\DrawLatitudeCircle[3][2]{
+\newcommand\DrawLatitudeCircleName[3][2]{
   \LatitudePlane{\angEl}{#2}
   \tikzset{current plane/.prefix style={scale=#1}}
   \pgfmathsetmacro\sinVis{sin(#2)/cos(#2)*sin(\angEl)/cos(\angEl)}
@@ -120,9 +121,9 @@
 		\node[right=5pt] at (tilt) {$23.5^{\circ}$};
 %		\coordinate (obslat) at (75:0.4*\R);
 %		\node[above=5pt] at (obslat) {$30^{\circ}$};
-		\DrawLatitudeCircle[\R,color=blue]{0}{celeq} % equator
+		\DrawLatitudeCircleName[\R,color=blue]{0}{celeq} % equator
 %		\draw 
-		\DrawLatitudeCircle[\R,rotate=23.5, color=orange]{0}{ecl} % ecliptic
+		\DrawLatitudeCircleName[\R,rotate=23.5, color=orange]{0}{ecl} % ecliptic
 		\node[right=0.5em, color=blue] at (Equator) {\textbf{Celestial equator}};
 		\node[above=0.5em, right=0.5em, color=orange] at (Ecliptic) {\textbf{Ecliptic}};
 		\path[name intersections={of= celeq and ecl,by={vereq}}];%, [label=above left:\textbf{Autumnal equinox}]b}}];
@@ -140,10 +141,11 @@
 		September 23rd} (auteq);
 		\coordinate[sundot] (sun) at (15:0.5*\R);
 		\draw[->,very thick] (sun) -- (18.4:0.7*\R);
+		\node[above=1.0em,right=0.1em] at (vereq) {$\aries$};
 		\node[below=1.0em] at (sun) {\textbf{The sun}};
 %		\draw[->] (auteq) -- (120:0.3*\R);
 %		\node[mark coordinate,align=center,below right] at (a) {Vernal \\ equinox};
-%		\node[mark coordinate,label=above left:\textbf{Summer solstice}]<++>
+%		\node[mark coordinate,label=above left:\textbf{Summer solstice}]
 %		\node[mark coordinate] at (a) {};
 %		\coordinate[mark coordinate] (a) at (intersection-2);
 %		\node[label={above right:\bf{Celestial horizon}},color=red] at (Horizon) {};
