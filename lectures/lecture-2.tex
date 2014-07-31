@@ -109,7 +109,7 @@ Earth's horizon.
 \begin{figure}[htpb]
 %	\captionsetup{width=0.9\textwidth}
 	\centering
-	\includestandalone[scale=0.9]{celestial-sphere-test}
+	\includestandalone[scale=1.0]{celestial-sphere-test}
 	\caption{The relation between the horizon and the equator. The figure shows the
 		celestial sphere as seen from Oslo ($\phi = 60^{\circ}$, since Oslo lies at 
 		$60^{\circ}$ N).}
@@ -364,17 +364,19 @@ remains constant as the star travels across the sky.
 \end{figure}
 
 Let us now pick a point $\aries$ on the celestial equator and let the
-meridian through the star $X$ cut the celestial equator at $D$. As the
+meridian through the star $X$ cut the celestial equator at $D$.\footnote{The reference
+point $\aries$ is not a random point, it is actually a point of intersection between the
+celestial equator and the ecliptic.} As the
 stars pass across the sky the declination $DX$ remains constant and
 that the relative configuration of the stars also remain constant. It
 follows that $\aries D$ is constant. We regard $\aries$ as a reference
 point on the celestial equator; we can then clearly specify the the
 position of the star $X$ by means of the great circle arc $\aries D$
 and the declination $DX$. The reference point chosen is called the
-{\it vernal equinox} or the {\it first point of Aries}. The arc
-$\aries D$ is called the {\it right ascension} ({\sc r.a.}) of the
+{\bf vernal equinox} or the {\bf first point of Aries}. The arc
+$\aries D$ is called the {\bf right ascension} ({\sc r.a.}) of the
 star $X$. It is denoted by $\alpha$ and is measured {\it eastward}
-from $\aries$ from $0^h$ to $24^h$, opposite to the direction the hour
+from $\aries$ from $0^{\mathrm{h}}$ to $24^{\mathrm{h}}$, opposite to the direction the hour
 angle $H$ is measured. 
 
 Note that $R\aries =RD+\aries D$. The hour angle of $\aries$ is called
@@ -384,10 +386,10 @@ the {\it sidereal time}\footnote{{\bf sidereal}: of or with respect to distant s
 {\rm S.T.}=H+\alpha
 \]
 When $\aries$ is on the observer's meridian, the hour angle of
-$\aries$ is $0^h$, {\it i.e} the sidereal time is $0^h$. When $\aries$
-is next on the observer's meridian an interval of $24^h$ of sidereal
+$\aries$ is $0^{\mathrm{h}}$, i.e the sidereal time is $0^{\mathrm{h}}$. When $\aries$
+is next on the observer's meridian an interval of $24^{\mathrm{h}}$ of sidereal
 time has elapsed. This interval is the same as is required for the
-complete revolution of the earth about its axis and is called a {\it
+complete revolution of the earth about its axis and is called a {\bf
   sidereal day}. 
 
 \section{The earth's orbit}
@@ -395,44 +397,72 @@ complete revolution of the earth about its axis and is called a {\it
 According to Kepler's first law of planetary motion, the earth is a 
 planet revolving around the sun in an elliptical path or orbit, and
 the sun is situated in a focus of the ellipse. Since our observations
-are made from earth, then relative to the earth the sun appears to
+are made from Earth, then relative to the earth the sun appears to
 describe an elliptical path around the earth. In the course of a year
 the sun makes a complete circuit of the heavens against the background
-of the stars. The plane of the orbit is called the {\it plane of the
+of the stars. The plane of the orbit is called the {\bf plane of the
   ecliptic},  and the great circle in which this plane intersects the
-celestial sphere whose center is the earths center $C$, is called the 
-{\it ecliptic}. With reference to the stars, the plane of the ecliptic
+celestial sphere whose center is the earths is called the 
+{\bf ecliptic}. With reference to the stars, the plane of the ecliptic
 will be a particular great circle which is found by observations to be
-inclined at an angle of about $23{1\over 2}^\circ$ to the celestial
+inclined at an angle of about $23.5^\circ$ to the celestial
 equator. 
 
-\begin{figure}[h]
+\begin{figure}[htpb]
 	\centering
-	\includegraphics[width=0.66\textwidth]{ecliptic.eps}
-	\caption{Celestial longitude and latitude.}
-	\label{fig:ecliptic}
+	\includestandalone[scale=1.0]{celestial-sphere-ecliptic}
+	\caption{The path of the sun over the course of a year, as seen from Earth.}
+	\label{fig:cel-sph-ecl}
 \end{figure}
+%
+In figure~\ref{fig:cel-sph-ecl}, the ecliptic and its inclination to the celestial
+equator, the \textbf{obliquity of the ecliptic}, is drawn. Relative to the earth, the sun
+appears to move on the celestial sphere along the ecliptic eastwards, in the direction as
+shown. Twice a year its position coincides with the intersections of the ecliptic and the
+celestial equator. The position $\aries$, at which the sun's declination changes from
+south to north (negative to positive), is the \textbf{vernal equinox}. It is in this way
+that the reference point $\aries$ is obtained, from which the right ascension of stars is
+measured. From the figure, it is seen that the right ascension and declination of the sun
+are both changing continually. When the sun is at $\aries$, its right ascension and
+declination are both zero. This occurs roughly March 20. Following the sun's path, we
+reach June 20th, which is the \textbf{summer solstice}; the longest day of the year
+in the northern hemisphere. At this point, the right ascension is $6^{\mathrm{h}}$, and
+the declination is about $23.5^\circ$. The second intersection of the ecliptic and
+celestial equator is the \textbf{first point of Libra}, which is more commonly known as the
+\textbf{autumnal equinox}, and occurs roughly September 23. At this point, the declination
+and right ascension of the sun are zero again. December 21 marks the shortest day of the
+year in the northern hemisphere, and is called the \textbf{winter solstice}. At this
+point the sun's maximum elevation throughout the day is the lowest of the year. The sun
+then has a declination of $-23.5^\circ$ and right ascension
+$18^{\mathrm{h}}$.
 
-In figure~\ref{fig:ecliptic}, $Y\aries M$ represents the ecliptic and
-its inclination to the celestial equator is $M\aries R$, which is
-known as the {\it obliquity of the ecliptic}. Relative to the earth,
+Please note that the situation is reversed for the southern hemisphere. When summer
+solstice occurs in the northern hemisphere, it is winter solstice in the southern
+hemisphere. The same applies to the vernal and autumnal equinox.
+
+\begin{comment}
+In figure~\ref{fig:cel-sph-ecl}, the ecliptic and its inclination to the celestial
+equator, the \textbf{obliquity of the ecliptic}, is drawn. Relative to the earth,
 the sun appears to move on the celestial sphere along the ecliptic in
-the direction $Y\aries M$ and twice yearly its position coincides
+the direction as shown, and twice yearly its position coincides
 with the intersections of the ecliptic with the celestial equator. The
 position $\aries$, at which the sun's declination changes from south
-to north, is the {\it vernal equinox}. It is in this way that the
+to north, is the {\bf vernal equinox}. It is in this way that the
 reference point $\aries$ is obtained, from which the right ascension
 of stars is measured. From the diagram it is seen that the right
 ascension and declination of the sun are both changing
-continually. When the sun is at $\aries$ its right ascension and
-declination are both zero (this occurs roughly March 21); at $M$ the
-right ascension is $6^h$ and declination about $23 {1\over2}^\circ$~N
-(roughly June 21, summer solstice); at $U$ the right ascension is
-$12^h$ and declination $0^\circ$ (September 21, autumnal equinox),
-and at $Y$ the right ascension is $18^h$ and the declination about $23
-{1\over 2}^\circ$~S (December 21, winter solstice).
+continually. When the sun is at $\aries$, its right ascension and
+declination are both zero, which occurs roughly March 20.
+At the highest 
+right ascension is $6^{\mathrm{h}}$ and declination about $23.5^\circ$~N
+(roughly June 21, summer solstice); at autumnal equinox (also called the first point of
+Libra) the right ascension is
+$12^{\mathrm{h}}$ and declination $0^\circ$ (September 21, autumnal equinox),
+and at $Y$ the right ascension is $18^h$ and the declination about $23.5^\circ$~S (December 21, winter solstice).
+\end{comment}
 
 \section{Celestial latitude and longitude}
+\label{sec:cel-lat-lon}
 
 The position of a heavenly body can also be referred to the ecliptic
 as fundamental great circle and the vernal equinox $\aries$ as principal
@@ -444,34 +474,40 @@ sun's annual motion (eastwards), is called the {\it longitude} of $X$
 and is measured from $0^\circ$ to $360^\circ$ round the ecliptic. The
 arc $\Lambda X$ is the {\it latitude}, north is considered positive
 and south negative. 
-
+%
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.66\textwidth]{ecliptic.eps}
+	\caption{Celestial longitude and latitude.}
+	\label{fig:ecliptic}
+\end{figure}
+%
 Thus, if one know a star's right ascension and declination it is
 possible to obtain its latitude ($\beta$) and longitude ($\lambda$)
 from the triangle $KPX$; and vice versa.
 
-\section{Sidereal time {\sc i}}
-\label{sec:sidereal_time_i}
-
-Sidereal time at Greenwich is given such that
-\[
-{\rm S.T.~at~Greenwich}={\rm S.T.~at}~l\pm{\rm long.~of~}l
-\]
-where $l$ is the longitude of the observer with the $+$ sign given
-when $l$ is west of Greenwich and the $-$ is given when $l$ is east of
-Greenwich. The sidereal time at $l$ is called the {\it local sidereal
-  time} ({\sc l.s.t.}).
-
+%\section{Sidereal time I}
+%\label{sec:sidereal_time_i}
+%
+%Sidereal time at Greenwich is given such that
+%\[
+%{\rm S.T.~at~Greenwich}={\rm S.T.~at}~l\pm{\rm long.~of~}l
+%\]
+%where $l$ is the longitude of the observer with the $+$ sign given
+%when $l$ is west of Greenwich and the $-$ is given when $l$ is east of
+%Greenwich. The sidereal time at $l$ is called the {\it local sidereal
+%  time} ({\sc l.s.t.}).
 \section{Mean solar time}
 
-When the sun is on the meridian of a given place, it is apparent {\it
-  noon} there; when the sun is next on the meridian, an {\it apparent
+When the sun is on the meridian of a given place, it is \textbf{apparent
+noon} there; when the sun is next on the meridian, an {\bf apparent
   solar day} has elapsed. An apparent solar day is not constant --- due
 to the fact that the sun's apparent orbit around the earth is not a
 circle but rather an ellipse. In addition the sun moves along the
 ecliptic and not the celestial equator so it's right ascension does
 not increase uniformly. The average apparent solar day through the
-year is called a {\it mean solar day}. The mean sun is assumed to
-move in the {\it celestial equator} at a uniform rate around the
+year is called a {\bf mean solar day}. The mean sun is assumed to
+move in the celestial equator at a uniform rate around the
 earth. The rate is such that the mean sun completes its orbit in the
 same amount of time as the real sun needs to complete an orbit around
 the ecliptic. Assume that the right ascension of the sun is known,
@@ -487,29 +523,43 @@ E={\rm R.A.M.S-R.A.\astrosun}
 \]
 $E$ can be positive or negative and varies in a complicated manner. 
 
-When the mean sun is on the meridian of Greenwich, it is {\it Greenwich
+When the mean sun is on the meridian of Greenwich, it is {\bf Greenwich
   mean noon}. The hour angle of the mean sun at Greenwich is denoted
-{\sc g.m.a.t.} ({\it Greenwich mean astronomical time}). 
+	{\sc g.m.a.t.} (\textbf{Greenwich mean astronomical time}). 
 Mean time reckoned from midnight at Greenwich is called
-{\it Greenwich Mean Time} ({\sc g.m.t.}), now designated {\it
+{\bf Greenwich Mean Time} ({\sc g.m.t.}), now designated {\bf
   Universal Time} ({\sc u.t.}). Thus
 \[
-{\rm U.T.}\equiv{\rm G.M.T.}={\rm G.M.A.T.}+12^h
+	{\rm U.T.}\equiv{\rm G.M.T.}={\rm G.M.A.T.}+12^{\mathrm{h}}
 \]
 and similarly for any place keeping the mean time appropriate to its
 meridian. 
 
-\section{Sidereal time {\sc ii}}
+\section{Sidereal time}
+
+%\section{Sidereal time I}
+%\label{sec:sidereal_time_i}
+Sidereal time at Greenwich is given such that
+\[
+{\rm S.T.~at~Greenwich}={\rm S.T.~at}~l\pm{\rm long.~of~}l
+\]
+where $l$ is the longitude of the observer with the $+$ sign given
+when $l$ is west of Greenwich and the $-$ is given when $l$ is east of
+Greenwich. The sidereal time at $l$ is called the {\bf local sidereal
+  time} ({\sc l.s.t.}).
 
 Sidereal time, at any instant at a given place, is the hour angle of the vernal 
-equinox. In section~\ref{sec:sidereal_time_i} the ecliptic and celestial equator were 
+equinox. In section~\ref{sec:cel-lat-long} the ecliptic and celestial equator were 
 considered as fixed great circles on the celestial sphere, and thus the vernal
-equinox as a fixed point. However, there are both the phenomena of {\it 
-precession} and {\it nutation}\footnote{{\bf precession}: the slow movement of the axis of a spinning body around another axis due to a torque acting to change the direction of the first axis. {\bf nutation}: a periodic variation in the inclination of a rotating object.}  so the celestial equator cannot be considered 
+equinox as a fixed point. However, there are both the phenomena of {\bf 
+precession} and {\bf nutation}. Precession is the slow movement of the axis of a spinning body around another axis due to a torque acting to change the direction of the first axis.
+Nutation is a periodic variation in the inclination of a rotating object. The celestial
+equator can thus not be considered 
 as a fixed great circle, and the position of the vernal equinox must be treated as
 a time varying quantity, slowly moving according to well established principles with
 reference to the background stars.
 
+%
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.66\textwidth]{sidereal.eps}
@@ -517,7 +567,7 @@ reference to the background stars.
 		of the vernal equinox. }
 	\label{fig:sidereal}
 \end{figure}
-
+%
 We will continue to assume the ecliptic as a fixed great circle. Owing to precession, 
 the north celestial pole $P$ describes a small circle about the pole $K$ (see 
 figure~\ref{fig:ecliptic}) of the ecliptic in a period of about $26\,000$~yr. At 
@@ -526,13 +576,14 @@ their relative positions are changing and in $12\,000$~yr  $P$ will be within a 
 degrees of Vega. It is the direction of the earth's axis that is altering continuously 
 with reference to the background stars. Referring to figure~\ref{fig:sidereal},
 $\aries$ is the vernal equinox for, say $1900.0$ and $\aries_1$ the vernal equinox
-for $1901.0$. \aries\ and $\aries_1$ are called the {\it mean equinoxes} at the dates
+for $1901.0$. The points \aries\ and $\aries_1$
+are called the {\bf mean equinoxes} at the dates
 in question, and the corresponding celestial equators are called the 
-{\it mean equators}. 
+{\bf mean equators}. 
 
 Assuming that owing to precession the north celestial pole moves uniformly along the 
 small circle arc $PP_1$ and that the mean equinox moves uniformly backwards along the 
-ecliptic from from \aries\  to $\aries_1$. It is found that the motion of \aries\  along
+ecliptic from from \aries\  to $\aries_1$. It is found that the motion of \aries\ along
 the ecliptic is at the rate of $50.3$~arcsec per annum.
 
 When we define sidereal time in relation to the moving equinox, we can no longer 
@@ -544,7 +595,7 @@ annual rate measured by $\aries C$, given by the small triangle formula
 \[ 
 \aries C=\aries\aries_1\cos\varepsilon.
 \]
-Hence, the mean equinox is separating, in right ascension, from \aries\  at the rate
+Hence, the mean equinox is separating, in right ascension, from \aries at the rate
 of $0.008$~s per sidereal day. The direction of motion of the equinox is westward 
 in the sky --- opposite to that in which right ascension increases --- and thus the 
 interval between two successive transits of the moving equinox is $0.008$~s less than 
@@ -567,12 +618,12 @@ two successive transits of the mean equinox.
 \section{Ephemeris and Universal time}
 
 There is a slight distinction between universal time, which is defined by the 
-rotation of the earth and {\it ephemeris time} which is uniform and is defined
+rotation of the earth and {\bf ephemeris time} which is uniform and is defined
 by the gravitational dynamics of the solar system, independent of the earth's 
 rotation.
 
 When the movements of the equator and equinox due to precession are taken into
-account, the {\it fictitious mean sun} is defined to travel along the mean 
+account, the {\bf fictitious mean sun} is defined to travel along the mean 
 equator in such a way that that its mean right ascension is always equal to 
 the sun's mean longitude. This right ascension is, therefore, independent 
 of the rotation of the earth's, and the fictitious mean sun is a 
@@ -627,12 +678,12 @@ is less than 2 milliseconds.
 \section{The sidereal year and the tropical year}
 
 The time required by the sun to make a complete a complete circuit of the 
-ecliptic is called a {\it sidereal year}. 
+ecliptic is called a {\bf sidereal year}. 
 
-The {\it tropical year} is the average interval between two consecutive 
+The {\bf tropical year} is the average interval between two consecutive 
 passages of the sun through the vernal equinox. Thus if \aries\ is the 
 position of the equinox
-at a given time and $\aries_1$ the position of the equinox one year later, the 
+at a given time and $\aries_1$ the position of the vernal equinox one year later, the 
 tropical year is the time taken by the sun to describe $360^\circ$ less 
 $\aries_1\aries$. From observations it is found to be $365.2422$~days. 
 
@@ -654,13 +705,14 @@ Let $t_2$ be the mean sidereal time one mean solar day later. The hour angle of
 the mean sun has increased by $360^\circ$ and the {\sc r.a.m.s} by $59'8.33''$.
 Hence,
 \[
-t_2=(H_1+24^h)+(R_1+3^m56.556^s)
+	t_2=(H_1+24^h)+(R_1+3^{\mathrm{m}}56.556^{\mathrm{s}})
 \]
 when we convert these to time measure, so that 
 \[
-t_2-t_1=24^h3^m56.556^s
+	t_2-t_1=24^{\mathrm{h}}3^{\mathrm{m}}56.556^{\mathrm{s}}
 \]
-This means that $24^h$~{\sc u.t.} is equal to $24^h3^m56.556^s$ mean sidereal time.
+This means that $24^{\mathrm{h}}$~{\sc u.t.} is equal to
+$24^{\mathrm{h}}3^{\mathrm{m}}56.556^{\mathrm{s}}$ mean sidereal time.
 Note that this is equivalent to noting that during a year the earth has rotated about
 its axis $365.2422$ times with respect with the mean sun and once more with respect
 to the equinox.
@@ -669,18 +721,18 @@ to the equinox.
 
 It is the general astronomical practice to define the beginning of the tropical year
 (sometimes called the solar year) as the instant when the {\sc r.a.} of the fictitious
-mean sun is exactly $18^h40^m$ or $280^\circ$. This instant falls near the beginning of
-the civil year and is usually called the {\it Besselian year}. 
+mean sun is exactly $18^{\mathrm{h}}40^{\mathrm{m}}$ or $280^\circ$. This instant falls near the beginning of
+the civil year and is usually called the {\bf Besselian year}. 
 
 It is general practice to denote the beginning of any Besselian year by the notation
-{\it e.g.} $1975.0$, $2008.0$, etc.
+e.g. $1975.0$, $2008.0$, etc.
 
 \section{The Julian date}
 
 In certain observations it is found convenient to express the instant of observations
 as so many days and fraction of a day after a definitive fundamental epoch. The epoch
 chosen is Greenwich mean noon of January 1, 4713~{\sc b.c.}, and for any given date the
-number of days which have elapsed since this epoch defines the {\it Julian Date} 
+number of days which have elapsed since this epoch defines the {\bf Julian Date} 
 ({\sc j.d.}) of the date in question.
 
 \section{The 3d dimension; distance}
@@ -694,34 +746,53 @@ its distance is uncertain by about one part in $2500$.
 
 \subsection{The astronomical unit}
 
-Kepler's 3'd law gives the scale of planetary orbits
+Kepler's 3rd law gives the scale of planetary orbits
 
 \[ a=P^{2/3} \]
 
 where $P$ is the period measured in years, and $a$ is the distance of a planet (or other object) 
 measured in units of the average distance between object and the Sun which defines the 
 astronomical unit; AU, or au. The presently accepted value for this length is
-\[ 1~{\rm au}=1.49\,5978\times 10^{11}~{\rm m} \]
-with an ancertainty of one part in $10^6$.
+\[ 1~{\rm AU}=1.495978\times 10^{11}~{\rm m} \]
+with an uncertainty of one part in $10^6$.
 
 \subsection{Stellar parallax}
 
-Once the length of the au has been established one can measure the distances to the nearby stars
-through the obsrvation of {\it stellar parallax}. As the Earth travels in its orbit the apparent
+Once the length of the astronomical unit has been established, one can measure the distances to the nearby stars
+through the observation of {\bf stellar parallax}. As the Earth travels in its orbit, the apparent
 position of a nearby star relative very distant objects shifts. Compared to background objects,
-the nearby star appears to move around the perimeter of the prallactic ellipse, reflecting the 
+the nearby star appears to move around the perimeter of the parallactic ellipse, reflecting
 Earth's orbital motion. The parallax angle $p$ is half the total angular shift in the star's
 position (the semi-major axis of the parallactic ellipse). From the right triangle formed by the
 Sun-star-Earth:
+\begin{figure}[htpb]
+	\centering
+%	\includestandalone[scale=1.0]{parallax-illustration}
+	\includegraphics[width=\textwidth]{parallax-illustration.pdf}
+	\caption{Schematic of how the parallax angle is measured. The position of a star on the
+	sky is measured at times $t_0$ and $t_1$ (about six months apart) when the earth arrives
+	at exactly oppsite sides of the sun in its orbit. The total angular displacement of the
+	star one
+	measures is $2p$, but only the parallax angle $p$ is used in calculating the distance to
+	the star, $r$.}
+	\label{fig:parallax-illustration}
+\end{figure}
 \[ \tan p={a\over r} \]
-where $a$ is one au and $r$ is the distance to the star. Since $p$ is very small, a very good 
-approximation is \[\tan p\simeq\sin p\simeq p\] so that \[ p={a\over r}\]. Usually one measures
+where $a$ is one AU and $r$ is the distance to the star. Since $p$ is very small, a very good 
+approximation is \[\tan p\simeq\sin p\simeq p\] so that \[ p={a\over r}.\]
+Usually one measures
 $p$ in arcsec so that 
-\[ p[{\rm arcsec}]=206\,265{a\over r}. \]
+\[ p [{\rm arcsec}]=206\,265{a\over r}. \]
+One degree equals to 60 arcminutes and one arcminute is equal to 60
+arcseconds.
+\bua
+	1^{\circ} = 60', \\
+	1' = 60''.
+\eua
 To avoid very large numbers it is both convenient and traditional to define the unit parsec with 
 the length
-\[ 1~{\rm parsec}=206\,265~{\rm au}=3.085\,678\times 10^{16}~{\rm m}=3.261\,633~{\rm ly}. \]
-The parsec (pc) is named because it is the distance of an object whose parallax is one arcsec. 
+\[ 1~{\rm parsec}=206\,265~{\rm AU}=3.085\,678\times 10^{16}~{\rm m}=3.261\,633~{\rm ly}. \]
+The parsec (pc) is named as such because it is the distance of an object whose parallax is one arcsec. 
 In the literature the parallax angle is often symbolized $\pi$ instead of $p$.
 
 {\it Some history:} James Bradley FRS (March 1693 -– 13 July 1762) was an English astronomer the Astronomer Royal from 1742. He undertook to measure stellar parallax. Bradley could measure stellar positions with a precision of about 0.5~arcsec (500~mas). This was good enough to
