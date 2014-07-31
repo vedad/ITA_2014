@@ -9,19 +9,23 @@ by Professor Viggo Hansteen.
 
 The primary goals are:
 * ~~Layout~~
-  * ~~Merge all chapters into a single document.~~ Done.
-  * ~~Change document format to `book`.~~ Done.
-  * ~~Add table of contents.~~ Done.
-  * ~~Fix sections, numbering and other to make it more consistent and neat.~~ Done.
+  * ~~Merge all chapters into a single document.~~
+  * ~~Change document format to `book`.~~
+  * ~~Add table of contents.~~
+  * ~~Fix sections, numbering and other to make it more consistent and neat.~~
 * **Content (text)**
-  * Correct typos.
-  * Rewrite unclear paragraphs.
-  * Add relevant paragraphs.
-  * Remove superflous paragraphs.
+  Correct typos.
+  Rewrite unclear paragraphs.
+  Add relevant paragraphs.
+  Remove superflous paragraphs.
+  * ~~Chapter 2.~~
+  * Chapter 3.
+  * Chapter 6.
 * **Content (figures)**
-  * Create and add descriptive figures for most of the chapters.
-
-The last two primary goals on content will be done simultaneously, chapter by chapter.
+  Create and add descriptive figures where needed.
+  * ~~Chapter 2.~~
+  * Chapter 3.
+  * Chapter 6.
 
 The secondary goals below will be carried out if there's time left.
 * Create and add exercises and solutions to the lecture notes, or make it separate from
