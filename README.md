@@ -13,15 +13,11 @@ The primary goals are:
   * ~~Change document format to `book`.~~
   * ~~Add table of contents.~~
   * ~~Fix sections, numbering and other to make it more consistent and neat.~~
-* Content (text)
-
-  Correct typos.
-
-  Rewrite unclear paragraphs.
-
-  Add relevant paragraphs.
-
-  Remove superflous paragraphs.
+* Content (text)  
+   Correct typos.  
+   Rewrite unclear paragraphs.  
+   Add relevant paragraphs.  
+   Remove superflous paragraphs.
   * ~~Chapter 2.~~
   * **Chapter 3.**
   * Chapter 6.
