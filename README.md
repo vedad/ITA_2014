@@ -15,15 +15,11 @@ The primary goals are:
   * ~~Fix sections, numbering and other to make it more consistent and neat.~~
 * Content (text)
 
-
   Correct typos.
-
 
   Rewrite unclear paragraphs.
 
-
   Add relevant paragraphs.
-
 
   Remove superflous paragraphs.
   * ~~Chapter 2.~~
