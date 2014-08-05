@@ -3,36 +3,6 @@
     xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
     version="1.1" baseProfile="full">
     <g>
-        <g latexdraw:type="rectangle" id="id1593">
-            <rect x="261.0" y="141.0" width="58.0" height="8.0"
-                latexdraw:borderPos="outer" stroke-width="2.0"
-                stroke="black" fill="#666666"/>
-        </g>
-        <g latexdraw:type="rectangle" id="id1595">
-            <rect x="331.0" y="141.0" width="58.0" height="8.0"
-                latexdraw:borderPos="outer" stroke-width="2.0"
-                stroke="black" fill="#666666"/>
-        </g>
-        <g latexdraw:type="rectangle" id="id1596">
-            <rect x="401.0" y="141.0" width="58.0" height="8.0"
-                latexdraw:borderPos="outer" stroke-width="2.0"
-                stroke="black" fill="#666666"/>
-        </g>
-        <g latexdraw:type="rectangle" id="id1597">
-            <rect x="471.0" y="141.0" width="58.0" height="8.0"
-                latexdraw:borderPos="outer" stroke-width="2.0"
-                stroke="black" fill="#666666"/>
-        </g>
-        <g latexdraw:type="rectangle" id="id1598">
-            <rect x="541.0" y="141.0" width="58.0" height="8.0"
-                latexdraw:borderPos="outer" stroke-width="2.0"
-                stroke="black" fill="#666666"/>
-        </g>
-        <g latexdraw:type="rectangle" id="id1599">
-            <rect x="611.0" y="141.0" width="58.0" height="8.0"
-                latexdraw:borderPos="outer" stroke-width="2.0"
-                stroke="black" fill="#666666"/>
-        </g>
         <g latexdraw:type="joinedLines" id="id1724">
             <polyline points="465.0,50.0 465.0,767.0 "
                 stroke-width="2.0" stroke="black"
@@ -49,18 +19,8 @@
                 stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
         </g>
         <g latexdraw:type="joinedLines" id="id1736">
-            <polyline points="188.0,152.0 742.0,152.0 "
+            <polyline points="188.0,154.0 742.0,154.0 "
                 stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
-        </g>
-        <g latexdraw:type="rectangle" id="id1738">
-            <rect x="681.0" y="141.0" width="58.0" height="8.0"
-                latexdraw:borderPos="outer" stroke-width="2.0"
-                stroke="black" fill="#666666"/>
-        </g>
-        <g latexdraw:type="rectangle" id="id1789">
-            <rect x="191.0" y="141.0" width="58.0" height="8.0"
-                latexdraw:borderPos="outer" stroke-width="2.0"
-                stroke="black" fill="#666666"/>
         </g>
         <g latexdraw:type="joinedLines" id="id1817">
             <polyline
@@ -1017,12 +977,52 @@
                 latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-2779)"/>
         </g>
         <g latexdraw:type="text" id="id2781" fill="black" latexdraw:position="bl">
-            <text x="80.0" y="150.0"><![CDATA[Gates]]></text>
+            <text x="86.0" y="150.0"><![CDATA[Gate]]></text>
         </g>
         <g latexdraw:type="joinedLines" id="id2848">
             <polyline points="780.0,290.0 840.0,290.0 "
                 stroke-width="2.0" stroke="black"
                 stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id3633">
+            <polyline
+                points="250.0,140.0 250.0,150.0 190.0,150.0 190.0,140.0 250.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id3637">
+            <polyline
+                points="260.0,140.0 260.0,150.0 320.0,150.0 320.0,140.0 260.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id3638">
+            <polyline
+                points="330.0,140.0 330.0,150.0 390.0,150.0 390.0,140.0 330.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id3639">
+            <polyline
+                points="400.0,140.0 400.0,150.0 460.0,150.0 460.0,140.0 400.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id3642">
+            <polyline
+                points="470.0,140.0 470.0,150.0 530.0,150.0 530.0,140.0 470.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id3643">
+            <polyline
+                points="540.0,140.0 540.0,150.0 600.0,150.0 600.0,140.0 540.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id3644">
+            <polyline
+                points="610.0,140.0 610.0,150.0 670.0,150.0 670.0,140.0 610.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id3647">
+            <polyline
+                points="680.0,140.0 680.0,150.0 740.0,150.0 740.0,140.0 680.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
         </g>
     </g>
     <defs>
