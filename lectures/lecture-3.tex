@@ -1,23 +1,3 @@
-%\documentclass{article}
-%\usepackage{wasysym}
-%\usepackage{graphicx}
-%\newcommand{\bc}{\begin{center}}
-%\newcommand{\ec}{\end{center}}
-%\newcommand{\be}{\begin{equation}}
-%\newcommand{\ee}{\end{equation}}
-%\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
-%\newcommand{\eea}{\end{eqnarray}}
-%\newcommand{\bua}{\begin{eqnarray*}}
-%\newcommand{\eua}{\end{eqnarray*}}
-%\newcommand{\dd}[2]{{{d^2#1}\over{d#2^2}}}
-%\newcommand{\aver}[1]{\langle{#1}\rangle}
-%\def\cl#1{{\cal #1}}               % for caligrafic letters
-%\def\abs{\!\mid\!}
-%\def\labs{\mid\!}
-%\def\rabs{\!\mid}
-%\def\rd{\mbox{d}}
-%\def\rD{\mbox{D}}
-%\begin{document}
 \chapter{Detectors}
 
 \section{Detector parameters}
@@ -27,30 +7,30 @@ different technical parameters. A short-list of such parameters
 include:
 
 \begin{itemize}
-  \item The {\em quantum efficiency} (QE) is the ratio of the actual
+  \item The {\bf quantum efficiency} (QE) is the ratio of the actual
   number of photons detected to the number of incident photons. This
   quantity varies with wavelength. In the range 300-900~nm typical
   values fall in the range 0.2--0.75 with maximum efficiency around 
   500~nm.  
-  \item The {\em spectral response} is the change in the output
+  \item The {\bf spectral response} is the change in the output
   signal as a function of the wavelength of the input signal.
-  \item The {\em charge transfer efficiency} (CTE) specifies the 
+  \item The {\bf charge transfer efficiency} (CTE) specifies the 
   efficiency at which accumulated charge may be transfered from one 
   pixel to the next. For a 1~\% accuracy in the read-out process 
   for a 10000 element detector a 99.9999~\% transfer efficiency is
   required. Actual numbers as high as 99.99999~\% have been quoted.
-  \item The {\em dark current} represent the output from the
+  \item The {\bf dark current} represent the output from the
   non-illuminated detector. It is usually measured as a
   root-mean-square current.  
-  \item The {\em dynamic range} is the ratio of the saturation output
+  \item The {\bf dynamic range} is the ratio of the saturation output
   to the dark current.  
-  \item The {\em  noise equivalent power} (NEP) is the input radiative 
+  \item The {\bf  noise equivalent power} (NEP) is the input radiative 
   flux that gives
   a signal-to-noise ratio of unity. It may be given for monochromatic
   or black body radiation. It is usually measured in watts.  
-  \item The  {\em detectivity} (D) is the inverse NEP value, that is, the
+  \item The  {\bf detectivity} (D) is the inverse NEP value, that is, the
   signal-to-noise ratio for unity intensity input radiation.  
-  \item  The {\em normalized detectivity} (D$^*$) is the detectivity
+  \item  The {\bf normalized detectivity} (D$^*$) is the detectivity
   normalized by multiplying with the square root of the product of the
   detector area and the electrical bandwidth of the measuring
   circuitry 
@@ -354,15 +334,31 @@ to rapidly increasing read-out times and production costs.
 \section{A simplified three-phase CCD lay-out}
 
 The CCD depends for its functioning as a photon counting device on
-four different operations: 1) the conversion of individual photons to
-elementary electric charges during the illumination period, 2) the
-storing of these charges over the desired exposure time, 3) the
-transfer of the stored charges from pixel to pixel for the read-out
-procedure, and finally 4) the accurate read-out of the accumulated
-charge for each pixel element.  
+four different operations:
+\begin{enumerate}
+	\item The conversion of individual photons to
+	elementary electric charges during the illumination period.
+	\item The
+	storing of these charges over the desired exposure time.
+	\item The
+	transfer of the stored charges from pixel to pixel for the read-out
+	procedure.
+	\item	The accurate read-out of the accumulated
+	charge for each pixel element. 
+\end{enumerate}
 
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.9\textwidth]{ccd-gate-structure2.pdf}
+	\caption{The figure shows a cross-section of two pixels on a CCD. Each pixel
+	consists of three gates $A,B,C$, where all gates with the same letter are connected.}
+	\label{fig:ccd-gate-structure}
+\end{figure}
+
+%
 In figure \ref{CCD.figschematic} a schematic lay-out for a three-phase
-4$\times $5 CCD detector matrix is illustrated.  On top of a strongly
+4$\times $5 CCD detector matrix is illustrated. Figure \ref{fig:ccd-gate-structure} shows
+a cross-section of a CCD. On top of a strongly
 doped p-type silicon substrate is laid a weakly doped p-type epitaxial
 layer, a subsequent electrically insulating SiO$_2$ layer and finally
 a layer of individual transparent, poly-crystalline silicon gate
@@ -384,17 +380,19 @@ shielded from radiation is needed for the read-out process.
   \label{CCD.figschematic}
 \end{figure}
 
-1) During the illumination phase the B-gate is held at high potential
+\begin{enumerate}
+	\item During the illumination phase 
+		the B-gate is held at high potential
 (10 V) while the A- and C-gates are kept at low potential (2
 V). Individual photons penetrating into the p-layer excites valence
-band electrons into the conduction band. 
+band electrons into the conduction band.
 
-2) These electrons are collected in the potential well created under
+\item These electrons are collected in the potential well created under
 the B-gate. The low potential of the A- and C-gates isolates charges
 generated in any given pixel element from those generated in the
-neighboring pixels.
+neighboring pixels. 
 
-3) The charge transfer phase is initiated by lifting C-gate to high
+\item The charge transfer phase is initiated by lifting C-gate to high
 potential. This widens the trapping potential well and drives the
 accumulated electrons towards the C-gate. This charge transport is
 strengthened by subsequently lowering the potential at the B-gate. The
@@ -403,18 +401,29 @@ under the C-gate. This procedure is next repeated twice, transporting
 the electrons further on to the A- and B-gates of the subsequent pixel
 element. The full procedure is then repeated until the charges
 accumulated over the full length of the detector array have been
-shifted out at the far end.
+shifted out at the far end. See figure~\ref{fig:ccd-shifting-potential} for
+an illustration.
 
-4) At the far end the individual shifted charge packets are dumped into
+\item At the far end the individual shifted charge packets are dumped into
 the register. Before the next set of charge packets from the different
 pixels lines can be dumped to the register, the contents of the
 register cells are shifted out to the measuring capacitor $C_{out}$ and
 recorded by a charge measuring circuit. From the recorded
 charge-versus-time series, the originating pixel element for each
 charge packet can be identified and the recorded image reconstructed.
+\end{enumerate}
 
 We will return to study different aspects of these different stages of
 the CCD detector in greater detail below.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\textwidth]{ccd-shifting-potential.pdf}
+	\caption{Process of moving electrons to the register. The potential across the gates
+	are shifted so that electrons fall into the potential well that the neighbouring gate
+	sets up.}
+	\label{fig:ccd-shifting-potential}
+\end{figure}
 
 \subsection{Other types of clocking}
 
