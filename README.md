@@ -19,13 +19,13 @@ The primary goals are:
    Add relevant paragraphs.  
    Remove superflous paragraphs.
   * ~~Chapter 2.~~
-  * **Chapter 3.**
-  * Other chapters where needed.
+  * ~~Chapter 3.~~
+  * **Other chapters where needed.**
 * Content (figures)  
    Create and add descriptive figures where needed.
   * ~~Chapter 2.~~
-  * **Chapter 3.**
-  * Other chapters where needed.
+  * ~~Chapter 3.~~
+  * **Other chapters where needed.**
 
 The secondary goals below will be carried out if there's time left.
 * Create and add exercises and solutions to the lecture notes, or make it separate from
