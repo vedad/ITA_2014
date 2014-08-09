@@ -76,7 +76,7 @@ is given by the Fermi-Dirac distribution function
 where $\cl T$ is the temperature (in energy units, $\cl T = \kappa T$
 where $\kappa$ is the Boltzmann constant and $T$ temperature in
 degrees Kelvin) and $U_F$ is the Fermi energy. The Fermi-Dirac
-distribution function (\ref{CCD.fFD}) is displayed in figure
+distribution function (\ref{fig:CCD.fFD}) is displayed in figure
 \ref{CCD.figfFD}. At $\cl T = 0$ all energy levels up to $U_F$ are
 occupied. At finite temperatures a definite variation of $f_{FD}$ with
 $U$ is found only for $\labs U - U_F \rabs$-values up to order $\cl
@@ -104,7 +104,7 @@ a partly filled conduction band there is ample supply of such empty
 energy levels, the conduction band electrons are free to move. The
 metals are therefore good electrical conductors, with the electrical
 conductance generally decreasing with temperature. In figure
-\ref{CCD.figsolstate} valence band energy levels are drawn blue,
+\ref{fig:CCD.figsolstate} valence band energy levels are drawn blue,
 conduction band levels red. Filled levels are illustrated with
 solid lines, empty levels by dashed lines. 
 
@@ -160,7 +160,7 @@ phosphor P), each foreign atom will replace one Si atom in the crystal
 lattice and remain fixed in this location. The foreign atom
 contributes one extra electron relative to the Si atom it replaces and
 will therefore be called a donor atom. The extra electron will occupy
-what are called donor impurity levels. In figure \ref{CCD.figsolstate}
+what are called donor impurity levels. In figure \ref{fig:CCD.figsolstate}
 these levels are denoted $U_D$. They are found just below the
 conduction band, approximately 0.05 eV from the edge of the conduction
 band. We recall that this is only twice the value of $\cl T$ at room
@@ -200,7 +200,7 @@ the energy $h\nu$ of a photon is absorbed by one electron in the
 surface layer of a metal, and where the energized electron
 subsequently escapes the metal with a maximum kinetic energy
 \begin{equation}
-  U_{kin} = h\nu - W.
+  U_{\rm kin} = h\nu - W.
 \end{equation}
 Here $W$ represents the work function of the metal, that is, the
 energy needed to lift an electron from the top of the conduction band
@@ -350,7 +350,7 @@ four different operations:
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=0.9\textwidth]{ccd-gate-structure2.pdf}
-	\caption{The figure shows a cross-section of two pixels on a CCD. Each pixel
+	\caption{The figure shows a cross-section of two pixels of a three-phase CCD. Each pixel
 	consists of three gates $A,B,C$, where all gates with the same letter are connected.}
 	\label{fig:ccd-gate-structure}
 \end{figure}
@@ -380,6 +380,7 @@ shielded from radiation is needed for the read-out process.
   \label{CCD.figschematic}
 \end{figure}
 
+The way a CCD works can be divided and summarized into four steps.
 \begin{enumerate}
 	\item During the illumination phase 
 		the B-gate is held at high potential
@@ -390,7 +391,7 @@ band electrons into the conduction band.
 \item These electrons are collected in the potential well created under
 the B-gate. The low potential of the A- and C-gates isolates charges
 generated in any given pixel element from those generated in the
-neighboring pixels. 
+neighboring pixels ($t_0$). 
 
 \item The charge transfer phase is initiated by lifting C-gate to high
 potential. This widens the trapping potential well and drives the
@@ -419,7 +420,7 @@ the CCD detector in greater detail below.
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=\textwidth]{ccd-shifting-potential.pdf}
-	\caption{Process of moving electrons to the register. The potential across the gates
+	\caption{Process of moving electrons to the register in a three-phase CCD. The potential across the gates
 	are shifted so that electrons fall into the potential well that the neighbouring gate
 	sets up.}
 	\label{fig:ccd-shifting-potential}
@@ -763,13 +764,13 @@ therefore recombine before reaching that far.
 
 A light sensitive diode can be used in several ways:
 \begin{itemize}
-\item As a {\it photo-conductor} where a battery holds the external voltage
+\item As a {\bf photo-conductor} where a battery holds the external voltage
   to a constant value and the current is a linear function of the
   incident photon flux.
-\item As a {\it power-cell} the diode is connected to a constant-load
+\item As a {\bf power-cell} the diode is connected to a constant-load
   resistance, and the power output depends on the incident photon
   flux. This is the principle behind solar power cells.
-\item In the {\it photovoltaic} mode current from from the diode
+\item In the {\bf photovoltaic} mode current from from the diode
   is held at zero, making it a stroage capicitor, and the voltage
   across it is a non-linear function of the photon flux.
 \end{itemize}
@@ -780,24 +781,24 @@ As the CCD detector is subsequently illuminated, the generated
 photoelectrons will be collected in a region around the maximum
 potential $V_{max}$ in the n-channel. This region therefore becomes
 non-depleted, with part of the space charge density of the donor ions
-neutralized by the photo-electron space charge density. This in turn
+neutralized by the photoelectron space charge density. This in turn
 means that the potential maximum starts to decrease and the charge
 collection region to widen. 
 
 Indeed, we expect a flat-topped potential distribution within the
-photo-electron collection region. Due to the presence of the
-photo-electrons, this region will be electrically conducting and where
+photoelectron collection region. Due to the presence of the
+photoelectrons, this region will be electrically conducting and where
 the internal electric field and the net space charge density
-from donor ions and photo-electrons both vanish. The width $\Delta x$
+from donor ions and photoelectrons both vanish. The width $\Delta x$
 of the flat-topped potential part is therefore determined by the
 relation
 \begin{equation}
   \Delta x = -\frac{\cl N}{N_D},
 \end{equation}
-where $\cl N$ is the collected number of photo-electrons per unit
+where $\cl N$ is the collected number of photoelectrons per unit
 detector area.
 
-The analysis of the buried channel MOS capacitor with photo-electrons
+The analysis of the buried channel MOS capacitor with photoelectrons
 present is rather similar to the one carried out above. The Poisson
 equation now reads
 \begin{equation}
@@ -846,7 +847,7 @@ to be replaced by
 
 In figure \ref{CCD.figburchanph} the potential structure for a given
 gate voltage $V_G$, but for different values $\cl N$ of collected
-photo-electrons per unit detector area is given. The parameters for
+photoelectrons per unit detector area is given. The parameters for
 the MOS capacitor are identical to that of figure~\ref{CCD.figburchan}. 
 With $\cl N = 15\times 10^{14}$ m$^{-2}$ the
 charged region is less than 40~nm away from the oxide-silicon
@@ -854,14 +855,14 @@ interface.
 
 We conclude that there will exist an upper limit to how much charge
 can be stored in the device. An over exposure of one pixel element
-will mean that surplus photo-electrons will start to leak into
+will mean that surplus photoelectrons will start to leak into
 neighboring pixels, producing a ``blooming'' effect in the image.
 
 
 \begin{figure}[h]
   \centering
 	\includegraphics{CCD_burchanph.eps}
-  \caption{Buried channel potential structure with photo-electrons present.}
+  \caption{Buried channel potential structure with photoelectrons present.}
   \label{CCD.figburchanph}
 \end{figure}
 
@@ -873,9 +874,9 @@ neighboring pixels, producing a ``blooming'' effect in the image.
 After the illuminated charge generation phase the collected charges
 need to be transfered to a suitable charge measuring circuitry. In a
 three-phase CCD array each pixel is supplied with three separate gate
-electrodes as illustrated in figures~\ref{CCD.figpMOS} or
-\ref{CCD.fignMOS}, each of these electrodes are connected with the
-corresponding electrodes of the neighboring pixels.  In the
+electrodes as illustrated in figure~\ref{fig:ccd-gate-structure}.
+Each of these electrodes are connected with the
+same gate electrodes of the neighboring pixels.  In the
 collecting phase the middle electrode of each pixel is biased high (10
 V), the others low (2 V). Photo-electrons generated over the full pixel
 will collect in the potential well existing under the B electrode.
@@ -884,7 +885,7 @@ pixel from similar charges generated in the neighboring pixels.
 
 At the end of the illumination period the charge transfer phase
 starts. This is done by applying clocking potentials to the gate
-electrodes as indicated in figure~\ref{CCD.figclocking}. The transfer
+electrodes as indicated in figure~\ref{CCD.figclocking}. The charge transfer process is illustrated in figure~\ref{fig:ccd-gate-structure}. The transfer
 of electrons from B to C starts by raising the gate electrode C to
 high potential. This will widen the potential well under gate B to
 also include gate C. The collected electrons will drift to fill the
@@ -915,22 +916,88 @@ value of the transfer time may be $t_T = 1$ $\mu$s.
 
 \section{Charge measurements} 
 
+
+
 The final operational phase of the CCD detector is the measurement of
 the charges accumulated in the different pixels during the exposure
-time. This is accomplished by dumping the transfered charges on to a
-small capacitor connected to a MOSFET amplifier. The MOSFET amplifier
-is the only active element of the CCD detector, that is, it is the
-only element that requires power. The individual pixel elements made
-up of MOS capacitors are themselves passive elements.
+time. Figure~\ref{fig:ccd-registry} attempts to illustrate the process. The
+figure shows a CCD with a 3x3 matrix of light-sensitive MOS capacitors. The
+columns of this array are collectively called \textbf{parallel registers}, where
+one column is a parallel register. The row below the 3x3 array is called the
+\textbf{serial register}, and is shielded from light.
 
+During the read-out
+process, one row at a time is shifted to the serial register. First, the serial
+register is cleared of any charges that may have accumulated. Then the electrons in
+row 3 shifts to the serial register, while the ones in row 2 shifts to row 3,
+and row 1 to row 2.
+
+The next operation reads the serial register by shifting the
+electrons in the rightmost pixel to a \textbf{output amplifier}, e.g. a MOSFET
+amplifier, that
+converts the charge to a voltage. The amplifier is the only active element of
+the CCD, which means it is the only element that requires power.
 The output amplifier generates a voltage proportional to the charge
-transfered, the larger voltages the smaller the capacitance of the
+transfered; the larger voltages the smaller the capacitance of the
 output capacitor. Important engineering design criteria for the output
 stage is to minimize the noise generation in the MOSFET
 amplifier. This can be achieved by cooling the CCD detector to
 temperatures down to about - 90$^\circ$C.  Modern
 high-performance CCDs have achieved remarkable noise level
 equivalents down to less than 2 (elementary) electron charges.
+
+The voltage is
+converted to a binary number through the \textbf{analog-to-digital converter}
+(\textbf{ADC}). Finally, the binary number is stored in some form of computer
+memory so that it can be used to reconstruct the image. When the
+content of the rightmost pixel has been read, the remaining contents of the
+serial register is shifted one pixel to the right, and the read-out process is
+repeated for the remaining pixels. Figures~\ref{fig:ccd-registry-3} -
+\ref{fig:ccd-registry-6} show this.
+%This is accomplished by dumping the transfered charges on to a
+%small capacitor connected to a MOSFET amplifier. The MOSFET amplifier
+%is the only active element of the CCD detector, that is, it is the
+%only element that requires power. The individual pixel elements made
+%up of MOS capacitors are themselves passive elements.
+\begin{figure}[htpb]
+	\centering
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[scale=1.0]{ccd-registry-1.pdf}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[scale=1.0]{ccd-registry-2.pdf}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.25\textwidth}
+		\centering
+		\includegraphics[scale=1.0]{ccd-registry-3.pdf}
+		\caption{}
+		\label{fig:ccd-registry-3}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.25\textwidth}
+		\centering
+		\includegraphics[scale=1.0]{ccd-registry-4.pdf}
+		\caption{}
+		\label{fig:ccd-registry-4}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.25\textwidth}
+		\centering
+		\includegraphics[scale=1.0]{ccd-registry-5.pdf}
+		\caption{}
+		\label{fig:ccd-registry-5}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.25\textwidth}
+		\centering
+		\includegraphics[scale=1.0]{ccd-registry-6.pdf}
+		\caption{}
+		\label{fig:ccd-registry-6}
+	\end{subfigure}
+	\caption{Some caption.}
+	\label{fig:ccd-registry}
+\end{figure}
 
 \section{Dark currents}
 
@@ -1017,9 +1084,9 @@ its neighbors. However, the hot spot pixel is often also a poor transporter
 of charge resulting in a spurious line being introduced into the image.
 
 Yet another problem is that of cross talk or blooming. This occurs when 
-electrons stray to nearby pixels. This especially affects rear illuminated 
-CCDs as in them electrons are produced quite far from the electrodes. This
-is the reason rear illuminated CCDs are thinned; {\it ie} to reduce this 
+electrons stray to nearby pixels. This especially affects back-illuminated 
+CCDs because electrons are produced quite far from the electrodes. This
+is the reason back-illuminated CCDs are thinned; i.e. to reduce this 
 distance. It will also occur for any CCD where the accumulating charge nears
 its maximum capacity. 
 
@@ -1043,7 +1110,7 @@ of some 1000~V. Once a photoelectron has escaped from the photoemitter, it
 is accelerated by an electric potential until it strikes a second 
 electron emitter. The primary electron's energy then goes into pair production
 and secondary electrons are emitted from the substance in a manner analogous
-to photo-electron emission. Several secondary electron emissions result 
+to photoelectron emission. Several secondary electron emissions result 
 from a single primary electron. The secondary emitter is coated onto dynodes
 that are successively more positive than the cathode by 100~V or so for each
 stage. The various electrodes are shaped and positioned so that the electrons
@@ -1054,10 +1121,10 @@ incoming photon.
 \subsection{Superconducting tunnel junction detectors (STJs)}
 
 Kitchin mentions that a possible replacement of CCDs could come in the form
-of superconducting tullel junction detectors (STJ). At temperatures
-below $T_{\rm c}$, an unlimited number fo superconducting states exist
+of superconducting tunnel junction detectors (STJ). At temperatures
+below $T_{\rm c}$, an unlimited number of superconducting states exist
 at an energy $\Delta$ below the Fermi level. Single electrons will
-therefore occupy only states of energy $(E_{\rm F}-\Delta$ or
+therefore occupy only states of energy $E_{\rm F}-\Delta$ or
   lower. $\Delta$ is a strong function of temperature rising from zero
   at $T_{\rm c}$ to a maximum $\Delta_{\rm m}$ at temperatures below
   about $0.3T_{\rm c}$. The value of $\Delta_{\rm m}$ measures the
@@ -1073,12 +1140,12 @@ therefore occupy only states of energy $(E_{\rm F}-\Delta$ or
 
 The STJ can operate 
 from the UV to the longwave infrared, and also in the X-ray region.
-Its operating principle is based on a {\it Josephsons junction}. This has two 
+Its operating principle is based on a {\it Josephson junction}. This has two 
 superconducting layers separated by a insulating layer that is thin
 enough (of order 1~nm) to permit quantum mechanical tunneling. A
 junction can be arranged as a light-detecting diode by applying a
 positive bias voltage less than $V^{+}=2\Delta/q$ to one of the
-superconductors and a magnetic field applied parallell to the
+superconductors and a magnetic field applied parallel to the
 junction. If the junction is very cold all excited states are
 empty. In a normal Josephson junction Cooper pairs could tunnel across
 the insulating layer to the superconductor with applied voltage
@@ -1104,7 +1171,7 @@ STJ-based detectors have begun to appear at telescopes.
 These are also known as photodiodes,
 photoconductors, and barrier junction detectors. The idea is to use the
 properties of a p-n junction in a semiconductor. When such a junction
-is in equilibrium electrons and holes have diffused across the
+is in equilibrium, electrons and holes have diffused across the
 junction until a sufficient potential difference is set up to halt the
 flow. The two Fermi levels are then coincident and the potential
 across the junction is equal to their original difference. If now
@@ -1121,7 +1188,7 @@ monitored and used as a measure of light intensity. For use as a
 radiation detector the p-n junction often has a region of undoped (or
 intrinsic) material between the p and n regions in order to increase
 the size of the detecting area. These devices are known as p-i-n
-junctions, and their operating principle does not differ fro that of
+junctions, and their operating principle does not differ from that of
 the simple p-n junction.
 
 \subsection{Thermocouples}
@@ -1142,7 +1209,7 @@ metals in the form of wires that are twisted together and blackened to
 improve their absorption. The other junction is kept in contact with
 something with a large thermal inertia so that it is kept at a
 constant temperature. Several thermocouples are usually connected
-serially so that their potentials combine. This is called a {\it
+serially so that their potentials combine. This is called a {\bf
   thermopile}.
 
 Practical thermocouples and thermopiles are usually made from antimony
@@ -1202,17 +1269,17 @@ so the balance of the bridge alters.
 \section{Noise}
 
 In the absence of noise any detector would be capable of detecting any source,
-however faint. A minimum signal to noise ratio of unity is required for 
-detection. However, most research work requires signal to noise ratios of
+however faint. A minimum signal-to-noise ratio (SNR) of unity is required for 
+detection. However, most research work requires signal-to-noise ratios of
 at least 10, and preferably 100 or 1000. 
 
-Noise sources can be separated into four classes: {\it intrinsic noise} 
-originating from the detector, {\it signal noise} arising from the character
-of the of the incoming signal, {\it external noise} e.g. spurious signals
-from cosmic rays and the like, {\it processing noise} from amplifiers and
+Noise sources can be separated into four classes: {\bf intrinsic noise} 
+originating from the detector, {\bf signal noise} arising from the character
+of the of the incoming signal, {\bf external noise} e.g. spurious signals
+from cosmic rays and the like, {\bf processing noise} from amplifiers and
 similar used to convert the signal from the detector into a usable form.
 
-{\it Intrinsic noise} in solid state devices comes from four sources.
+Intrinsic noise in solid state devices comes from four sources.
 \begin{enumerate}
 \item Thermal noise arises in any resistive material. It is due to the thermal
 motion of the charge carriers. 
@@ -1226,7 +1293,7 @@ in time, either because of intrinsic variations or because it is being
 `chopped' (i.e. source and background are alternately observed). 
 \end{enumerate}
 
-{\it Signal noise} can be present for a variety of reasons. One example is
+Signal noise can be present for a variety of reasons. One example is
 background noise. Noise also comes from the quantum nature of light. At
 low signal levels photons arrive at the detector sporadically. A Poisson
 distribution gives the probability of arrival, and this has the standard
