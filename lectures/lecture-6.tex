@@ -793,14 +793,14 @@ to within $\pm 50$~nm or better, such as Foucault, Ronchi, Hartmann and Null
 tests. 
 
 \noindent
-{\it Epicyclic grinding.} Larger mirrors are ground by using large machines that 
+{\bf Epicyclic grinding.} Larger mirrors are ground by using large machines that 
 move the tool in an epicyclic fashion. The motion of the tool is similar to that of 
 the planets under the Ptolemaic model of the solar system. The epicyclic motion 
 can be produced by a mechanical arrangement, but commercial production of 
 large mirrors is now largely done by computer controlled planetary polishers. 
 
 \noindent
-{\it Stressed polishing.} The mirror segments for large instruments such as the 10~m
+{\bf Stressed polishing.} The mirror segments for large instruments such as the 10~m
 Keck or Gran Tecan telescopes are small, off-axis parts of the total hyperbolic shape. 
 These are produced by so-called stressed polishing where the blank is is deformed 
 by carefully designed forces from a warping harness, and then polished to a spherical
@@ -808,7 +808,7 @@ shape. When the the deforming forces are released the blank springs into the req
 shape.
 
 \noindent
-{\it Numerically controlled diamond milling.} The requirements for for non-axisymmetric
+{\bf Numerically controlled diamond milling.} The requirements for for non-axisymmetric
 mirrors for segmented mirror telescopes and and for glancing incidence x-ray telescopes
 have led to the development of numerically controlled diamond milling machines which 
 can produce the required shaped and polished surface directly to an accuracy of 10~nm or
@@ -832,7 +832,7 @@ reflectivity in the visible, and this may be required as the total number of
 reflections becomes large.
 
 \noindent
-{\it Coefficient of thermal expansion.} To avoid deformations of its shape It is essential
+{\bf Coefficient of thermal expansion.} To avoid deformations of its shape it is essential
 that the coefficient of thermal expansion for a mirror is low. For glass it is of order
 $9\times 10^{-6}$~K${-1}$, for pyrex $3\times 10^{-6}$~K${-1}$, and for fused quartz
 $4\times 10^{-7}$~K${-1}$. Pyrex has been the favorite material up until the last 30 years
@@ -842,7 +842,7 @@ steel beryllium, or aluminium. However, it can be very difficult to polish these
 they have a relatively coarse crystalline surface.
 
 \noindent
-{\it Rigidity of mirrors, thin mirrors and honeycomb mirrors.} Small solid mirrors can maintain
+{\bf Rigidity of mirrors, thin mirrors and honeycomb mirrors.} Small solid mirrors can maintain
 their shape simply by mechanical rigidity. However, the thickness required for such rigidity
 scales as the cube of the size, so the weight of a solid mirror scales as $D^5$ --- this quickly 
 becomes to expensive to build. There are various ways to reduce the weight of mirrors, these
@@ -852,16 +852,23 @@ maintain the correct shape. Honeycomb mirrors are thick sold blanks that have ha
 the material behind the reflecting surface removed, leaving only thin struts to support that surface. 
 
 \noindent
-{\it Rotating mirrors, bath of mercury.} Isaac Newton realized that the surface of a steadily rotating liquid would take up a paraboloidal shape under the combined forces of gravity and
+{\bf Rotating mirrors, bath of mercury.} Isaac Newton realized that the surface of a steadily rotating liquid would take up a paraboloidal shape under the combined forces of gravity and
 centrifugal acceleration. If the liquid reflects light, like mercury, gallium, gallium-indium alloy, or an oil suffused with reflecting particles, one can then use it as the primary mirror of a telescope. 
 
 \subsection{Designs}
 
+\subsubsection{Cassegrain}
 The most common format for large telescopes is the Cassegrain system, although
-most large telescopes can be usually be used in several alternative 
-different modes by interchanging the secondary mirrors. The Cassegrain is
-based on a paraboloidal primary and a convex hyperboloidal secondary. The 
-major advantage of the Cassegrain lies in its telephoto characteristic, 
+most large telescopes can usually be used in several alternative 
+modes by interchanging the secondary mirrors. The Cassegrain system is
+based on a paraboloidal primary and a convex hyperboloidal secondary mirror.
+The light reflects off of the primary mirror and converge to its focal point (focus).
+Before the reflected light meet at the focus, it is instead redirected by the
+secondary mirror, so that the light rays instead
+converge to the secondary focus which is usually behind the primary mirror. The light passes 
+through a hole in the primary mirror, where it is detected by e.g. a CCD at the secondary
+focus.
+The major advantage of the Cassegrain lies in its telephoto characteristic, 
 the secondary mirror serves to expand the beam from the primary mirror so 
 that the effective focal length of the whole system is several times the
 that of the primary. A compact (thus cheap) mounting can thus be used to 
@@ -873,18 +880,19 @@ aberration to about the same degree as an equivalent Newtonian.
 	\centering
 	\includegraphics[width=0.45\textwidth]{cassegraindetailed.eps}
 	\includegraphics[width=0.45\textwidth]{newtoniandetailed.eps}
-  \caption{Cassegrain and Newtonian Designs}
+  \caption{Cassegrain (left) and Newtonian (right) designs}
   \label{fig:catatropic}
 \end{figure}
 
-A great improvement of the Cassegrain can be achieved by a slight alteration
-to a Ritchey-Chr{\'e}tien system. The optical arrangement is identical but for
-that the primary mirror is deepened to a hyperboloid and a stronger 
-hyperboloid is used for the secondary. With this system both coma and 
-spherical aberration can be corrected and one achieves a aplanatic system. 
+\subsubsection{Ritchey-Chr\'{e}tien}
+A great improvement of the Cassegrain is the Ritchey-Chr{\'e}tien system.
+The optical arrangement is identical, but the
+primary mirror is deepened to a hyperboloid and a stronger 
+hyperboloid is used for the secondary. This is done to correct for both coma and 
+spherical aberration so that one achieves an aplanatic system. 
 
-\noindent
-{\it Corrector lenses just before the focus.} One can also improve Cassegrain
+\subsubsection{Corrector lenses just before the focus}
+One can also improve Cassegrain
 or Ritchey-Chr\'etien systems by adding correctors just before the focus. 
 The correctors are low power lenses whose aberrations oppose those of the main
 system. The corrective optics may be combined with a focal reducer to enable 
@@ -893,38 +901,83 @@ is a positive lens, usually a apochromatic triplet, placed just before the focal
 point of the telescope that decreases the effective focal length and so gives 
 a smaller image scale.
 
-{\it Coud\'e focus.} Another related telescope design is the Coud{\'e} system, which in effect
+\subsubsection{Coud\'e focus}
+Another related telescope design is the Coud{\'e} system, which in effect
 is a very long focal length Cassegrain or Ritchey-Chr{\'e}tien whose light 
 beam is folded and guided by additional flat mirrors to give a focus whose
 position is fixed irrespective of the telescope position. One way is to insert a 
-diagonal mirror after the secondary, light is reflected down the declination, and 
-then down the polar axis by a second diagonal mirror. LIght then always emerges
+diagonal mirror after the secondary, so that light is reflected down the declination axis.
+Here it is further reflected by a series of flat mirrors until it ends at the Coud\'e
+focus along the polr axis.
+Light then always emerges
 from the end of the polar axis, whatever part of the sky the telescope is inspecting.
-
-\noindent
-{\it Nasmyth focus/system.} With alt-ax mountings the light beam can be directed
-along the altitude axis to one of the two Nasmyth foci on the side of the mounting.
+%
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=1.0]{coude_focus_side.pdf}
+	\caption{The figure shows the light path to the Coud\'{e} focus. The light from the
+primary (1) to the secondary (2) is redirected by a series of flat mirrors (3-6) that
+brings the beam to the polar (or azimuth) axis.}
+	\label{fig:coude_focus_side}
+\end{figure}
+%
+\begin{comment}
+\begin{figure}[htpb]
+	\centering
+	\begin{subfigure}[t]{0.5\textwidth}
+		\includegraphics[scale=1.0]{nasmyth_focus_side.pdf}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.5\textwidth}
+		\includegraphics[scale=1.0]{coude_focus_side.pdf}
+		\caption{}
+	\end{subfigure}
+	\caption{Figure \textbf{(a)} shows the Nasmyth focus. The light from the primary and
+		secondary is redirected to the side by a third flat mirror, where it comes to focus above
+		the Nasmyth platform. Figure \textbf{(b)} shows the Coud\'{e}, where the light from the
+		secondary is redirected by a series of flat mirrors that brings the beam to the polar
+		(or azimuth) axis.}
+	\label{fig:nasmyth_and_coude_focus}
+\end{figure}
+\end{comment}
+%
+\subsubsection{Nasmyth focus}
+With alt-az mountings the light beam can be directed
+along the altitude axis (by use of a flat mirror) to one of the two Nasmyth foci on the side of the mounting.
 These foci still rotate as the telescope changes azimuth, but this is still easier than 
-changing the altitude and altitude of a conventional Cassegrain focus. Both of the
+changing the altitude of a conventional Cassegrain focus. Both of the
 fixed focus systems, Coud\'e and Nasmyth, are very advantageous when large equipment
 such as high dispersion spectrographs, are to be used. Disadvantages are that the
 field of view rotates as the telescope tracks an object across the sky, and is very 
 small due to the large effective focal ratios that are required to bring the focus 
 through the axes, and finally the additional reflections cause the loss of light.
+%
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=1.0]{nasmyth_focus_side.pdf}
+	\caption{The figure shows the light path to the Nasmyth focus. The light from the
+	primary (1) and secondary (2) is redirected to the side of the telescope by a third
+	flat mirror (3), where it comes to focus next to the Nasmyth platform.}
+	\label{fig:nasmyth_focus_side}
+\end{figure}
 
+\subsubsection{Newtonian and prime focus}
 The simplest of all designs is a mirror used at its prime focus. That is, 
 the primary mirror is used directly to produce the images and the detector
 is placed at the top end of the telescope. The image quality of at the prime
 focus is usually poor even a few tens of arcsec away from the optical axis
-because the primary mirrors focal ratio may be as short as f3 or less in
-order to reduce the instrument length. A system that is almost identical
-to the use of a telescope at prime focus is the Newtonian. A secondary 
+because the primary mirrors focal ratio may be as short as f3 or less in % f3? f/3?
+order to reduce the instrument length.
+
+A system that is almost identical
+to the use of a telescope at prime focus is the Newtonian. A 
 flat secondary mirror is used just before the prime focus. This reflects the
 light beam to the side of the telescope from where access to it is relatively
 simple. There is little advantage to this design over use of the prime focus
 for large telescopes. The images in a Newtonian system and at prime focus 
 are very similar and are of poor quality away from the optical axis.
 
+\subsubsection{Gregorian}
 A Gregorian is similar to the Cassegrain except that the secondary is a
 concave ellipsoid and is placed after the prime focus. Since the primary 
 mirror creates an actual image before the secondary mirror, the design
@@ -933,9 +986,29 @@ the field of view does not reach the secondary mirror. This is a major advantage
 to solar telescopes, where a field stop can reduce the amount of heat reaching secondary
 mirror and subsequent components. Hinode/SOT (Solar Optical Telscope) is an 
 example of a Gregorian.
+%
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=1.0]{gregorian_telescope.pdf}
+	\caption{The light path in a Gregorian telescope. The design allows for a field stop at
+	the prime focus, before it reaches the secondary mirror.}
+	\label{fig:gregorian_telescope}
+\end{figure}
 
-{\it Refractors (and the Swedish 1-meter Solar Telescope).}
+%Refractors (and the Swedish 1-meter Solar Telescope).} Headline? 
 
+\subsubsection{Catadioptric telescopes}
+The catadioptric (from catoptric, i.e. reflecting, and dioptric, i.e. 
+refracting) group of which the Schmidt camera is best known. A catadioptric 
+system uses both lenses and mirrors in its primary light gathering section.
+Very high degrees of corrections of the aberrations can be achieved because
+of the wide range of variable parameters that become available. Diffraction-limited
+performance over a field of view of several degrees is possible with
+focal ratios as fast as $f1.5$ or $f2$. The Schmidt
+camera cannot be used visually since its focus is inaccessible. One of the best
+modifications of this is the Maksutov. A similar system is the 
+Schmidt-Cassegrain telescope. 
+%
 \begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.45\textwidth]{maksutovcassegraindetailed.eps}
@@ -944,19 +1017,7 @@ example of a Gregorian.
   \label{fig:catadiotropic}
 \end{figure}
 
-The catadioptric (from catoptric, {\it ie} reflecting, and dioptric, {\it ie} 
-refracting) group of which the Schmidt camera is best known. A catadioptric 
-system uses both lenses and mirrors in its primary light gathering section.
-Very high degrees of corrections of the aberrations can be achieved because
-of the wide range of variable parameters that become available. Diffraction
-limited performance over fields of view of several degrees is possible with
-focal ratios as fast as $f1.5$ or $f2$. The Schmidt
-camera cannot be used visually since its focus is inaccessible. One of the best
-modifications of this is the Maksutov. A similar system is the 
-Schmidt-Cassegrain telescope. 
-
 \subsection{Mountings}
-
 The functions of a telescope mounting are to hold the optical components 
 in their correct mutual alignment, and to direct the optical axis towards the
 object to be observed. One can consider the functions of the mounting under 
@@ -964,35 +1025,35 @@ three separate aspects: supporting the optical components, preserving their
 correct spatial relationship, and acquiring and holding the object of interest 
 in the field of view.
 
-\noindent
-{\it Equatorial mounting.} This is a two axis mounting, with one axis, the polar axis,
+\subsubsection{Equatorial mounting}
+This is a two axis mounting, with one axis, the polar axis,
 aligned parallel with the Earth's rotational axis, and the other, the declination axis,
 perpendicular to the polar axis. Only a single constant velocity motor is required 
 to rotate the mounting around the polar axis in order to track an object.
 
-\noindent
-{\it Alt-az mounting.} This mounting has motions in altitude and azimuth. Structurally 
+\subsubsection{Alt-az mounting}
+This mounting has motions in altitude and azimuth. Structurally 
 it is much simpler and much more compact than the equatorial system. Its drawbacks are 
 that the field of view
 rotates telescope motion, and that it needs driving continuously in both axes and with 
 variable speeds in order to track an object. 
 
-\noindent
-{\it Fixed position telescopes.} Some telescopes do not track: {\it e.g.} transit telescopes
+\subsubsection{Fixed position telescopes}
+Some telescopes do not track: {\it e.g.} transit telescopes
 point only along the meridian. Other telescopes do not vary their pointing at all and
 the tracking function is realized by moving the detector in the image plane while the 
 massive telescope remains stationary.
 
-\noindent
-{\it Coelostat and heliostat.} A coelostat is comprised of two flat mirrors that are driven 
+\subsubsection{Coelostat and heliostat}
+A coelostat is comprised of two flat mirrors that are driven 
 so that a beam of light from any part of the sky is routed into a fixed direction. They are
 particularly used in conjunction with solar telescopes whose extremely long focal lengths
 make them impossible to move. One mirror of the coelostat is mounted on a polar axis and
 driven at half the sidereal rate. The second mirror is mounted and driven to reflect the light
 into the fixed telescope.
 
-\noindent
-{\it Mountings in space.} Telescopes in space must also mount and track but since the 
+\subsubsection{Mountings in space}
+Telescopes in space must also mount and track but since the 
 effects of gravity are much less some aspects of these tasks is easier. In general two methods
 are used to stabilize the orientation of a telescope in space: small rockets and spinning 
 reaction wheels. A space telescope often has more stringent pointing requirements than
@@ -1003,12 +1064,12 @@ atmospheric drag and thermal effects.
 
 \subsection{Telescopes in space}
 
-In connection with a RAND project in 1946, Lyman Spitzer was asked to consider the advantages
-of putting an astronomical telescope in space. This work came to full fruition in 1990 
-when the Hubble Space Telescope (HST) was launched. The HST has an aperture of 2.4~m and
-has generated unprecedented results, revolutionizing astronomy. Its replacement is meant to
-be the 6.5~m James Webb Space Telescope (JWST) built by NASA and ESA in collaboration and to
-be placed at the Sun-Earth L$_2$ Lagrange point in 2017 (or so).
+In connection with a RAND project in 1946, Lyman Spitzer was asked to consider the
+advantages of putting an astronomical telescope in space. This work came to full fruition
+in 1990 when the Hubble Space Telescope (HST) was launched. The HST has an aperture of
+2.4~m and has generated unprecedented results, revolutionizing astronomy. Its replacement
+is meant to be the 6.5~m James Webb Space Telescope (JWST) built by NASA and ESA in
+collaboration and to be placed at the Sun-Earth L$_2$ Lagrange point in 2017 (or so).
 
 The absence of an atmosphere and hence wavefront distortions means that a space telescope 
 should have diffraction limited resolution. {\it I.e.} that the ``diameter'' of a star will
@@ -1103,6 +1164,21 @@ some $10^9$ US dollars.
 	Indicate in both cases the positions of the
 	object (the arrow), the focal points, and the image of the arrow.
 	\item What is the image scale expressed in arcsec per unit lenght?
+	\item (Taken from the midterm exam from 2009) \\
+		\begin{enumerate}
+			\item Describe the Cassegrain telescope with the help of a figure. Indicate the
+				position of the primary and secondary foci. Where is the Coud\'{e} focus? What are
+				the advantages of using this?
+			\item Describe 4 out of the 5 Seidel aberrations. Make figures if necessary to aid
+				your description.
+		\end{enumerate}
+	\item (Taken from the midterm exam from 2010) \\
+		\begin{enumerate}
+			\item Describe the two main types of mountings for telescopes; the equatorial and
+				alt-az mountings. What are their advantages and disadvantages?
+			\item The Cassegrain was designed to remove one aberration. Which one?
+			\item What aberrations are removed with a Ritchey-Chr\'{e}tien?
+		\end{enumerate}
 \end{enumerate}
 
 %\end{document}

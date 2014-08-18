@@ -7,30 +7,30 @@ different technical parameters. A short-list of such parameters
 include:
 
 \begin{itemize}
-  \item The {\bf quantum efficiency} (QE) is the ratio of the actual
+	\item The {\textbi{quantum efficiency}} (QE) is the ratio of the actual
   number of photons detected to the number of incident photons. This
   quantity varies with wavelength. In the range 300-900~nm typical
   values fall in the range 0.2--0.75 with maximum efficiency around 
   500~nm.  
-  \item The {\bf spectral response} is the change in the output
+	\item The {\textbi{spectral response}} is the change in the output
   signal as a function of the wavelength of the input signal.
-  \item The {\bf charge transfer efficiency} (CTE) specifies the 
+\item The {\textbi{charge transfer efficiency}} (\textbi{CTE}) specifies the 
   efficiency at which accumulated charge may be transfered from one 
   pixel to the next. For a 1~\% accuracy in the read-out process 
   for a 10000 element detector a 99.9999~\% transfer efficiency is
   required. Actual numbers as high as 99.99999~\% have been quoted.
-  \item The {\bf dark current} represent the output from the
+\item The {\textbi{dark current}} represent the output from the
   non-illuminated detector. It is usually measured as a
   root-mean-square current.  
-  \item The {\bf dynamic range} is the ratio of the saturation output
+\item The {\textbi{dynamic range}} is the ratio of the saturation output
   to the dark current.  
-  \item The {\bf  noise equivalent power} (NEP) is the input radiative 
+\item The {\textbi{noise equivalent power}} (NEP) is the input radiative 
   flux that gives
   a signal-to-noise ratio of unity. It may be given for monochromatic
   or black body radiation. It is usually measured in watts.  
-  \item The  {\bf detectivity} (D) is the inverse NEP value, that is, the
+\item The  {\textbi{detectivity}} (D) is the inverse NEP value, that is, the
   signal-to-noise ratio for unity intensity input radiation.  
-  \item  The {\bf normalized detectivity} (D$^*$) is the detectivity
+\item  The {\textbi{normalized detectivity}} (D$^*$) is the detectivity
   normalized by multiplying with the square root of the product of the
   detector area and the electrical bandwidth of the measuring
   circuitry 
@@ -52,8 +52,8 @@ metal-oxide-semiconductor (MOS) capacitor.
 
 \section{Semiconductors}
 
-Many types of detectors base their properties on those of {\it
-  semiconductors}. Thus, let us discuss these properties as a
+Many types of detectors base their properties on those of {\textbi{
+semiconductors}}. Thus, let us discuss these properties as a
 prerequisite to achieving an understanding of the detectors that
 employ them. 
 
@@ -71,13 +71,13 @@ finding a given energy level $U$ occupied by an electron (of spin 1/2)
 is given by the Fermi-Dirac distribution function
 \begin{equation}
   f_{FP}(U) \sim \frac{1}{1+\exp((U-U_F)/\cl T)},
-  \label{CCD.fFD}
+  \label{eq:CCD.fFD}
 \end{equation}
 where $\cl T$ is the temperature (in energy units, $\cl T = \kappa T$
 where $\kappa$ is the Boltzmann constant and $T$ temperature in
 degrees Kelvin) and $U_F$ is the Fermi energy. The Fermi-Dirac
-distribution function (\ref{fig:CCD.fFD}) is displayed in figure
-\ref{CCD.figfFD}. At $\cl T = 0$ all energy levels up to $U_F$ are
+distribution function (\ref{eq:CCD.fFD}) is displayed in figure
+\ref{fig:CCD.figfFD}. At $\cl T = 0$ all energy levels up to $U_F$ are
 occupied. At finite temperatures a definite variation of $f_{FD}$ with
 $U$ is found only for $\labs U - U_F \rabs$-values up to order $\cl
 T$. We note that $U_F$ represents the average energy acquired by an
@@ -177,7 +177,7 @@ instance boron B) each foreign atom will lack one electron for a
 complete chemical binding. Such atoms will leave vacant levels (holes)
 in the valence band. These atoms are therefore called acceptors.  The
 vacant levels, called acceptor impurity levels and denoted $U_A$ in
-figure \ref{CCD.figsolstate}, are located just above the top of the
+figure \ref{fig:CCD.figsolstate}, are located just above the top of the
 valence band, approximately 0.05 eV from the edge of the valence band.
 Neighboring valence band electrons are easily thermally excited into
 the vacant levels where they will be trapped and not allowed to
@@ -351,7 +351,7 @@ four different operations:
 	\centering
 	\includegraphics[width=0.9\textwidth]{ccd-gate-structure2.pdf}
 	\caption{The figure shows a cross-section of two pixels of a three-phase CCD. Each pixel
-	consists of three gates $A,B,C$, where all gates with the same letter are connected.}
+	consists of three gates A,B,C, where the same gates for each pixel are connected.}
 	\label{fig:ccd-gate-structure}
 \end{figure}
 
@@ -380,7 +380,7 @@ shielded from radiation is needed for the read-out process.
   \label{CCD.figschematic}
 \end{figure}
 
-The way a CCD works can be divided and summarized into four steps.
+The way a CCD works can be described in four steps.
 \begin{enumerate}
 	\item During the illumination phase 
 		the B-gate is held at high potential
@@ -417,6 +417,7 @@ charge packet can be identified and the recorded image reconstructed.
 We will return to study different aspects of these different stages of
 the CCD detector in greater detail below.
 
+\begin{comment}
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=\textwidth]{ccd-shifting-potential.pdf}
@@ -425,6 +426,7 @@ the CCD detector in greater detail below.
 	sets up.}
 	\label{fig:ccd-shifting-potential}
 \end{figure}
+\end{comment}
 
 \subsection{Other types of clocking}
 
@@ -764,13 +766,13 @@ therefore recombine before reaching that far.
 
 A light sensitive diode can be used in several ways:
 \begin{itemize}
-\item As a {\bf photo-conductor} where a battery holds the external voltage
+	\item As a {\textbi{photoconductor}} where a battery holds the external voltage
   to a constant value and the current is a linear function of the
   incident photon flux.
-\item As a {\bf power-cell} the diode is connected to a constant-load
+\item As a {\textbi{power-cell}} the diode is connected to a constant-load
   resistance, and the power output depends on the incident photon
   flux. This is the principle behind solar power cells.
-\item In the {\bf photovoltaic} mode current from from the diode
+\item In the {\textbi{photovoltaic}} mode current from from the diode
   is held at zero, making it a stroage capicitor, and the voltage
   across it is a non-linear function of the photon flux.
 \end{itemize}
@@ -858,16 +860,12 @@ can be stored in the device. An over exposure of one pixel element
 will mean that surplus photoelectrons will start to leak into
 neighboring pixels, producing a ``blooming'' effect in the image.
 
-
 \begin{figure}[h]
   \centering
 	\includegraphics{CCD_burchanph.eps}
   \caption{Buried channel potential structure with photoelectrons present.}
   \label{CCD.figburchanph}
 \end{figure}
-
-
-
 
 \section{The charge transfer process} 
 
@@ -878,14 +876,16 @@ electrodes as illustrated in figure~\ref{fig:ccd-gate-structure}.
 Each of these electrodes are connected with the
 same gate electrodes of the neighboring pixels.  In the
 collecting phase the middle electrode of each pixel is biased high (10
-V), the others low (2 V). Photo-electrons generated over the full pixel
+V), the others low (2 V). Photoelectrons generated over the full pixel
 will collect in the potential well existing under the B electrode.
 Electrodes A and C act to isolate charges generated in the selected
 pixel from similar charges generated in the neighboring pixels.
 
 At the end of the illumination period the charge transfer phase
 starts. This is done by applying clocking potentials to the gate
-electrodes as indicated in figure~\ref{CCD.figclocking}. The charge transfer process is illustrated in figure~\ref{fig:ccd-gate-structure}. The transfer
+electrodes as indicated in figure~\ref{CCD.figclocking}. The charge
+transfer process is illustrated in figure~\ref{fig:ccd-shifting-potential}.
+The transfer
 of electrons from B to C starts by raising the gate electrode C to
 high potential. This will widen the potential well under gate B to
 also include gate C. The collected electrons will drift to fill the
@@ -895,6 +895,15 @@ the remaining electrons under B toward C. In this way the electrons
 have been shifted one gate position and are ready to be shifted to
 gate A of the next pixel and so on. After three gate shifts the
 collected electrons have been moved one pixel.
+%
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\textwidth]{ccd-shifting-potential.pdf}
+	\caption{Process of moving electrons to the register in a three-phase CCD. The potential across the gates
+	are shifted so that electrons fall into the potential well that the neighbouring gate
+	sets up.}
+	\label{fig:ccd-shifting-potential}
+\end{figure}
 
 Optimum performance of the transfer process is achieved for slow slew
 rates of the clocking signals. The characteristic RC rise and fall times
@@ -916,15 +925,13 @@ value of the transfer time may be $t_T = 1$ $\mu$s.
 
 \section{Charge measurements} 
 
-
-
 The final operational phase of the CCD detector is the measurement of
-the charges accumulated in the different pixels during the exposure
+the charges accumulated in the pixels during the exposure
 time. Figure~\ref{fig:ccd-registry} attempts to illustrate the process. The
 figure shows a CCD with a 3x3 matrix of light-sensitive MOS capacitors. The
-columns of this array are collectively called \textbf{parallel registers}, where
+columns of this array are collectively called \textbi{parallel registers}, where
 one column is a parallel register. The row below the 3x3 array is called the
-\textbf{serial register}, and is shielded from light.
+\textbi{serial register}, and is shielded from light.
 
 During the read-out
 process, one row at a time is shifted to the serial register. First, the serial
@@ -933,7 +940,7 @@ row 3 shifts to the serial register, while the ones in row 2 shifts to row 3,
 and row 1 to row 2.
 
 The next operation reads the serial register by shifting the
-electrons in the rightmost pixel to a \textbf{output amplifier}, e.g. a MOSFET
+electrons in the rightmost pixel to a \textbi{output amplifier}, e.g. a MOSFET
 amplifier, that
 converts the charge to a voltage. The amplifier is the only active element of
 the CCD, which means it is the only element that requires power.
@@ -947,18 +954,14 @@ high-performance CCDs have achieved remarkable noise level
 equivalents down to less than 2 (elementary) electron charges.
 
 The voltage is
-converted to a binary number through the \textbf{analog-to-digital converter}
-(\textbf{ADC}). Finally, the binary number is stored in some form of computer
+converted to a binary number through the \textbi{analog-to-digital converter}
+(\textbi{ADC}). Finally, the binary number is stored in some form of computer
 memory so that it can be used to reconstruct the image. When the
 content of the rightmost pixel has been read, the remaining contents of the
 serial register is shifted one pixel to the right, and the read-out process is
 repeated for the remaining pixels. Figures~\ref{fig:ccd-registry-3} -
 \ref{fig:ccd-registry-6} show this.
-%This is accomplished by dumping the transfered charges on to a
-%small capacitor connected to a MOSFET amplifier. The MOSFET amplifier
-%is the only active element of the CCD detector, that is, it is the
-%only element that requires power. The individual pixel elements made
-%up of MOS capacitors are themselves passive elements.
+%
 \begin{figure}[htpb]
 	\centering
 	\begin{subfigure}[t]{0.5\textwidth}
@@ -995,7 +998,12 @@ repeated for the remaining pixels. Figures~\ref{fig:ccd-registry-3} -
 		\caption{}
 		\label{fig:ccd-registry-6}
 	\end{subfigure}
-	\caption{Some caption.}
+	\caption{The CCD components and readout. In \textbf{(a)} the photoelectrons
+	are accumulated in a 3x3 array of capacitors, the parallel register.
+	\textbf{(b)} the electrons in the bottom row shift to the serial register,
+	while the other rows shift down one row. \textbf{(c)} The serial register is
+	read one column at the time. \textbf{(d)} the next row shifts down into the
+empty parallel register.}
 	\label{fig:ccd-registry}
 \end{figure}
 
@@ -1164,10 +1172,7 @@ determine their wavelength, from X-ray to infrared, of each. This is a
 technology still in development, but some practical multi-pixel
 STJ-based detectors have begun to appear at telescopes.
 
-%\subsection{Other types}
-
 \subsection{Photovoltaic cells}
-%\noindent{\it Photovoltaic cells.}
 These are also known as photodiodes,
 photoconductors, and barrier junction detectors. The idea is to use the
 properties of a p-n junction in a semiconductor. When such a junction
@@ -1192,7 +1197,6 @@ junctions, and their operating principle does not differ from that of
 the simple p-n junction.
 
 \subsection{Thermocouples}
-%\noindent{\it Thermocouples.}
 Two dissimilar metals in contact can
 develop a potential difference across their junction. This is called
 the Seebeck effect. The position of the Fermi level will change with
@@ -1220,7 +1224,6 @@ robustness has led to many application for them despite their
 relatively low sensitivity.
 
 \subsection{Phototransistors}
-%\noindent{\it Phototransistors.}
 These are of little direct use in
 astronomy because of their low sensitivity. They consist simply of a
 p-n-p or n-p-n transistor with the minority current carriers produced
@@ -1246,7 +1249,6 @@ of the NIR and MIR (and somewhat into the FIR) and the bolometer for the
 FIR.
 
 \subsection{Photoconductive cells}
-%\noindent{\it Photoconductive cells}
 These cells exhibit a change in conductivity with the 
 intensity of their illumination. The mechanism for that change is the 
 absorption of radiation by the electrons in the valence band of a 
@@ -1259,7 +1261,6 @@ the maximum. In the FIR sizes are still only up to $32\times 32$. Unlike
 CCDs infrared arrays are read out pixel by pixel. 
 
 \subsection{Bolometers}
-%\noindent{\it Bolometers}
 Bolometers change their electrical
 resistivity in response to heating by illuminating radiation. At the
 simplest, two strips of material are used as the arms of a Wheatstone
@@ -1273,10 +1274,10 @@ however faint. A minimum signal-to-noise ratio (SNR) of unity is required for
 detection. However, most research work requires signal-to-noise ratios of
 at least 10, and preferably 100 or 1000. 
 
-Noise sources can be separated into four classes: {\bf intrinsic noise} 
-originating from the detector, {\bf signal noise} arising from the character
-of the of the incoming signal, {\bf external noise} e.g. spurious signals
-from cosmic rays and the like, {\bf processing noise} from amplifiers and
+Noise sources can be separated into four classes: {\textbi{intrinsic noise}} 
+originating from the detector, {\textbi{signal noise}} arising from the character
+of the of the incoming signal, {\textbi{external noise}} e.g. spurious signals
+from cosmic rays and the like, {\textbi{processing noise}} from amplifiers and
 similar used to convert the signal from the detector into a usable form.
 
 Intrinsic noise in solid state devices comes from four sources.
@@ -1306,6 +1307,26 @@ time.
 \begin{enumerate}
 \item Describe, in detail, how two phase and virtual phase CCDs move charges
 compared to three phase CCDs.
+\item (Taken from the midterm exam from 2008) \\
+	Given the Poisson equation for a buried-channel CCD,
+	\[
+  \dd{V}{x} = \left\{ \begin{array}{ll} 
+	0 & -d < x < 0 \\
+	\frac{\displaystyle -eN_D}{\displaystyle \epsilon_{si}} \quad &
+	0 < x < t \\
+	\frac{\displaystyle eN_A}{\displaystyle\epsilon_{si}} & 
+	t < x < t+x_p \\
+	0 & x > t+x_p
+  \end{array} \right.
+  \label{CCD.Poissonbur}
+	\]
+	where $d$ is the thickness of the isolating layer (insulating Si$\mathrm{O}_2$
+	layer), $t$ is the thickness of the n-doped layer and $x_p$ the depth of the
+	layer that is cleared of free charge carriers, make a diagram of depth
+	$x$ vs. the voltage V in the various CCD layers. Discuss how one could achieve
+	such a solution without free charge carriers (i.e. a depleted CCD). Where will
+	photoelectrons be collected? Indicate what happens to the voltage when the
+	number of photoelectrons becomes significant.
 \item Re-derive the expressions for the total voltage drop and for thickness 
 of the depletion region $x_d$ for a surface channel potential well. Reproduce
 with {\tt idl} the plot of the potential versus depth for gate voltages of 
@@ -1331,6 +1352,15 @@ expression?
 {\it photoconductive cells}, and {\it bolometers} work and for which regions
 of the spectrum they are used for. Find expamples of modern telescopes/instruments
 (space or ground based) on which such measurement techniques are used.
+\item (Taken from the midterm exam from 2009) \\
+	CCDs.
+	\begin{enumerate}
+		\item Describe the layout and workings of a three-phase CCD.
+		\item In what parts of the electromagnetic spectrum can we use CCDs? What
+			happens for longer wavelengths? And for shorter wavelengths?
+		\item Describe the most common errors introduced by a CCD. How are these
+			errors corrected when reducing data from a CCD?
+		\item Should a CCD be cooled as much as possible to improve its workings? If
+			so why or why not?
+	\end{enumerate}
 \end{enumerate}
-
-%\end{document}
