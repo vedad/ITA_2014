@@ -1,7 +1,7 @@
 \documentclass[a4paper, 11pt, english]{book}
 
-% Packages
-\usepackage{graphicx}
+%---------------------------- Packages ---------------------------------------%
+\usepackage{graphicx}	% For several things
 \usepackage{wasysym}	% For Aries symbol
 \usepackage{bm}				% Dependency
 \usepackage{amssymb}	% Dependency
@@ -10,8 +10,9 @@
 \usepackage{enumitem}	% Functionality for enumerate environment
 \usepackage{subcaption}	% Subfigure environment
 \usepackage{fancyref}
-%\captionsetup{width=0.8\textwidth}
-%\usepackage[export]{adjustbox} % For aligning figures next to eachother
+%-----------------------------------------------------------------------------%
+
+
 %----------------------------- Used for listings -----------------------------%
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{listings}	
@@ -35,15 +36,12 @@
 \lstset{showtabs=false}
 \lstset{breaklines}
 \lstset{tabsize=4}
-
-%\usepackage[usenames,dvipsnames]{pstricks}
-%\usepackage{epsfig}
-%\usepackage{pst-grad} % For gradients
-%\usepackage{pst-plot} % For axes
 %------------------------------------------------------------------------------%
 
+
 %--------- New commands, dependencies -----------%
-\newcommand{\bc}{\begin{center}}
+\newcommand{\textbi}[1]{\textit{\textbf{#1}}}	% Italic and bold face in one command
+\newcommand{\bc}{\begin{center}} % \begin original commands that Viggo wrote
 \newcommand{\ec}{\end{center}}
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
@@ -55,24 +53,29 @@
 \newcommand{\ddt}[1]{\dd{#1}{t}}
 \newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
 \newcommand{\aver}[1]{\langle{#1}\rangle}
-\newcommand{\infint}{\int_{-\infty}^{\infty}}
+\newcommand{\infint}{\int_{-\infty}^{\infty}} % \end original commands that Viggo wrote
 %------------------------------------------------%
 
-% For caligraphic letters, dependencies
+
+%-------------- For caligraphic letters, dependencies ----------------------%
 \def\cl#1{{\cal #1}}
 \def\abs{\!\mid\!}
 \def\labs{\mid\!}
 \def\rabs{\!\mid}
 \def\rd{\mbox{d}}
 \def\rD{\mbox{D}}
-%---------------------------------------
+%---------------------------------------------------------------------------%
 
+
+%-------------------------- New environments ------------------------------%
 % New environments
 \newenvironment{mylisting}
 {\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
 {\end{list}}
+%--------------------------------------------------------------------------%
 
-% ---------------------------- For TikZ -----------------------------------%
+
+% ---------------------------- For TikZ figures -----------------------------------%
 
 %% helper macros
 
@@ -138,28 +141,7 @@
 	sundot/.style={
 	fill, color=yellow, circle, inner sep=3.5pt}%
 }
-
-%\input{celestial-sphere-preamble}
-%\input{celestial-sphere-circles-preamble}
-%\input{celestial-sphere-test-preamble}
-%\input{celestial-sphere-ecliptic-preamble}
-
-%---------------------------------------------------------------------------%
-
-%\lstdefinestyle{customidl}{
-%	belowcaptionskip=0.2\baselineskip,
-%	breaklines=true,
-%	frame=L,
-%	xleftmargin=\parindent,
-%	language=idl,
-%	showstringspaces=false,
-%	basicstyle=\footnotesize\ttfamily,
-%	keywordstyle=\bfseries\color{BrickRed}\bfseries,
-%	commentstyle=\color{SeaGreen},
-%	identifierstyle=\color{black},
-%	stringstyle=\color{green},
-%}
-%\lstset{escapechar=@,style=customidl}
+%--------------------------------------------------------------------------------%
 
 
 \begin{document}
@@ -187,16 +169,16 @@
 % Lecture notes on Chapter 7:	Diffraction II
 \input{lecture-7.tex}
 
-% Lecture notes on Chapter 8:
+% Lecture notes on Chapter 8: Radio, EUV and X-ray telescopes
 \input{lecture-8.tex}
 
-% Lecture notes on Chapter 9:
+% Lecture notes on Chapter 9: Imaging
 \input{lecture-9.tex}
 
-% Lecture notes on Chapter 10:
+% Lecture notes on Chapter 10: Spectroscopy
 \input{lecture-10.tex}
 
-% Lecture notes on Chapter 11:
+% Lecture notes on Chapter 11: Polarimetry
 \input{lecture-11.tex}
 
 % Lecture notes on Chapter 12: Photometry
