@@ -4,7 +4,7 @@ Observational Astronomy. These notes are originally authored
 by Professor Viggo Hansteen.
 
 
-Edit Aug. 21, 2014: The project is now finished. The document `main.pdf`
+**Edit Aug. 21, 2014:** The project is now finished. The document `main.pdf`
 contains
 the updated lecture notes, and can be found in the folder `lectures`.
 
@@ -25,12 +25,12 @@ The primary goals are:
    Remove superflous paragraphs.
   * ~~Chapter 2: Celestial coordinate systems~~
   * ~~Chapter 3: Detectors~~
-	* ~~Chapter 6: Telescopes~~
+  * ~~Chapter 6: Telescopes~~
 * Content (figures)  
    Create and add descriptive figures where needed.
   * ~~Chapter 2: Celestial coordinate systems~~
   * ~~Chapter 3: Detectors~~
-	* ~~Chapter 6: Telescopes~~
+  * ~~Chapter 6: Telescopes~~
 
 The secondary goals below will be carried out if there's time left.
 * Create and add exercises and solutions to the lecture notes, or make it separate from
