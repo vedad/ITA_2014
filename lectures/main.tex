@@ -1,0 +1,187 @@
+\documentclass[a4paper, 11pt, english]{book}
+
+%---------------------------- Packages ---------------------------------------%
+\usepackage{graphicx}	% For several things
+\usepackage{wasysym}	% For Aries symbol
+\usepackage{bm}				% Dependency
+\usepackage{amssymb}	% Dependency
+\usepackage{a4wide}		% In case margins are too wide
+\usepackage{booktabs}	% Functionality for tabular* environment
+\usepackage{enumitem}	% Functionality for enumerate environment
+\usepackage{subcaption}	% Subfigure environment
+\usepackage{fancyref}
+%-----------------------------------------------------------------------------%
+
+
+%----------------------------- Used for listings -----------------------------%
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}	
+\usepackage{xcolor}
+\usepackage[labelfont=bf]{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{intersections,calc,fadings,decorations.pathreplacing,shapes.geometric}
+\usepackage{verbatim}
+\usepackage{xparse}
+\usepackage{standalone}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\linewidth}{\colorbox{gray}{\parbox{\linewidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+%\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+\lstset{frame=b}
+\lstset{showspaces=false}
+\lstset{showstringspaces=false}
+\lstset{showtabs=false}
+\lstset{breaklines}
+\lstset{tabsize=4}
+%------------------------------------------------------------------------------%
+
+
+%--------- New commands, dependencies -----------%
+\newcommand{\textbi}[1]{\textit{\textbf{#1}}}	% Italic and bold face in one command
+\newcommand{\bc}{\begin{center}} % \begin original commands that Viggo wrote
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}[1]{\begin{eqnarray}\label{#1}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bua}{\begin{eqnarray*}}
+\newcommand{\eua}{\end{eqnarray*}}
+\newcommand{\dd}[2]{{{d#1}\over{d#2}}}
+\newcommand{\ddt}[1]{\dd{#1}{t}}
+\newcommand{\dddt}[1]{\dd{^2#1}{t^2}}
+\newcommand{\aver}[1]{\langle{#1}\rangle}
+\newcommand{\infint}{\int_{-\infty}^{\infty}} % \end original commands that Viggo wrote
+%------------------------------------------------%
+
+
+%-------------- For caligraphic letters, dependencies ----------------------%
+\def\cl#1{{\cal #1}}
+\def\abs{\!\mid\!}
+\def\labs{\mid\!}
+\def\rabs{\!\mid}
+\def\rd{\mbox{d}}
+\def\rD{\mbox{D}}
+%---------------------------------------------------------------------------%
+
+
+%-------------------------- New environments ------------------------------%
+% New environments
+\newenvironment{mylisting}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+{\end{list}}
+%--------------------------------------------------------------------------%
+
+
+% ---------------------------- For TikZ figures -----------------------------------%
+
+%% helper macros
+
+\newcommand\pgfmathsinandcos[3]{%
+  \pgfmathsetmacro#1{sin(#3)}%
+  \pgfmathsetmacro#2{cos(#3)}%
+}
+\newcommand\LongitudePlane[3][current plane]{%
+  \pgfmathsinandcos\sinEl\cosEl{#2} % elevation
+  \pgfmathsinandcos\sint\cost{#3} % azimuth
+  \tikzset{#1/.style={cm={\cost,\sint*\sinEl,0,\cosEl,(0,0)}}}
+}
+\newcommand\LatitudePlane[3][current plane]{%
+  \pgfmathsinandcos\sinEl\cosEl{#2} % elevation
+  \pgfmathsinandcos\sint\cost{#3} % latitude
+  \pgfmathsetmacro\yshift{\cosEl*\sint}
+  \tikzset{#1/.style={cm={\cost,0,0,\cost*\sinEl,(0,\yshift)}}} %
+}
+\newcommand\DrawLongitudeCircleName[3][1]{
+  \LongitudePlane{\angEl}{#2}
+  \tikzset{current plane/.prefix style={scale=#1}}
+   % angle of "visibility"
+  \pgfmathsetmacro\angVis{atan(sin(#2)*cos(\angEl)/sin(\angEl))} %
+  \draw[name path=#3,current plane] (\angVis:1) arc (\angVis:\angVis+180:1);
+  \draw[name path=dashed#3,current plane,dashed] (\angVis-180:1) arc (\angVis-180:\angVis:1);
+}
+\newcommand\DrawLatitudeCircleName[3][2]{
+  \LatitudePlane{\angEl}{#2}
+  \tikzset{current plane/.prefix style={scale=#1}}
+  \pgfmathsetmacro\sinVis{sin(#2)/cos(#2)*sin(\angEl)/cos(\angEl)}
+  % angle of "visibility"
+  \pgfmathsetmacro\angVis{asin(min(1,max(\sinVis,-1)))}
+  \draw[name path=#3,current plane] (\angVis:1) arc (\angVis:-\angVis-180:1);
+  \draw[name path=dashed#3,current plane,dashed] (180-\angVis:1) arc (180-\angVis:\angVis:1);
+}
+
+\newcommand\DrawLongitudeCircle[2][1]{
+  \LongitudePlane{\angEl}{#2}
+  \tikzset{current plane/.prefix style={scale=#1}}
+   % angle of "visibility"
+  \pgfmathsetmacro\angVis{atan(sin(#2)*cos(\angEl)/sin(\angEl))} %
+  \draw[current plane] (\angVis:1) arc (\angVis:\angVis+180:1);
+  \draw[current plane,dashed] (\angVis-180:1) arc (\angVis-180:\angVis:1);
+}
+\newcommand\DrawLatitudeCircle[2][2]{
+  \LatitudePlane{\angEl}{#2}
+  \tikzset{current plane/.prefix style={scale=#1}}
+  \pgfmathsetmacro\sinVis{sin(#2)/cos(#2)*sin(\angEl)/cos(\angEl)}
+  % angle of "visibility"
+  \pgfmathsetmacro\angVis{asin(min(1,max(\sinVis,-1)))}
+  \draw[current plane] (\angVis:1) arc (\angVis:-\angVis-180:1);
+  \draw[current plane,dashed] (180-\angVis:1) arc (180-\angVis:\angVis:1);
+}
+
+% document-wide tikz options and styles
+
+\tikzset{%
+  >=latex, % option for nice arrows
+  inner sep=0pt,%
+  outer sep=2pt,%
+  mark coordinate/.style={inner sep=0pt,outer sep=0pt,minimum size=4pt,
+    fill=black,circle},%
+	sundot/.style={
+	fill, color=yellow, circle, inner sep=3.5pt}%
+}
+%--------------------------------------------------------------------------------%
+
+
+\begin{document}
+
+\tableofcontents
+
+% Lecture notes on Chapter 1: The human eye
+\input{lecture-1.tex}
+
+% Lecture notes on Chapter 2: Celestial coordinates
+\input{lecture-2.tex}
+
+% Lecture notes on Chapter 3: Detectors
+\input{lecture-3.tex}
+
+% Lecture notes on Chapter 4: Fourier analysis
+\input{lecture-4.tex}
+
+% Lecture notes on Chapter 5: Diffraction I
+\input{lecture-5.tex}
+
+% Lecture notes on Chapter 6: Telescopes for visible light
+\input{lecture-6.tex}
+
+% Lecture notes on Chapter 7:	Diffraction II
+\input{lecture-7.tex}
+
+% Lecture notes on Chapter 8: Radio, EUV and X-ray telescopes
+\input{lecture-8.tex}
+
+% Lecture notes on Chapter 9: Imaging
+\input{lecture-9.tex}
+
+% Lecture notes on Chapter 10: Spectroscopy
+\input{lecture-10.tex}
+
+% Lecture notes on Chapter 11: Polarimetry
+\input{lecture-11.tex}
+
+% Lecture notes on Chapter 12: Photometry
+\input{lecture-12.tex}
+
+\end{document}

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="circle" id="id191">
+            <circle cx="290.0" cy="150.0" r="9.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id192">
+            <circle cx="360.0" cy="150.0" r="9.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id195">
+            <circle cx="430.0" cy="150.0" r="9.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id199">
+            <polyline points="290.0,160.0 290.0,260.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id200">
+            <polyline points="360.0,160.0 360.0,260.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id201">
+            <polyline points="430.0,160.0 430.0,260.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="circle" id="id325">
+            <circle cx="500.0" cy="150.0" r="9.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id326">
+            <circle cx="570.0" cy="150.0" r="9.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id327">
+            <circle cx="640.0" cy="150.0" r="9.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id330">
+            <polyline points="500.0,160.0 500.0,260.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id331">
+            <polyline points="570.0,160.0 570.0,260.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id332">
+            <polyline points="640.0,160.0 640.0,260.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id448">
+            <polyline points="680.0,320.0 680.0,500.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="text" id="id496" fill="black" latexdraw:position="bl">
+            <text x="330.0" y="490.0"><![CDATA[Pixel 1]]></text>
+        </g>
+        <g latexdraw:type="text" id="id507" fill="black" latexdraw:position="bl">
+            <text x="550.0" y="490.0"><![CDATA[Pixel 2]]></text>
+        </g>
+        <g latexdraw:type="joinedLines" id="id523">
+            <polyline points="260.0,485.0 320.0,485.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-start="url(#arrow0-523)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id548">
+            <polyline points="475.0,485.0 540.0,485.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-start="url(#arrow0-548)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id551">
+            <polyline points="615.0,485.0 675.0,485.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-551)"/>
+        </g>
+        <g latexdraw:type="circle" id="id574">
+            <circle cx="346.0" cy="302.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id578">
+            <circle cx="364.0" cy="302.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id579">
+            <circle cx="374.0" cy="300.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id580">
+            <circle cx="542.0" cy="300.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id582">
+            <circle cx="562.0" cy="300.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id583">
+            <circle cx="570.0" cy="300.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id585">
+            <circle cx="588.0" cy="302.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id587">
+            <circle cx="554.0" cy="306.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id588">
+            <circle cx="564.0" cy="308.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id589">
+            <circle cx="574.0" cy="306.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id590">
+            <circle cx="582.0" cy="306.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id591">
+            <circle cx="596.0" cy="300.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id592">
+            <circle cx="594.0" cy="308.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id600">
+            <circle cx="526.0" cy="328.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id601">
+            <circle cx="562.0" cy="346.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id602">
+            <circle cx="608.0" cy="332.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id610">
+            <polyline points="530.0,324.0 544.0,312.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-610)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id626">
+            <polyline points="604.0,328.0 592.0,316.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-626)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id629">
+            <polyline points="564.0,340.0 568.0,318.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-629)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id644">
+            <polyline
+                points="702.0,470.0 762.0,470.0 762.0,470.0 762.0,470.0 "
+                stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id645">
+            <polyline points="712.0,480.0 752.0,480.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id646">
+            <polyline points="722.0,490.0 742.0,490.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="circle" id="id565">
+            <circle cx="338.0" cy="298.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id576">
+            <circle cx="356.0" cy="298.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id581">
+            <circle cx="552.0" cy="298.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="circle" id="id584">
+            <circle cx="578.0" cy="298.0" r="3.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id777">
+            <rect x="233.0" y="275.0" width="448.0" height="18.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="#cccccc"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id866">
+            <rect x="233.0" y="441.0" width="448.0" height="18.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="#cccccc"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id641">
+            <polyline
+                points="682.0,450.0 732.0,450.0 732.0,470.0 732.0,470.0 732.0,470.0 "
+                stroke-width="2.0" stroke="black" fill="none"
+                latexdraw:rotationAngle="0.0" marker-start="url(#arrow0-641)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id440">
+            <polyline points="465.0,320.0 465.0,495.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id468">
+            <polyline points="250.0,320.0 250.0,500.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id882">
+            <polyline points="290.0,260.0 290.0,230.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0"
+                marker-start="url(#arrow0-882)" marker-end="url(#arrow1-882)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id883">
+            <polyline points="360.0,260.0 360.0,200.0 360.0,200.0 "
+                stroke-width="2.0" stroke="black" fill="none"
+                latexdraw:rotationAngle="0.0"
+                marker-start="url(#arrow0-883)" marker-end="url(#arrow1-883)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id884">
+            <polyline points="430.0,260.0 430.0,170.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0"
+                marker-start="url(#arrow0-884)" marker-end="url(#arrow1-884)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id885">
+            <polyline points="500.0,260.0 500.0,230.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0"
+                marker-start="url(#arrow0-885)" marker-end="url(#arrow1-885)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id886">
+            <polyline points="570.0,260.0 570.0,200.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0"
+                marker-start="url(#arrow0-886)" marker-end="url(#arrow1-886)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id887">
+            <polyline points="640.0,260.0 640.0,170.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0"
+                marker-start="url(#arrow0-887)" marker-end="url(#arrow1-887)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id890">
+            <polyline points="430.0,170.0 640.0,170.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id891">
+            <polyline points="360.0,200.0 570.0,200.0 "
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id892">
+            <polyline
+                points="290.0,230.0 500.0,230.0 500.0,230.0 500.0,230.0 "
+                stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id894">
+            <polyline points="290.0,230.0 240.0,230.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id899">
+            <polyline points="360.0,200.0 310.0,200.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id901">
+            <polyline points="430.0,170.0 380.0,170.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id902">
+            <polyline points="570.0,200.0 620.0,200.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id903">
+            <polyline points="500.0,230.0 550.0,230.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id904">
+            <polyline points="640.0,170.0 690.0,170.0 "
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.819444444444445, 5.291666666666667" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="text" id="id909" fill="black" latexdraw:position="bl">
+            <text x="284.0" y="132.0"><![CDATA[A]]></text>
+        </g>
+        <g latexdraw:type="text" id="id912" fill="black" latexdraw:position="bl">
+            <text x="354.0" y="132.0"><![CDATA[B]]></text>
+        </g>
+        <g latexdraw:type="text" id="id915" fill="black" latexdraw:position="bl">
+            <text x="424.0" y="132.0"><![CDATA[C]]></text>
+        </g>
+        <g latexdraw:type="text" id="id918" fill="black" latexdraw:position="bl">
+            <text x="494.0" y="132.0"><![CDATA[A]]></text>
+        </g>
+        <g latexdraw:type="text" id="id921" fill="black" latexdraw:position="bl">
+            <text x="564.0" y="132.0"><![CDATA[B]]></text>
+        </g>
+        <g latexdraw:type="text" id="id924" fill="black" latexdraw:position="bl">
+            <text x="634.0" y="132.0"><![CDATA[C]]></text>
+        </g>
+        <g latexdraw:type="joinedLines" id="id978">
+            <polyline points="170.0,260.0 250.0,260.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-978)"/>
+        </g>
+        <g latexdraw:type="text" id="id981" fill="black" latexdraw:position="bl">
+            <text x="130.0" y="264.0"><![CDATA[Gate]]></text>
+        </g>
+        <g latexdraw:type="joinedLines" id="id986">
+            <polyline points="190.0,450.0 280.0,450.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-986)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id988">
+            <polyline points="190.0,380.0 280.0,380.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-988)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id995">
+            <polyline
+                points="699.6169985956858,320.8009898044931 606.3830014043142,305.1990101955069 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-995)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id1002">
+            <polyline points="722.0,284.0 652.0,284.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-1002)"/>
+        </g>
+        <g latexdraw:type="text" id="id1013" fill="black" latexdraw:position="bl">
+            <text x="134.0" y="384.0"><![CDATA[Silicon]]></text>
+        </g>
+        <g latexdraw:type="text" id="id1016" fill="black" latexdraw:position="bl">
+            <text x="132.0" y="448.0"><![CDATA[Doped]]></text>
+        </g>
+        <g latexdraw:type="text" id="id1027" fill="black" latexdraw:position="bl">
+            <text x="134.0" y="464.0"><![CDATA[silicon]]></text>
+        </g>
+        <g latexdraw:type="text" id="id1039" fill="black" latexdraw:position="bl">
+            <text x="736.0" y="282.0"><![CDATA[Insulator]]></text>
+        </g>
+        <g latexdraw:type="text" id="id1042" fill="black" latexdraw:position="bl">
+            <text x="706.0" y="316.0"><![CDATA[Electrons collect]]></text>
+        </g>
+        <g latexdraw:type="text" id="id1045" fill="black" latexdraw:position="bl">
+            <text x="706.0" y="336.0"><![CDATA[at insulator-silicon]]></text>
+        </g>
+        <g latexdraw:type="text" id="id1048" fill="black" latexdraw:position="bl">
+            <text x="706.0" y="359.0"><![CDATA[junction]]></text>
+        </g>
+        <g latexdraw:type="joinedLines" id="id837">
+            <polyline
+                points="320.0,260.0 320.0,270.0 260.0,270.0 260.0,250.0 240.0,250.0 240.0,240.0 270.0,240.0 270.0,260.0 320.0,260.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id842">
+            <polyline
+                points="390.0,270.0 330.0,270.0 330.0,250.0 310.0,250.0 310.0,240.0 340.0,240.0 340.0,260.0 380.0,260.0 380.0,240.0 400.0,240.0 410.0,240.0 410.0,250.0 390.0,250.0 390.0,270.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id213">
+            <polyline
+                points="430.0,260.0 400.0,260.0 400.0,270.0 460.0,270.0 460.0,260.0 430.0,260.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id848">
+            <polyline
+                points="530.0,270.0 470.0,270.0 470.0,250.0 450.0,250.0 450.0,240.0 480.0,240.0 480.0,260.0 530.0,260.0 530.0,270.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id852">
+            <polyline
+                points="600.0,270.0 540.0,270.0 540.0,250.0 520.0,250.0 520.0,240.0 550.0,240.0 550.0,260.0 590.0,260.0 590.0,240.0 620.0,240.0 620.0,250.0 600.0,250.0 600.0,270.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id323">
+            <polyline
+                points="610.0,260.0 610.0,270.0 670.0,270.0 670.0,260.0 610.0,260.0 "
+                stroke-width="2.0" stroke="black" fill="#666666" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id1431">
+            <polyline points="390.0,485.0 457.0,485.0 "
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-1431)"/>
+        </g>
+    </g>
+    <defs>
+        <marker overflow="visible" orient="auto" id="arrow0-523">
+            <path d="M 0.0 0.0 L 6.0 2.0 L 4.5 0.0 L 6.0 -2.0 z "
+                latexdraw:arrSizeNum="2.75" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-548">
+            <path
+                d="M 0.0 0.0 L 6.108083333333333 2.1814583333333335 L 4.5810625 0.0 L 6.108083333333333 -2.1814583333333335 z "
+                latexdraw:arrSizeNum="3.04" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-551">
+            <path
+                d="M 0.0 0.0 L -6.108083333333333 2.1814583333333335 L -4.5810625 0.0 L -6.108083333333333 -2.1814583333333335 z "
+                latexdraw:arrSizeNum="3.04" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-610">
+            <path
+                d="M 0.0 0.0 L -3.322916666666667 1.6614583333333335 L -3.322916666666667 0.0 L -3.322916666666667 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-626">
+            <path
+                d="M 0.0 0.0 L -3.322916666666667 1.6614583333333335 L -3.322916666666667 0.0 L -3.322916666666667 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-629">
+            <path
+                d="M 0.0 0.0 L -3.322916666666667 1.6614583333333335 L -3.322916666666667 0.0 L -3.322916666666667 -1.6614583333333335 z "
+                latexdraw:arrSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-641">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-882">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-882">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-883">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-883">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-884">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-884">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-885">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-885">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-886">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-886">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow0-887">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-887">
+            <circle r="2.3819444444444446" latexdraw:dotSizeNum="3.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-978">
+            <path
+                d="M 0.0 0.0 L -9.315104166666668 2.6614583333333335 L -6.986328125000001 0.0 L -9.315104166666668 -2.6614583333333335 z "
+                latexdraw:arrSizeNum="4.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-986">
+            <path
+                d="M 0.0 0.0 L -9.315104166666668 2.6614583333333335 L -6.986328125000001 0.0 L -9.315104166666668 -2.6614583333333335 z "
+                latexdraw:arrSizeNum="4.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-988">
+            <path
+                d="M 0.0 0.0 L -9.315104166666668 2.6614583333333335 L -6.986328125000001 0.0 L -9.315104166666668 -2.6614583333333335 z "
+                latexdraw:arrSizeNum="4.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-995">
+            <path
+                d="M 0.0 0.0 L -9.315104166666668 2.6614583333333335 L -6.986328125000001 0.0 L -9.315104166666668 -2.6614583333333335 z "
+                latexdraw:arrSizeNum="4.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-1002">
+            <path
+                d="M 0.0 0.0 L -9.315104166666668 2.6614583333333335 L -6.986328125000001 0.0 L -9.315104166666668 -2.6614583333333335 z "
+                latexdraw:arrSizeNum="4.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-1431">
+            <path
+                d="M 0.0 0.0 L -6.375 2.125 L -4.78125 0.0 L -6.375 -2.125 z "
+                latexdraw:arrSizeNum="2.75" fill="black"/>
+        </marker>
+    </defs>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes><![CDATA[]]></latexdraw:latexIncludes>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>10</latexdraw:gridGap>
+            <latexdraw:magneticGrid>true</latexdraw:magneticGrid>
+            <latexdraw:version>3.1.0</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1848</latexdraw:width>
+                <latexdraw:height>1064</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0.0</latexdraw:x>
+                <latexdraw:y>22.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>
